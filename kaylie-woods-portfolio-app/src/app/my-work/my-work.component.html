@@ -1,340 +1,198 @@
-      <!-- MY WORK -->
-      <section id="myWork">
-        <div class="container">
-          <div class="row border-bottom">
-            <h1 class="p-0">My Work</h1>
+<div class="container">
+    <div class="row border-bottom">
+      <h1 class="p-0">My Work</h1>
+    </div>
+
+    <!--PRORANK-->
+    <div>
+      <div class="row mt-4">
+        <div class="col">
+          <h2 class="text-primary">{{proRank.employer}}</h2>
+          <h4 class="fw-light">{{proRank.role}}</h4>
+          <p>{{proRank.description}}</p>
+        </div>
+      </div>
+      <!--PRORANK YEAR IN REVIEW-->
+      <div class="row mt-4" *ngFor="let example of proRank.workExamples">
+        <div class="col-lg-2"></div>
+
+        <div class="col">
+          <!--YEAR IN REVIEW-->
+          <div class="card card-blue-violet h-100" *ngIf="example.id === 1">
+            <img src="assets/yearInReview.png" class="card-img-top" alt="Kaylie Woods Design Engineer Year in Review at ProRank">
+            <div class="card-body">
+              <h5 class="card-title">{{example.title}}</h5>
+              <p class="card-text">{{example.description}}</p>
+            </div>
+            <a href="{{example.link}}" 
+              target="_blank" 
+              class="btn btn-primary m-3" 
+              style="width: fit-content;">
+              Download
+            </a>
           </div>
-  
-          <!--PRORANK-->
-          <div>
-            <div class="row mt-4">
-              <div class="col">
-                <h2 class="text-primary">ProRank</h2>
-                <h4 class="fw-light">Design Engineer</h4>
-                <p>ProRank is a startup seeking to transform talent acquisition in healthcare. I joined as Angular Developer, 
-                  developing front-end features and enhancements, but as time progressed, I assumed responsibility for 
-                  UX and UI design and front-end developer mentorship in addition to angular development. I was a key voice 
-                  in the ideation discussions behind MVP and I brought these discussions to fruition in wireframes and 
-                  hi-fidelity mockups. Once the designs were approved, I tackled the angular development required to 
-                  bring them to life in the product. These efforts established ProRank’s new look and the direction 
-                  of the product, which led to the signing of ProRank’s first client.
-                </p>
-              </div>
-            </div>
-            <!--PRORANK YEAR IN REVIEW-->
-            <div class="row mt-4">
-              <div class="col-lg-2"></div>
-              <div class="col">
-                  <div class="card card-blue-violet h-100">
-                    <img src="assets/yearInReview.png" class="card-img-top" alt="Kaylie Woods Design Engineer Year in Review at ProRank">
-                    <div class="card-body">
-                      <h5 class="card-title">Year in Review</h5>
-                      <p class="card-text">
-                        This is a presentation I put together explaining the highlights of my design and engineering work during my year
-                        at ProRank.
-                      </p>
-                    </div>
-                    <a href="assets/102824_KaylieWoods_ProRank Highlights.pdf" 
-                      target="_blank" 
-                      class="btn btn-primary m-3" 
-                      style="width: fit-content;">
-                      Download
-                    </a>
+
+          <!--UI LIBRARY-->
+          <div class="card card-spring-green h-100" *ngIf="example.id === 2">
+            <div id="uiLibraryCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/ProRank UI Library.png" class="d-block w-100" alt="ProRank UI Figma file">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Cards.png" class="d-block w-100" alt="ProRank Cards">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Candidate Card.png" class="d-block w-100" alt="ProRank Candidate Cards">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Talent Communities Card.png" class="d-block w-100" alt="ProRank Talent Communities Cards">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Buttons 1.png" class="d-block w-100" alt="ProRank Buttons slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Buttons 2.png" class="d-block w-100" alt="ProRank Buttons slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Chips.png" class="d-block w-100" alt="ProRank Chips">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Flags.png" class="d-block w-100" alt="ProRank Flags">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Icons 1.png" class="d-block w-100" alt="ProRank Icons slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Icons 2.png" class="d-block w-100" alt="ProRank Icons slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Icons 3.png" class="d-block w-100" alt="ProRank Icons slide 3">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Inputs 1.png" class="d-block w-100" alt="ProRank Inputs slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Inputs 2.png" class="d-block w-100" alt="ProRank Inputs slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/Base UI.png" class="d-block w-100" alt="ProRank Base UI">
                 </div>
               </div>
-              <div class="col-lg-2"></div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#uiLibraryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#uiLibraryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <!--PRORANK STYLE LIBRARY-->
-            <div class="row mt-4">
-              <div class="col-lg-2"></div>
-              <div class="col">
-                <div class="card card-spring-green h-100">
-                  <div id="uiLibraryCarousel" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="assets/ProRank UI Library.png" class="d-block w-100" alt="ProRank UI Figma file">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Cards.png" class="d-block w-100" alt="ProRank Cards">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Candidate Card.png" class="d-block w-100" alt="ProRank Candidate Cards">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Talent Communities Card.png" class="d-block w-100" alt="ProRank Talent Communities Cards">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Buttons 1.png" class="d-block w-100" alt="ProRank Buttons slide 1">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Buttons 2.png" class="d-block w-100" alt="ProRank Buttons slide 2">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Chips.png" class="d-block w-100" alt="ProRank Chips">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Flags.png" class="d-block w-100" alt="ProRank Flags">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Icons 1.png" class="d-block w-100" alt="ProRank Icons slide 1">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Icons 2.png" class="d-block w-100" alt="ProRank Icons slide 2">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Icons 3.png" class="d-block w-100" alt="ProRank Icons slide 3">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Inputs 1.png" class="d-block w-100" alt="ProRank Inputs slide 1">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Inputs 2.png" class="d-block w-100" alt="ProRank Inputs slide 2">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="assets/Base UI.png" class="d-block w-100" alt="ProRank Base UI">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#uiLibraryCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#uiLibraryCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">ProRank UI Library</h5>
-                    <p class="card-text">
-                      ProRank UI Library is the design system I created from scratch in Figma. 
-                      It consists of 194 components that can be quickly imported into any Figma file, vigorously
-                      organized with proper names and plenty of color coding.
-                      It serves as the central location where developers, and anyone at ProRank, can locate colors, 
-                      typography and every UI component in the product.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2"></div>
+            <div class="card-body">
+              <h5 class="card-title">{{example.title}}</h5>
+              <p class="card-text">{{example.description}}</p>
             </div>
           </div>
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
   
-          <!-- GENESYS -->
-          <div>
-            <div class="row border-top mt-5 mb-3">
-              <div class="mt-3 p-0">
-                <h2 class="text-primary">Genesys</h2>
-                <h4 class="fw-light">Software Engineer, Analytics UI</h4>
-                <p>
-                  Genesys Cloud develops call center and customer service software, driven by empathy. The Analytics UI team 
-                  develops views where managers can go and see various analytics and graphics that relay call center agent 
-                  productivity. I was a software engineer responsible for developing new views and features for Analytics UI.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col mx-5 mb-3">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                  <div class="col">
-                    <div class="card card-aqua h-100">
-                      <img src="assets/Export View Data.png" class="card-img-top" alt="Icon of a text document">
-                      <div class="card-body">
-                        <h5 class="card-title">Export View Data</h5>
-                        <p class="card-text">
-                          Export the data from selected views and selected columns inside Analytics UI as a CSV file or PDF. 
-                          This file is sent to the user's inbox inside Genesys Cloud.
-                        </p>
-                      </div>
-                      <a href="https://help.mypurecloud.com/articles/export-view-data/" 
-                        target="_blank" 
-                        class="btn btn-primary m-3" 
-                        style="width: fit-content;">
-                        Documentation
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card card-blue-violet h-100">
-                      <img src="assets/Conversation Record.png" class="card-img-top" alt="Icon of a call center agent wearing a headset">
-                      <div class="card-body">
-                        <h5 class="card-title">Conversation Data Model</h5>
-                        <p class="card-text">Applying analytics metrics to conversation records.</p>
-                      </div>
-                      <a href="https://developer.genesys.cloud/analyticsdatamanagement/analytics/detail/conversation-data-model" 
-                        target="_blank" 
-                        class="btn btn-primary m-3" 
-                        style="width: fit-content;">
-                        Documentation
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card card-spring-green h-100">
-                      <img src="assets/Queue Performance.png" class="card-img-top" alt="Icon of a line chart">
-                      <div class="card-body">
-                        <h5 class="card-title">Queue Performance Summary & Detail</h5>
-                        <p class="card-text">Two new views in Analytics UI where the user can see current and past metrics and data for queues.</p>
-                      </div>
-                      <div class="d-flex m-3">
-                        <a href="https://help.mypurecloud.com/articles/queues-performance-summary-view/" 
-                          target="_blank" 
-                          class="btn btn-primary me-2"
-                          style="width: fit-content;">
-                          Summary
-                        </a>
-                        <a href="https://help.mypurecloud.com/articles/queue-performance-detail-view/" 
-                          target="_blank" 
-                          class="btn btn-primary me-2" 
-                          style="width: fit-content;">
-                          Detail
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+    <!-- GENESYS -->
+    <div>
+      <div class="row border-top mt-5 mb-3">
+        <div class="mt-3 p-0">
+          <h2 class="text-primary">{{genesys.employer}}</h2>
+          <h4 class="fw-light">{{genesys.role}}</h4>
+          <p>{{genesys.description}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mx-5 mb-3">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let example of genesys.workExamples">
+              <div class="card h-100" 
+                [ngClass]="
+                {
+                  'card-aqua':  example.id === 1, 
+                  'card-blue-violet':  example.id === 2, 
+                  'card-spring-green': example.id === 3
+                }">
+                <img src="{{example.img}}" class="card-img-top" alt="{{example.imgAltTxt}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{example.title}}</h5>
+                  <p class="card-text">{{example.description}}</p>
                 </div>
-              </div>
-            </div>
-          </div>
-  
-          <!--TCC-->
-          <div>
-            <div class="row border-top mt-4">
-              <div class="mt-4 p-0">
-                <h2 class="text-primary">TCC Solutions</h2>
-                <h4 class="fw-light">UI/UX Developer</h4>
-                <p>
-                  TCC is a leader in the early childhood education and care solutions industry, developing solutions that help organizations 
-                  in the industry solve problems to better serve children and families. From 2020-2022, I was the sole UI/UX Developer 
-                  on the team and my time was spread across multiple projects (highlighted below).
-                </p>
-  
-                <div class="container-fluid p-0 mt-4">
-                  <!-- GGM -->
-                  <div class="row g-0">
-                    <div class="col-lg">
-                      <div class="portfolioItem">
-                        <a href="https://www.gogomeds.com" target="blank">
-                          <img src="assets/ggm.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg">
-                      <div class="p-4 caption">
-                        <h4>GoGoMeds</h4>
-                        <p>
-                          As the UI/UX Developer on the GoGoMeds team at TCC Solutions, 
-                          I was responsible for the HTML & CSS of new pages and features.
-                          I also resolved front-end bugs, updated content, and audited pages 
-                          for Section 508 compliance and responsiveness to screen size.
-                          I led the design effort and client-side code for rebuilding the client
-                          in a blank-slate repository.
-                        </p>
-                        <a href="https://www.gogomeds.com"
-                          target="_blank" 
-                          class="btn btn-primary" 
-                          style="width: fit-content;">
-                          gogomeds.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- NJCCIS -->
-                  <div class="row g-0">
-                    <div class="col-lg d-lg-none">
-                      <div class="portfolioItem">
-                        <a href="https://www.njccis.com" target="blank">
-                          <img src="assets/njccis.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg">
-                      <div class="p-4 caption light-aqua">
-                        <h4>NJCCIS</h4>
-                        <p>
-                          When I first joined the NJCCIS team at TCC Solutions, I served as UI/UX Developer, 
-                          auditing code for any user experience, screen size or accessibility
-                          discrepancies. I expressed interest in learning the back-end and tackling full-stack tasks.
-                          The team architect helped me get going with C# and SQL. Shortly after, I was tackling full-stack features
-                          sprint-to-sprint.
-                        </p>
-                        <a href="https://www.njccis.com"
-                          target="_blank" 
-                          class="btn btn-primary" 
-                          style="width: fit-content;">
-                          njccis.com
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg d-none d-lg-flex">
-                      <div class="portfolioItem">
-                        <a href="https://www.njccis.com" target="blank">
-                          <img src="assets/njccis.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Meck Pre-K -->
-                  <div class="row g-0">
-                    <div class="col-lg">
-                      <div class="portfolioItem">
-                        <a href="https://ascend.meckprek.com/ecds/home" target="blank">
-                          <img src="assets/meck.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg">
-                      <div class="p-4 caption">
-                        <h4>Meck Pre-K</h4>
-                        <p>
-                          As the UI/UX Developer on the Meck Pre-K team at TCC Solutions, I was responsible for the HTML and CSS 
-                          of new features. Additionally, I reviewed pull requests to ensure usability, Section 508 compliance, 
-                          responsiveness to screen size, and consistency with the style guide.
-                        </p>
-                        <a href="https://ascend.meckprek.com/ecds/home"
-                          target="_blank" 
-                          class="btn btn-primary" 
-                          style="width: fit-content;">
-                          ascend.meckprek.com
-                        </a>
-                      </div>
-                    </div>  
-                  </div>
-                  <!-- TCC -->
-                  <div class="row g-0">
-                    <div class="col-lg d-lg-none">
-                      <div class="portfolioItem">
-                        <a href="https://www.e-tcc.com" target="blank">
-                          <img src="assets/tcc.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg">
-                      <div class="p-4 caption light-aqua">
-                        <h4>TCC Company Website</h4>
-                        <p>
-                          I was the developer at TCC Software Solutions in charge of any changes needed to the company website. This included
-                          coding the Secure Virtual Desktop page in ASP.Net Razor Pages based off a provided wireframe and implementing content updates.
-                          <span class="fst-italic">Secure Virtual Desktop, and the iteration of e-tcc.com that I worked on, is now deprecated.</span>
-                        </p>
-                        <a href="https://www.e-tcc.com" 
-                          target="_blank" 
-                          class="btn btn-primary" 
-                          style="width: fit-content;">
-                          e-tcc.com
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg d-none d-lg-flex">
-                      <div class="portfolioItem">
-                        <a href="https://www.e-tcc.com" target="blank">
-                          <img src="assets/tcc.png" class="img-fluid">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <a href="{{example.link}}" 
+                  target="_blank" 
+                  class="btn btn-primary m-3" 
+                  style="width: fit-content;">
+                  Documentation
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  
+    <!--TCC-->
+    <div>
+      <div class="row border-top mt-4">
+        <div class="mt-4 p-0">
+          <h2 class="text-primary">{{tcc.employer}}</h2>
+          <h4 class="fw-light">{{tcc.role}}</h4>
+          <p>{{tcc.description}}</p>
+  
+          <div class="container-fluid p-0 mt-4">
+            <div class="row g-0" *ngFor="let example of tcc.workExamples; let i = index; let even = even">
+              <ng-container *ngIf="even">
+                <div class="col-lg">
+                  <div class="portfolioItem">
+                    <a href="{{example.link}}" target="blank">
+                      <img src="{{example.img}}" class="img-fluid" alt="{{example.imgAltTxt}}">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="p-4 caption">
+                    <h4>{{example.title}}</h4>
+                    <p>{{example.description}}</p>
+                    <a href="{{example.link}}"
+                      target="_blank" 
+                      class="btn btn-primary" 
+                      style="width: fit-content;">
+                      {{example.linkTxt}}
+                    </a>
+                  </div>
+                </div>
+              </ng-container>
+
+              <ng-container *ngIf="!even">
+                <div class="col-lg">
+                  <div class="p-4 caption light-aqua">
+                    <h4>{{example.title}}</h4>
+                    <p>{{example.description}}</p>
+                    <a href="{{example.link}}"
+                      target="_blank" 
+                      class="btn btn-primary" 
+                      style="width: fit-content;">
+                      {{example.linkTxt}}
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="portfolioItem">
+                    <a href="{{example.link}}" target="blank">
+                      <img src="{{example.img}}" class="img-fluid" alt="{{example.imgAltTxt}}">
+                    </a>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

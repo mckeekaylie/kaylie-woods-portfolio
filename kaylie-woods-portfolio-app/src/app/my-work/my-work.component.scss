@@ -1,0 +1,27 @@
+@use "../../../public/assets/sass/variables" as vars;
+
+/* MY WORK  */
+.card {
+    border: none;
+}
+
+.card-aqua {
+    background-color: vars.$aquaLight; 
+}
+
+.card-blue-violet {
+    background-color: vars.$blueVioletLight;
+}
+
+.card-spring-green {
+    background-color: vars.$springGreenLight;
+}
+
+.caption {
+    background-color: vars.$blueVioletLight;
+    height: 100%;
+}
+
+.caption.light-aqua {
+    background-color: vars.$aquaLight;
+}
