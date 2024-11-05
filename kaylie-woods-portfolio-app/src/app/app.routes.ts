@@ -8,7 +8,11 @@ export const routes: Routes = [
         component: HomeComponent
     },
     { 
-        path: 'ux-process', 
+        path: 'approach', 
         component: UxProcessComponent 
     },
+    {
+        path: 'case-studies',
+        component: UxProcessComponent
+    }
 ];

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Truth & Ethics",
+    "text": "Ethical journalism also trained me to seek out reliable, reputable and truthful sources when I seek knowledge or when faced with a decision that will affect the user.When considering potential solutions to a problem, I give weight to and consider best practices that have been proven through research or rigorous study. Neilsen Norman Group and The Interaction Design Foundation are my sources of truth when I need knowledge or inspiration. My sources of truth also help me make a decision and advocate for that decision."
+  },
+  {
+    "id": 2,
+    "title": "Passion for Knowledge",
+    "text": "As a genuinely curious knowledge-seeker, I'm on an endless pursuit for knowledge. I firmly believe that no matter how much one may already know, there is always more knowledge to be found. The more perspectives you hear, the more your knowledge grows and thus you can better empathize with a variety of users. It is of utmost importance to me that my knowledge is up-to-date and well-rounded.When I notice an area I may have limited knowledge of or an area I think will permit me to help users more effectively, I seek out articles, studies, books and more to educate myself and grow as a designer.",
+    "cardText": "Refactoring UI is another source material I refer back to. It is a straight-forward guide to user interface design. While geared toward those with no official design training, it provided a plethora of tips to guide me in my designs."
+  },
+  {
+    "id": 3,
+    "title": "Embrace Human Nature",
+    "text": "Psychology is a special interest of mine. I often say if I was forced to change careers and it could not be in the tech space,  I would pursue psychology. I find the human brain fascinating and learning the science of how humans think, feel, act and  react, enables me to make effective design decisions while contemplating the many ways my designs may be perceived by a user.",
+    "cardText": "100 Things Every Designer Needs to Know About People is a book I recommend every person involved in design decisions takes the time to read. It explains how the human brain processes and stores information, citing studies conducted by psychologists. I attribute part of my knowledge about psychology and what it means for user experience to this book."
+  },
+  {
+    "id": 4,
+    "title": "Users First",
+    "text": "The user is always at the forefront of every decision I make. While I have been a user myself in many scenarios and I have studied the craft of user experience design, I am still not the true user of the product.I always advocate for the user and encourage input from a variety of sources, not just one or two people on the team. When tackling a new solution, I ask myself and my peers:",
+    "list": "What is our goal with this feature? What is the value of this feature to the user? What pain points may arise from this feature? How can we alleviate those pain points? What pre-existing solutions internally or externally exist? What are the pros & cons of each?"
+  },
+  {
+    "id": 5,
+    "title": "Collaboration",
+    "text": "Actively seeking out and listening to input from a variety of users, peers and stakeholders is essential to my process. Humans are complex. We have unique personalities, experiences and behaviors. We all have a story to tell. I believe that every voice matters and deserves to be heard. In the design process I thrive with a diverse team where everyone is valued, no one is deemed more important than someone else, and ideas get to flow freely. I believe in figuring out a process that is comfortable for everyone while also being efficient.  I'm respectful of personality types and I accommodate them where I can. When I notice someone hasn't had a chance to say something, I invite them in to the conversation by asking for their input. I advocate for interactive sessions with FigJam, Miro or real sticky notes if in-person. I encourage time to think independently, because not everyone feels comfortable speaking up. The best experiences happen when we gather a diverse pool of ideas. The more we accommodate for differences, the closer we are to a solution that works for every user."
+  }
+]

@@ -1,261 +1,135 @@
+<app-nav></app-nav>
 
-        <!--NAV-->
-        <div class="nav-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Kaylie Woods</a>
+<div class="container-fluid p-0">
 
-                    <button 
-                        class="navbar-toggler" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#navbarSupportedContent" 
-                        aria-controls="navbarSupportedContent" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                    
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+<div class="my-ux-process d-flex flex-column justify-content-center">
+    <h1>My UX Process</h1>
+    <h4 class="text-white mt-2">
+        When solving design or user experience problems, <br>
+        my thought process and my decisions are guided by my 5 core values.
+    </h4>
+</div>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#myJourney">My Journey</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#myWork">My Work</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="process.html">My UX Process</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<div class="mt-5 px-4">
+    <div class="container" *ngFor="let section of myApproachData$ | async; let i = index"
+    [ngClass]="{ 'border-top mt-4':  section.id !== 1 }">
+        <div class="row mt-4">
+            <h1>{{section.title}}</h1>
         </div>
-
-        <!-- CONTENT -->
-        <div class="container-fluid p-0">
-
-            <div class="my-ux-process d-flex flex-column justify-content-center">
-                <h1>My UX Process</h1>
-                <h4 class="text-white mt-2">
-                    When solving design or user experience problems, <br>
-                    my thought process and my decisions are guided by my 5 core values.
-                </h4>
+        <div class="row">
+            <div class="col">
+                <p>{{section.text}}</p>
             </div>
+            <div class="col-lg">
+                <ng-container *ngIf="section.id === 1">
+                    <ng-container *ngTemplateOutlet="truthEthics"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="section.id === 2">
+                    <ng-container *ngTemplateOutlet="passionKnowledge"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="section.id === 3">
+                    <ng-container *ngTemplateOutlet="humanNature"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="section.id === 4">
+                    <ng-container *ngTemplateOutlet="usersFirst"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="section.id === 5">
+                    <ng-container *ngTemplateOutlet="collab"></ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
 
-            <div class="mt-5 px-4">
-                <!--Truth & Ethics-->
-                <div class="container">
-                    <div class="row mt-3">
-                        <h1>Truth & Ethics</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                My bachelor's degree existed at the intersection of journalism and visual design. Ethical journalism was 
-                                heavily involved in my education, which led to my core belief that my work should always be honest and ethical.
-                            </p>
-                            <p>
-                                Ethical journalism also trained me to seek out reliable, reputable and truthful sources when I seek knowledge or when faced
-                                with a decision that will affect the user.
-                            </p>
-            
-                            <p>
-                                When considering potential solutions to a problem, I give weight to and consider best practices that have been proven through 
-                                research or rigorous study.
-                            </p>
-                            <p>
-                                Neilsen Norman Group and The Interaction Design Foundation are my sources of truth when I need knowledge or inspiration.
-                                My sources of truth also help me make a decision and advocate for that decision.
-                            </p>
-                        </div>
-                        <div class="col-lg">
-                            <div class="d-flex flex-column p-4">
-                                <img class="rounded" style="width: 14rem" src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo">
-                                <img class="rounded align-self-end" style="width: 14rem" src="assets/idf.jpg" alt="IDF Logo">
-                            </div>
-                        </div>
-                    </div>
+    <ng-template #truthEthics>
+        <div class="d-flex flex-column p-4">
+            <img class="rounded" style="width: 14rem" src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo">
+            <img class="rounded align-self-end" style="width: 14rem" src="assets/idf.jpg" alt="IDF Logo">
+        </div>
+    </ng-template>
+
+    <ng-template #passionKnowledge>
+        <img src="assets/lawsOfUxNotes.png" class="img-fluid" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
+        <div class="card mt-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src="assets/refactoringUI.jpg" class="img-fluid rounded-start" alt="Refactoring UI cover">
                 </div>
-
-                <!--Passion for Knowledge-->
-                <div class="container border-top mt-4">
-                    <div class="row mt-3">
-                        <h1>Passion for Knowledge</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                        <p>
-                            As a genuinely curious knowledge-seeker, I'm on an endless pursuit for knowledge.
-                            I firmly believe that no matter how much one may already know, there is always more knowledge to be found.
-                            The more perspectives you hear, the more your knowledge grows and thus you can better empathize with a variety of users.
-                        </p>
-                        <p>
-                            It is of utmost importance to me that my knowledge is up-to-date and well-rounded.
-                            When I notice an area I may have limited knowledge of or an area I think will permit me to help users more effectively,
-                            I seek out articles, studies, books and more to educate myself and grow as a designer.
-                        </p> 
-                            <p>In summer 2024, I read Laws of UX by Jon Yablonski. I found this book to be very informative and I found myself able to put into words the things I was already doing that I knew were beneficial for users.</p>
-                            <p>I enjoy digital journaling on my iPad and I wanted a reference for everything I learned in this book so I created a notebook in Goodnotes.</p>
-                            <p>I wanted to have fun while taking notes so I got creative with color, washi tape, hand-lettering and typography.</p>
-                        </div>
-                    <div class="col-lg">
-                        <img src="assets/lawsOfUxNotes.png" class="img-fluid" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
-                        <div class="card mt-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                <img src="assets/refactoringUI.jpg" class="img-fluid rounded-start" alt="Refactoring UI cover">
-                                </div>
-                                <div class="col-md-8">
-                                <div class="card-body">
-                                <p class="card-text">
-                                        Refactoring UI is another source material I refer back to. It is a straight-forward guide to user interface 
-                                        design. While geared toward those with no official design training, it provided a plethora of tips to 
-                                        guide me in my designs.
-                                    </p>
-                                </div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    </div>
-                </div>
-
-                <!--Embrace Human Nature-->
-                <div class="container border-top mt-4">
-                    <div class="row mt-3">
-                        <div class="col">
-                            <h1>Embrace Human Nature</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                Psychology is a special interest of mine. I often say if I was forced to change careers and it could not be in the tech space,
-                                I would pursue psychology. I find the human brain fascinating and learning the science of how humans think, feel, act and 
-                                react, enables me to make effective design decisions while contemplating the many ways my designs may be perceived by a user.
-                            </p>
-                        </div>
-                        <div class="col-lg">
-                            <div class="card">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="assets/100Things.png" class="img-fluid rounded-start" alt="100 Things Every Designer Needs to Know About People cover">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                        <p class="card-text">
-                                            100 Things Every Designer Needs to Know About People is a book I recommend every person involved in design decisions takes the time to read.
-                                            It explains how the human brain processes and stores information, citing studies conducted by psychologists. 
-                                            I attribute part of my knowledge about psychology and what it means for user experience to this book. 
-                                        </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rounded p-4 mt-4 blue-violet-light-bkgd">
-                                <h5>
-                                    “We must design for the way people behave, not for how we would wish them to behave.”
-                                </h5>
-                                <span>Don Norman</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Users First-->
-                <div class="container border-top mt-4">
-                    <div class="row mt-3">
-                        <h1>Users First</h1>
-                    </div>
-                <div class="row">
-                    <div class="col">
-                    <p>
-                        The user is always at the forefront of every decision I make. 
-                        While I have been a user myself in many scenarios and I have studied the craft of user experience design, 
-                        I am still not the true user of the product.
+                <div class="col-md-8">
+                <div class="card-body">
+                <p class="card-text">
+                        Refactoring UI is another source material I refer back to. It is a straight-forward guide to user interface 
+                        design. While geared toward those with no official design training, it provided a plethora of tips to 
+                        guide me in my designs.
                     </p>
-                        <p>
-                        I always advocate for the user and encourage input from a variety of sources, not just one or two people on the team.
-                        When tackling a new solution, I ask myself and my peers:
-                        <ul>
-                            <li>What is our goal with this feature?</li>
-                            <li>What is the value of this feature to the user?</li>
-                            <li>What pain points may arise from this feature? How can we alleviate those pain points?</li>
-                            <li>
-                            What pre-existing solutions internally or externally exist? What are the pros & cons of each?
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg">
-                        <div class="rounded p-4 spring-green-light-bkgd">
-                            <h5>
-                                "By creating designs that are tailored to the user’s needs and preferences, businesses can create 
-                                products and experiences that are more likely to meet the user’s expectations and deliver value."
-                            </h5>
-                            <span>Tibi David, UX Planet</span>
-                        </div>
-                    </div>
                 </div>
                 </div>
+            </div>
+        </div>  
+    </ng-template>
 
-                <!--Collaboration-->
-                <div class="container border-top mt-4">
-                    <div class="row mt-3">
-                        <h1>Collaboration</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                            Actively seeking out and listening to input from a variety of users, peers and stakeholders is essential to my process.
-                            Humans are complex. We have unique personalities, experiences and behaviors. We all have a story to tell.
-                            </p>
-                            <p>I believe that every voice matters and deserves to be heard.</p>
-                            <p>In the design process I thrive with a diverse team where everyone is valued, no one is deemed more important than someone else, and ideas get to flow freely.</p>
-                            <p>
-                            I believe in figuring out a process that is comfortable for everyone while also being efficient.
-                            I'm respectful of personality types and I accommodate them where I can. When I notice someone hasn't had a chance
-                            to say something, I invite them in to the conversation by asking for their input.
-                        </p>
-                        <p>
-                            I advocate for interactive sessions with FigJam, Miro or real sticky notes if in-person.
-                            I encourage time to think independently, because not everyone feels comfortable speaking up.
-                            The best experiences happen when we gather a diverse pool of ideas. 
-                                The more we accommodate for differences, the closer we are to a solution that works for every user.
-                        </p>
-                        </div>
-                        <div class="col-lg">
-                            <div class="rounded p-4 aqua-light-bkgd">
-                                <h5>
-                                    "None of us is as smart as all of us. Keeping your ideas to yourself is detrimental. Diversity of people equals diversity of ideas.” 
-                                </h5>
-                                <span>Denise Jacobs</span>
-                            </div>
-                        </div>
+    <ng-template #humanNature>
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="assets/100Things.png" class="img-fluid rounded-start" alt="100 Things Every Designer Needs to Know About People cover">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <p class="card-text">
+                        100 Things Every Designer Needs to Know About People is a book I recommend every person involved in design decisions takes the time to read.
+                        It explains how the human brain processes and stores information, citing studies conducted by psychologists. 
+                        I attribute part of my knowledge about psychology and what it means for user experience to this book. 
+                    </p>
                     </div>
                 </div>
             </div>
-
-            <img src="assets/grayTriangles.jpg" class="img-fluid" alt="A pattern of gray triangles">
-
-            <!-- FOOTER -->
-            <section id="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
-                                <img src="assets/linkedin-3-256.png" style="width: 3em">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="mt-3">© Copyright 2024, Kaylie Woods</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
+        <div class="rounded p-4 mt-4 blue-violet-light-bkgd">
+            <h5>
+                “We must design for the way people behave, not for how we would wish them to behave.”
+            </h5>
+            <span>Don Norman</span>
+        </div>
+    </ng-template>
+
+    <ng-template #usersFirst>
+        <div class="rounded p-4 spring-green-light-bkgd">
+            <h5>
+                "By creating designs that are tailored to the user’s needs and preferences, businesses can create 
+                products and experiences that are more likely to meet the user’s expectations and deliver value."
+            </h5>
+            <span>Tibi David, UX Planet</span>
+        </div>
+    </ng-template>
+
+    <ng-template #collab>
+        <div class="rounded p-4 aqua-light-bkgd">
+            <h5>
+                "None of us is as smart as all of us. Keeping your ideas to yourself is detrimental. Diversity of people equals diversity of ideas.” 
+            </h5>
+            <span>Denise Jacobs</span>
+        </div>
+    </ng-template>
+</div>
+
+<img src="assets/grayTriangles.jpg" class="img-fluid" alt="A pattern of gray triangles">
+
+<!-- FOOTER -->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
+                    <img src="assets/linkedin-3-256.png" style="width: 3em">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mt-3">© Copyright 2024, Kaylie Woods</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
