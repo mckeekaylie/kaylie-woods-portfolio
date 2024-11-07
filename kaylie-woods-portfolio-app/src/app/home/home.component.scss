@@ -12,23 +12,17 @@
   align-items: center;
 }
 
-.introWrapper p {
-  margin-top: 1em;
-  color: white;
-  font-size: 2em;
-}
-
 #line1 {
-  color: white;
+  color: white !important;
   font-weight: 500;
-  font-size: 8rem;
-  line-height: 7.5rem;
+  font-size: 9.2rem;
+  line-height: 10rem;
 }
 
 #line2 {
   margin-top: 0;
   font-weight: 700;
-  color: white;
+  color: white !important;
   font-size: 10rem;
   line-height: 9.5rem;
 }
@@ -37,22 +31,38 @@
   color: vars.$aqua;
 }
 
+.introWrapper p {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 2.5rem 0;
+}
+
+.hello {
+  height: 93vh;
+}
+
+.icon-button {
+  width: 6rem;
+  height: 6rem;
+}
+
 /* MY JOURNEY */
+
+.my-journey {
+  background-color: vars.$charcoal;
+}
+.para-col {
+  padding: 1rem;
+  border: 2px solid vars.$aqua;
+  color: white;
+}
 .aqua-light-bkgd {
   background-color: vars.$aquaLight;
 }
 
 .linkedInBanner {
   border: 0.25rem solid vars.$crayolaBlue;
-}
-
-/* FOOTER */
-#footer {
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  background-color: vars.$crayolaBlue;
-  color: white;
 }
 
 /* MEDIA QUERIES */

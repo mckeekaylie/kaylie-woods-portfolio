@@ -2,12 +2,12 @@
   <!--CONTENT-->
   <div class="container-fluid p-0">
     <!-- HELLO -->
-    <section id="intro" style="height: 100vh;">
+    <div class="hello">
       <div class="w-100 h-100 introWrapper">
         <div class="container">
           <div class="row">
             <div class="col">
-              <h1 id="line1">Hello,</h1>
+              <h2 id="line1">Hello,</h2>
             </div>
           </div>
           <div class="row">
@@ -17,109 +17,70 @@
           </div>
           <div class="row">
             <div class="col">
-              <p class="lead">I'm a Design Engineer with visual design and full-stack development experience.</p>
+              <p>I'm a Design Engineer with UX/UI Design & <br>Software Engineering experience.</p>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <div>
-                <!-- <a href="#myJourney">
-                  <button type="button" class="btn btn-outline-secondary">Learn more about me</button>
-                </a> -->
-                <!-- <div class="w-100 d-lg-none"></div> -->
-                <a href="assets/KaylieWoods_Resume_103024.pdf" download>
-                  <button class="btn btn-outline-secondary" type="button">Download my resume</button>
-                </a>
+              <div class="row">
+                <div class="d-flex justify-content-center">
+                  <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
+                    <img src="assets/linkedin-3-256.png" class="icon-button p-2 m-2">
+                  </a>
+                    <a href="https://github.com/mckeekaylie" target="blank">
+                      <img src="assets/icons8-github.svg" class="icon-button m-2">
+                    </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row" style="padding-top: 2em;">
-            <div class="col">
-              <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
-                <img src="assets/linkedin-3-256.png" style="width: 3em">
-              </a>
-            </div>
-          </div>
+  
         </div>
       </div>
-    </section>
-  
-    <div class="px-4">
-      <!-- MY JOURNEY -->
-      <section id ="myJourney">
-        <div class="container my-4">
-          <div class="row">
-            <div class="col-md">
-              <h1>My Journey</h1>
-            </div>
-          </div>
-          <div class="row mt-2">
-            <div class="col-md-8">
-              <p>{{myJourneyTxt.para1}}</p>
-              <p>{{myJourneyTxt.para2}}</p>
-              <p>{{myJourneyTxt.para3}}</p>
-              <p>{{myJourneyTxt.para4}}</p>
-              <p>{{myJourneyTxt.para5}}</p>
-              <p>{{myJourneyTxt.para6}}</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <img src="assets/My Journey Graphic.svg"
-                class="img-fluid" 
-                alt="My unique combination of creativity
-                and technical ability allows me to bridge 
-                the gap between designers and engineers while
-                producing high-quality designs and code."
-              >
-          </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <img src="assets/Kaylie Woods (New LinkedIn Banner).png.png" class="w-100 rounded linkedInBanner">
-            </div>
-          </div>
-        </div>
-        <div class="container mt-4">
-          <div class="row">
-            <div class="col">
-              <img src="assets/Skill Graphic.png" class="w-100">
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- MY WORK -->
-      <my-work></my-work>
-
-      <!--CHALLENGES PASSION PROJECTS-->
-      <challenges-passion-projs></challenges-passion-projs>
-      
     </div>
-    
-  
-    <!--LINE ART IMG-->
-    <img src="assets/IMG_2096.PNG" class="img-fluid">
-  
-    <!-- FOOTER -->
-    <section id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
-              <img src="assets/linkedin-3-256.png" style="width: 3em">
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="mt-3">© Copyright 2024, Kaylie Woods</p>
-        </div>
+
+    <div class="container-fluid my-journey pt-4">
+      <div class="row px-5">
+        <div class="col-md p-0">
+          <h1>My Journey</h1>
         </div>
       </div>
-    </section>
+      <div class="row mt-3 px-5">
+        <div class="col-md-9 para-col mb-4">
+          <p>{{myJourneyTxt.para1}}</p>
+          <p>{{myJourneyTxt.para2}}</p>
+          <p>{{myJourneyTxt.para3}}</p>
+          <p>{{myJourneyTxt.para4}}</p>
+          <p>{{myJourneyTxt.para5}}</p>
+          <p>{{myJourneyTxt.para6}}</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <img src="assets/My Journey Graphic.svg"
+            class="img-fluid" 
+            alt="My unique combination of creativity
+            and technical ability allows me to bridge 
+            the gap between designers and engineers while
+            producing high-quality designs and code."
+          >
+      </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col">
+          <img src="assets/Kaylie Woods (New LinkedIn Banner).png.png" class="w-100 rounded linkedInBanner">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col">
+          <img src="assets/Skill Graphic.png" class="w-100">
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
   </div>

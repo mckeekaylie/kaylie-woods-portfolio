@@ -1,27 +1,48 @@
 @use "../../../public/assets/sass/variables" as vars;
 
 /* MY WORK  */
+.my-work {
+  height: 50vh;
+
+  h1 {
+    font-size: 4rem;
+    color: vars.$crayolaBlue !important;
+    font-weight: 600 !important;
+  }
+}
+
+.my-work-bkgd {
+  background-image: url(../../../public/assets/rm218-katie-13.jpg);
+  background-position: 10% 20%;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
-    border: none;
+  border: none;
 }
 
 .card-aqua {
-    background-color: vars.$aquaLight; 
+  background-color: vars.$aquaLight;
 }
 
 .card-blue-violet {
-    background-color: vars.$blueVioletLight;
+  background-color: vars.$blueVioletLight;
 }
 
 .card-spring-green {
-    background-color: vars.$springGreenLight;
+  background-color: vars.$springGreenLight;
 }
 
 .caption {
-    background-color: vars.$blueVioletLight;
-    height: 100%;
+  background-color: vars.$blueVioletLight;
+  height: 100%;
 }
 
 .caption.light-aqua {
-    background-color: vars.$aquaLight;
+  background-color: vars.$aquaLight;
 }

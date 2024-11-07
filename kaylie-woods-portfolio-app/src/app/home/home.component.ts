@@ -4,6 +4,7 @@ import { MyWorkComponent } from '../my-work/my-work.component';
 import { MyJourney } from '../../enum';
 import { NavComponent } from '../nav/nav.component';
 import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/cha
     NavComponent,
     MyWorkComponent,
     ChallengesPassionProjsComponent,
+    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
