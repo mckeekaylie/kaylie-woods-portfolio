@@ -1,25 +1,26 @@
-<div class="container">
+<div class="container mt-5">
     <div class="row border-bottom">
       <h1 class="p-0">Challenges & Passion Projects</h1>
     </div>
-    <div class="row">
-        <div class="col-lg">
-            <div class="card card-blue-violet h-100">
-                <img src="" class="card-img-top" alt="">
+    <div class="row mt-4">
+        <div class="col-lg" *ngFor="let example of challengesProjs$ | async">
+            <div class="card h-100"[ngClass]="
+            {
+              'card-aqua':  example.id === 1, 
+              'card-spring-green': example.id === 2
+            }">
+                <img src="{{example.image}}" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">{{example.title}}</h5>
                   <p class="card-text">{{example.description}}</p>
                 </div>
-                <a href="" 
+                <a href="{{example.link}}" 
                   target="_blank" 
                   class="btn btn-primary m-3" 
                   style="width: fit-content;">
-                  Download
+                  View
                 </a>
               </div>
-        </div>
-        <div class="col-lg">
-
         </div>
     </div>
 </div>

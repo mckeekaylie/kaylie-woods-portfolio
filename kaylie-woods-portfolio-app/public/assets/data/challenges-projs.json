@@ -1,12 +1,16 @@
 [
-    {
-        "id": 1,
-        "title": "Employee App",
-        "description": "This angular application requests an array of employees from a json file, then populates a table with employee information. The table can be filtered by name and sorted by name and id. Clicking an employee's name routes to a detail view for the selected employee."
-    },
-    {
-        "id": 2,
-        "title": "Web Address App",
-        "description": "This angular application requests an array of contacts from a node server, then populates the page with their information."
-    }
+  {
+    "id": 1,
+    "title": "Employee App",
+    "description": "This angular application requests an array of employees from a json file, then populates a table with employee information. The table can be filtered by name and sorted by name and id. Clicking an employee's name routes to a detail view for the selected employee.",
+    "link": "https://kw-angular-employees-app.netlify.app/employees",
+    "image": "assets/employees-app.png"
+  },
+  {
+    "id": 2,
+    "title": "Contact Book",
+    "description": "This angular application requests an array of contacts from a serverless function built with Netlify edge functions & express.js. Once the angular service receives a response, the response is referenced to populate the panel with all contacts, then the profile with the applied contact.",
+    "link": "https://kw-contact-book-angular.netlify.app/",
+    "image": "assets/address-book.png"
+  }
 ]

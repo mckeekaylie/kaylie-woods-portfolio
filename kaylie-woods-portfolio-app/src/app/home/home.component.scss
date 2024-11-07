@@ -1,130 +1,94 @@
 @use "../../../public/assets/sass/variables" as vars;
 
-/* TYPE STYLING FOR THE ENTIRE DOCUMENT */
-body {
-    font-family: "Poppins", sans-serif;
-}
-
-h1 {
-    color: vars.$blueViolet;
-    font-weight: 600;
-}
-
-/* BUTTONS */
-.btn-primary, .btn-primary:visited {
-    background-color: vars.$crayolaBlue;
-    border-color: transparent;
-}
-
-.btn-primary:hover, .btn-primary:active {
-    background-color: blueViolet;
-    border-color: transparent;
-}
-
 /* INTRO */
 .introWrapper {
-    background-image: url(../../../public/assets/bkgd.jpg);
-    background-position: 10% 20%;
-    background-size: cover;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-image: url(../../../public/assets/bkgd.jpg);
+  background-position: 10% 20%;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .introWrapper p {
-    margin-top: 1em;
-    color: white;
-    font-size: 2em;
+  margin-top: 1em;
+  color: white;
+  font-size: 2em;
 }
 
 #line1 {
-    color: white;
-    font-weight: 500;
-    font-size: 8rem;
-    line-height: 7.5rem;
+  color: white;
+  font-weight: 500;
+  font-size: 8rem;
+  line-height: 7.5rem;
 }
 
 #line2 {
-    margin-top: 0;
-    font-weight: 700;
-    color: white;
-    font-size: 10rem;
-    line-height: 9.5rem;
+  margin-top: 0;
+  font-weight: 700;
+  color: white;
+  font-size: 10rem;
+  line-height: 9.5rem;
 }
 
 #line2 span {
-    color:  vars.$aqua;
-}
-
-.introWrapper button {
-    margin-top: 2em;
-    background-color: transparent;
-    border: 2px solid  vars.$springGreen;
-    color: white;
-    width: 12em;
-    height: 3em;
-    font-weight: 500;
-}
-
-.introWrapper button:hover {
-    background-color: vars.$crayolaBlue;
-    border: 2px solid vars.$crayolaBlue;
+  color: vars.$aqua;
 }
 
 /* MY JOURNEY */
 .aqua-light-bkgd {
-    background-color: vars.$aquaLight;
+  background-color: vars.$aquaLight;
 }
 
 .linkedInBanner {
-    border: 0.25rem solid vars.$crayolaBlue;
+  border: 0.25rem solid vars.$crayolaBlue;
 }
 
 /* FOOTER */
 #footer {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    background-color: vars.$crayolaBlue;
-    color: white;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  background-color: vars.$crayolaBlue;
+  color: white;
 }
 
 /* MEDIA QUERIES */
 
 /* lg, xl, xxl screens */
 @media (min-width: 992px) {
-    .introWrapper .learnMoreBtn {
-        margin-right: 1rem;
-    }
+  .introWrapper .learnMoreBtn {
+    margin-right: 1rem;
+  }
 }
 
 /* xs, sm, md screens */
 @media (max-width: 991.99px) {
-    #line1 {
-        font-size: 6em;
-    }
-    #line2 {
-        font-size: 8em;
-    }
+  #line1 {
+    font-size: 6em;
+  }
+  #line2 {
+    font-size: 8em;
+  }
 }
 
 /* xs, sm screens */
 @media (max-width: 767.99px) {
-    #line1 {
-        font-size: 4rem;
-        line-height: 3.5rem;
-    }
-    
-    #line2 {
-        margin-top: 0;
-        font-size: 6rem;
-        line-height: 5.5rem;
-    }
+  #line1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
 
-    .introWrapper p {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
+  #line2 {
+    margin-top: 0;
+    font-size: 6rem;
+    line-height: 5.5rem;
+  }
+
+  .introWrapper p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
 }

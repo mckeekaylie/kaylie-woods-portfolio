@@ -1,8 +1,43 @@
+@use "../public/assets/sass/variables" as vars;
+
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1 {
+  color: vars.$blueViolet !important;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-primary:visited {
+  background-color: vars.$crayolaBlue !important;
+  border-color: transparent !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: blueViolet !important;
+  border-color: transparent !important;
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:visited {
+  background-color: transparent !important;
+  border: 2px solid vars.$springGreen !important;
+  color: vars.$springGreen !important;
+  padding: 0.5rem !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active {
+  background-color: vars.$crayolaBlue !important;
+  border: 2px solid vars.$crayolaBlue !important;
+  color: white !important;
 }
