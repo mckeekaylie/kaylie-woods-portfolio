@@ -5,7 +5,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-lg" *ngFor="let example of challengesProjs$ | async">
-            <div class="card h-100"[ngClass]="
+            <div class="card h-100" [ngClass]="
             {
               'card-aqua':  example.id === 1, 
               'card-spring-green': example.id === 2
