@@ -5,7 +5,7 @@ Access-Control-Allow-Origin="*"
 
 [build]
 command = "npm run build"
-publish = "dist/kaylie-woods-portfolio/browser"
+publish = "dist/kaylie-woods-portfolio-app/browser"
 
 [[redirects]]
 from = "/*"
