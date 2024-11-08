@@ -26,18 +26,23 @@
 }
 
 .card {
-  border: 2px solid vars.$aqua;
-}
-.blue-violet-light-bkgd {
-  background-color: vars.$blueVioletLight;
-}
-
-.spring-green-light-bkgd {
+  border: 1.5px solid vars.$springGreen;
   background-color: vars.$springGreenLight;
 }
 
-.aqua-light-bkgd {
+.card-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid vars.$aqua;
   background-color: vars.$aquaLight;
+}
+
+.list-text {
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+  color: vars.$grayDark;
 }
 
 .flip-img {

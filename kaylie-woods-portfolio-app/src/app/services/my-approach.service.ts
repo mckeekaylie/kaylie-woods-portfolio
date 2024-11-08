@@ -11,13 +11,15 @@ export class MyApproachService {
   getMyApproach(): Observable<MyApproachSections[]> {
     return this.http.get<MyApproachSections[]>('assets/data/approach.json');
   }
-  
 }
 
 export interface MyApproachSections {
-    id: number;
-    title: string;
-    text: string;
-    cardText: string;
-    list: string;
+  id: number;
+  title: string;
+  text: string;
+  cardText: string;
+  cardTextRightCol: string;
+  list: string[];
+  quote: string;
+  author: string;
 }

@@ -27,6 +27,18 @@ h1 {
   color: vars.$springGreen !important;
 }
 
+.blue-violet-light-bkgd {
+  background-color: vars.$blueVioletLight;
+}
+
+.spring-green-light-bkgd {
+  background-color: vars.$springGreenLight;
+}
+
+.aqua-light-bkgd {
+  background-color: vars.$aquaLight;
+}
+
 /* BUTTONS */
 .btn-primary,
 .btn-primary:visited {
@@ -81,4 +93,9 @@ h1 {
 .card-spring-green {
   background-color: vars.$springGreenLight !important;
   border: transparent !important;
+}
+
+/* Target all elements with an id attribute */
+[id] {
+  scroll-margin-top: 4.375rem; /* Adjust this value to match your navbar height */
 }
