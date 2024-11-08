@@ -1,7 +1,7 @@
 @use "../../../public/assets/sass/variables" as vars;
 
 .my-ux-process {
-  background-image: url(../../../public/assets/DarkPolygons.jpg);
+  background-image: url(../../../public/assets/bkgd-my-approach.png);
   background-position: 10% 20%;
   background-size: cover;
   width: 100%;
@@ -25,11 +25,9 @@
   margin: 0 2.5rem;
 }
 
-h1 {
-  color: vars.$blueViolet;
-  font-weight: 600;
+.card {
+  border: 2px solid vars.$aqua;
 }
-
 .blue-violet-light-bkgd {
   background-color: vars.$blueVioletLight;
 }
@@ -45,6 +43,13 @@ h1 {
 .flip-img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.my-approach-footer {
+  background-image: url(../../../public/assets/my-approach-footer.png);
+  background-position: 10% 20%;
+  background-size: cover;
+  height: 48vh;
 }
 
 /* MEDIA QUERIES */
