@@ -1,5 +1,14 @@
+[[headers]]
+for="/*"
+[headers.values]
+Access-Control-Allow-Origin="*"
+
+[build]
+command = "npm run build"
+publish = "dist/kaylie-woods-portfolio/browser"
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
 headers = { Access-Control-Allow-Origin = "*" }
