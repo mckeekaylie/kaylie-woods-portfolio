@@ -1,127 +1,144 @@
-<app-nav></app-nav>
-
 <div class="container-fluid p-0">
-
-<div class="my-ux-process d-flex flex-column justify-content-center">
-    <h1 class="text-aqua">My Approach</h1>
-    <h4 class="text-white mt-4">
-        When solving design or user experience problems, <br>
-        my thought process and my decisions are guided by my 5 core values.
-    </h4>
-    <div class="d-flex justify-content-between flex-wrap values-wrapper">
-        <h4 class="text-spring-green">Truth & Ethics</h4>
-        <h4 class="text-spring-green">Passion for knowledge</h4>
-        <h4 class="text-spring-green">Embrace Human Nature</h4>
-        <div class="d-lg"></div>
-        <h4 class="text-spring-green">Users First</h4>
-        <h4 class="text-spring-green">Collaboration</h4>
-    </div>
-</div>
-
-<div class="mt-5 px-4">
-    <div class="container" *ngFor="let section of myApproachData$ | async; let i = index"
-    [ngClass]="{ 'border-top mt-4':  section.id !== 1 }">
-        <div class="row mt-4">
-            <h1>{{section.title}}</h1>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p>{{section.text}}</p>
-            </div>
-            <div class="col-lg">
-                <ng-container *ngIf="section.id === 1">
-                    <ng-container *ngTemplateOutlet="truthEthics"></ng-container>
-                </ng-container>
-                <ng-container *ngIf="section.id === 2">
-                    <ng-container *ngTemplateOutlet="passionKnowledge"></ng-container>
-                </ng-container>
-                <ng-container *ngIf="section.id === 3">
-                    <ng-container *ngTemplateOutlet="humanNature"></ng-container>
-                </ng-container>
-                <ng-container *ngIf="section.id === 4">
-                    <ng-container *ngTemplateOutlet="usersFirst"></ng-container>
-                </ng-container>
-                <ng-container *ngIf="section.id === 5">
-                    <ng-container *ngTemplateOutlet="collab"></ng-container>
-                </ng-container>
-            </div>
+    <!--COVER-->
+    <div class="my-ux-process d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-aqua">My Approach</h1>
+        <div style="max-width: 72vw;">
+            <h4 class="text-white mt-4">
+                When approached with a design and/or user experience problem, I value coming to a solution
+                that is truthful and ethical, embraces human nature, and puts the user first. My endless pursuit of knowledge
+                and my emphasis on collaboration aids in my path to a decision.
+            </h4>
         </div>
     </div>
 
-    <ng-template #truthEthics>
-        <div class="d-flex flex-column p-4">
-            <img class="rounded" style="width: 14rem" src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo">
-            <img class="rounded align-self-end" style="width: 14rem" src="assets/idf.jpg" alt="IDF Logo">
-        </div>
-    </ng-template>
-
-    <ng-template #passionKnowledge>
-        <img src="assets/lawsOfUxNotes.png" class="img-fluid" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
-        <div class="card mt-3">
-            <div class="row g-0">
-                <div class="col-md-4">
-                <img src="assets/refactoringUI.jpg" class="img-fluid rounded-start" alt="Refactoring UI cover">
+    <!--CONTENT WRAPPER-->
+    <div class="mt-5 px-4">
+        <!--SECTIONS-->
+        <div class="container mt-2" *ngFor="let section of myApproachData$ | async; let i = index">
+            <div class="row mt-5">
+                <h1>{{section.title}}</h1>
+            </div>
+            <div class="row mt-3">
+                <!--LEFT COL-->
+                <div class="col">
+                    <p>{{section.text}}</p>
+                    <ul *ngIf="section.id === 3">
+                        <li>{{section.list}}</li>
+                    </ul>
+                    <!--CARDS BELOW TEXT FOR ID = 4-->
+                    <ng-container *ngIf="section.id === 4">
+                        <div class="card mt-5">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="assets/refactoringUI.jpg" class="img-fluid rounded-start" alt="Refactoring UI cover">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                Refactoring UI is another source material I refer back to. It is a straight-forward guide to user interface 
+                                                design. While geared toward those with no official design training, it provided a plethora of tips to 
+                                                guide me in my designs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </ng-container>
                 </div>
-                <div class="col-md-8">
-                <div class="card-body">
-                <p class="card-text">
-                        Refactoring UI is another source material I refer back to. It is a straight-forward guide to user interface 
-                        design. While geared toward those with no official design training, it provided a plethora of tips to 
-                        guide me in my designs.
-                    </p>
-                </div>
+                <!--RIGHT COL-->
+                <div class="col-lg">
+                    <ng-container *ngIf="section.id === 1">
+                        <ng-container *ngTemplateOutlet="truthEthics"></ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="section.id === 4">
+                        <ng-container *ngTemplateOutlet="passionKnowledge"></ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="section.id === 2">
+                        <ng-container *ngTemplateOutlet="humanNature"></ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="section.id === 3">
+                        <ng-container *ngTemplateOutlet="usersFirst"></ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="section.id === 5">
+                        <ng-container *ngTemplateOutlet="collab"></ng-container>
+                    </ng-container>
                 </div>
             </div>
-        </div>  
-    </ng-template>
+            <!--WAVE SEPARATOR-->
+            <div class="row" *ngIf="section.id !== 5">
+                <div class="col-lg-3"></div>
+                <img src="assets/node-wave.svg" class="img-fluid" [ngClass]="{'flip-img':  section.id === 2 || section.id === 4}">
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
 
-    <ng-template #humanNature>
-        <div class="card">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="assets/100Things.png" class="img-fluid rounded-start" alt="100 Things Every Designer Needs to Know About People cover">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <p class="card-text">
-                        100 Things Every Designer Needs to Know About People is a book I recommend every person involved in design decisions takes the time to read.
-                        It explains how the human brain processes and stores information, citing studies conducted by psychologists. 
-                        I attribute part of my knowledge about psychology and what it means for user experience to this book. 
-                    </p>
+        <ng-template #truthEthics>
+            <div class="d-flex flex-column p-4">
+                <img class="rounded" style="width: 14rem" src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo">
+                <img class="rounded align-self-end" style="width: 14rem" src="assets/idf.jpg" alt="IDF Logo">
+            </div>
+        </ng-template>
+
+        <ng-template #humanNature>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/100Things.png" class="img-fluid rounded-start" alt="100 Things Every Designer Needs to Know About People cover">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text">
+                                100 Things Every Designer Needs to Know About People is a book I recommend every person involved in design decisions takes the time to read.
+                                It explains how the human brain processes and stores information, citing studies conducted by psychologists. 
+                                I attribute part of my knowledge about psychology and what it means for user experience to this book. 
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="rounded p-4 mt-4 blue-violet-light-bkgd">
-            <h5>
-                “We must design for the way people behave, not for how we would wish them to behave.”
-            </h5>
-            <span>Don Norman</span>
-        </div>
-    </ng-template>
+            <div class="rounded p-4 mt-4 blue-violet-light-bkgd">
+                <h5>
+                    “We must design for the way people behave, not for how we would wish them to behave.”
+                </h5>
+                <span>Don Norman</span>
+            </div>
+        </ng-template>
 
-    <ng-template #usersFirst>
-        <div class="rounded p-4 spring-green-light-bkgd">
-            <h5>
-                "By creating designs that are tailored to the user’s needs and preferences, businesses can create 
-                products and experiences that are more likely to meet the user’s expectations and deliver value."
-            </h5>
-            <span>Tibi David, UX Planet</span>
-        </div>
-    </ng-template>
+        <ng-template #usersFirst>
+            <div class="rounded p-4 spring-green-light-bkgd">
+                <h5>
+                    "By creating designs that are tailored to the user’s needs and preferences, businesses can create 
+                    products and experiences that are more likely to meet the user’s expectations and deliver value."
+                </h5>
+                <span>Tibi David, UX Planet</span>
+            </div>
+        </ng-template>
 
-    <ng-template #collab>
-        <div class="rounded p-4 aqua-light-bkgd">
-            <h5>
-                "None of us is as smart as all of us. Keeping your ideas to yourself is detrimental. Diversity of people equals diversity of ideas.” 
-            </h5>
-            <span>Denise Jacobs</span>
-        </div>
-    </ng-template>
-</div>
+        <ng-template #passionKnowledge>
+            <div class="card mt-3">
+                <img src="assets/lawsOfUxNotes.png" class="card-img-top" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
 
-<img src="assets/grayTriangles.jpg" class="img-fluid" alt="A pattern of gray triangles">
+                <div class="card-body">
+                    <p class="card-text">
+                        In summer 2024, I read Laws of UX by Jon Yablonski. I found this book to be very informative and I found myself 
+                        able to put into words the things I was already doing that I knew were beneficial for users. I enjoy digital 
+                        journaling on my iPad and I wanted a reference for everything I learned in this book so I created a notebook 
+                        in Goodnotes. I wanted to have fun while taking notes so I got creative with color, washi tape, hand-lettering 
+                        and typography.
+                    </p>
+                </div>
+            </div>
+        </ng-template>
 
-<app-footer></app-footer>
+        <ng-template #collab>
+            <div class="rounded p-4 aqua-light-bkgd">
+                <h5>
+                    "None of us is as smart as all of us. Keeping your ideas to yourself is detrimental. Diversity of people equals diversity of ideas.” 
+                </h5>
+                <span>Denise Jacobs</span>
+            </div>
+        </ng-template>
+    </div>
 
+    <img src="assets/grayTriangles.jpg" class="img-fluid" alt="A pattern of gray triangles">
 </div>

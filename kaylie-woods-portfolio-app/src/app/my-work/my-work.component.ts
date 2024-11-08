@@ -11,8 +11,6 @@ import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/cha
   standalone: true,
   imports: [
     CommonModule,
-    NavComponent,
-    FooterComponent,
     ChallengesPassionProjsComponent,
   ],
   templateUrl: './my-work.component.html',

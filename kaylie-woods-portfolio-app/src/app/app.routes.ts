@@ -13,7 +13,7 @@ export const routes: Routes = [
     component: MyWorkComponent,
   },
   {
-    path: 'approach',
+    path: 'my-approach',
     component: UxProcessComponent,
   },
   {

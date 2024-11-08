@@ -19,4 +19,5 @@ export interface MyApproachSections {
     title: string;
     text: string;
     cardText: string;
+    list: string;
 }
