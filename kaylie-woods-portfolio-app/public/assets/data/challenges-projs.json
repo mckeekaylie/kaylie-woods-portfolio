@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Employee App",
     "description": "This angular application requests an array of employees from a json file, then populates a table with employee information. The table can be filtered by name and sorted by name and id. Clicking an employee's name routes to a detail view for the selected employee.",
-    "link": "https://kw-angular-employees-app.netlify.app/employees",
+    "link": "https://kw-angular-employees-app.netlify.app/",
     "image": "assets/employees-app.png"
   },
   {
