@@ -1,5 +1,6 @@
 @use "../public/assets/sass/variables" as vars;
 
+
 /* TYPOGRAPHY */
 * {
   font-family: "Poppins", sans-serif;
@@ -97,5 +98,5 @@ h1 {
 
 /* Target all elements with an id attribute */
 [id] {
-  scroll-margin-top: 4.375rem; /* Adjust this value to match your navbar height */
+  scroll-margin-top: 4.375rem;
 }
