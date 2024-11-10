@@ -29,4 +29,5 @@ export interface workExamples {
     linkTxt?: string;
     img?: string;
     imgAltTxt?: string;
+    imgSrc?: string;
 }

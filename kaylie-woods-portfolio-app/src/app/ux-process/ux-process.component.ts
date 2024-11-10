@@ -20,6 +20,8 @@ export class UxProcessComponent {
   constructor(private myApproachService: MyApproachService) {}
 
   ngOnInit() {
+    window.scrollTo(0, 0);
+
     this.myApproachService
       .getMyApproach()
       .pipe(takeUntil(this.onDestroy$))

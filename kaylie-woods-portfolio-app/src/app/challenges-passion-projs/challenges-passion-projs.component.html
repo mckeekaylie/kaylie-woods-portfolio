@@ -4,7 +4,8 @@
       <h2 class="text-blue-violet">Challenges & Other Projects</h2>
     </div>
     <div class="row mt-4">
-        <div class="col-lg" *ngFor="let example of challengesProjs$ | async">
+      <ng-container *ngFor="let example of challengesProjs$ | async">
+        <div class="col-lg">
             <div class="card h-100" [ngClass]="
             {
               'card-aqua':  example.id === 1, 
@@ -21,7 +22,9 @@
                   style="width: fit-content;">
                   View
                 </a>
-              </div>
+            </div>
         </div>
+        <div class="card-spacer d-md-none"></div>
+      </ng-container>
     </div>
 </div>

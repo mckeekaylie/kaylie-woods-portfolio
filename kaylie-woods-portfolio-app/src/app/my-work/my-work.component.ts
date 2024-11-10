@@ -26,6 +26,8 @@ export class MyWorkComponent {
   constructor(private myWorkService: MyWorkService) {}
 
   ngOnInit() {
+      window.scrollTo(0, 0);
+    
     this.myWorkService
       .getMyJobs()
       .pipe(takeUntil(this.onDestroy$))

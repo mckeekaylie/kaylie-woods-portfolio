@@ -81,6 +81,10 @@ h1 {
 }
 
 /* CARDS */
+.card-spacer {
+  height: 1.5rem;
+}
+
 .card-aqua {
   background-color: vars.$aquaLight !important;
   border: transparent !important;

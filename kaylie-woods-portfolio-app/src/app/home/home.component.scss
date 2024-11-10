@@ -38,6 +38,10 @@
   margin: 2.5rem 0;
 }
 
+.icon-button:hover {
+  transform: scale(1.25, 1.25);
+}
+
 .hello {
   height: 93vh;
 }
