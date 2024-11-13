@@ -12,86 +12,96 @@
     </div>
 
     <!--CONTENT WRAPPER-->
-    <div class="mt-5 px-4">
+    <div class="mt-5">
         <!--SECTIONS-->
-        <div class="container mt-2" *ngFor="let section of myApproachData$ | async; let i = index">
-            <div class="row mt-5">
-                <h1>{{section.title}}</h1>
-            </div>
-            <div class="row mt-3">
-                <!--LEFT COL-->
-                <div class="col-lg">
-                    <p>{{section.text}}</p>
-                    <div *ngFor="let li of section.list; let i = index">
-                        <span class="list-text w-100" >{{li}}</span>
-                    </div>
-                    <!--BOOK CARDS UNDER TEXT-->
-                    <ng-container *ngIf="section.id === 2">
-                        <div class="mt-5 p-4 rounded card-book align-self-end">
-                            <img src="assets/100things.jpg" class="w-25 rounded" alt="100 Things Every Designer Needs to Know About People cover">
-            
-                            <p class="px-4 mb-0">
-                                {{section.cardText}}
-                            </p> 
-                        </div>
-                    </ng-container>
-                    <ng-container *ngIf="section.id === 4">
-                        <div class="mt-5 p-4  rounded card-book align-self-end">
-                            <img src="assets/refactoringUI.jpg" class="w-25 rounded" alt="Refactoring UI cover">
-
-                            <p class="px-4 mb-0">{{section.cardText}}</p>
-                        </div>
-                    </ng-container>
+        <ng-container *ngFor="let section of myApproachData$ | async; let i = index">
+            <div class="container mt-2 px-4">
+                <div class="row mt-5">
+                    <h1>{{section.title}}</h1>
                 </div>
+                <div class="row mt-3">
+                    <!--LEFT COL-->
+                    <div class="col-lg">
+                        <p class="mb-0">{{section.text}}</p>
+                        <div class="card-spacer"></div>
+                        <div *ngFor="let li of section.list; let i = index">
+                            <span class="list-text w-100" >{{li}}</span>
+                        </div>
+                        <!--BOOK CARDS UNDER TEXT-->
+                        <ng-container *ngIf="section.id === 2">
+                            <div class="card-spacer"></div>
+
+                            <div class="p-4 rounded card-book align-self-end">
+                                <img src="assets/100things.jpg" class="w-25 rounded" alt="100 Things Every Designer Needs to Know About People cover">
                 
-                <!--RIGHT COL-->
-                <div class="col-lg">
-                    <ng-container *ngIf="section.id === 1">
-                        <ng-container *ngTemplateOutlet="truthEthics"></ng-container>
-                    </ng-container>
-                    <ng-container *ngIf="section.id === 4">
-                        <ng-container *ngTemplateOutlet="passionKnowledge; context: { section }"></ng-container>
-                    </ng-container>
+                                <div class="card-spacer d-lg-none"></div>
 
-                    <ng-container *ngIf="section.id === 5 || section.id === 3 || section.id === 2">
-                        <div class="rounded p-4 aqua-light-bkgd"
-                            [ngClass]="
-                            {
-                                'blue-violet-light-bkgd': section.id === 2,
-                                'aqua-light-bkgd': section.id ===3,
-                                'spring-green-light-bkgd': section.id === 5
-                            }"
-                        >
-                            <h5>{{section.quote}}</h5>
-                            <span>{{section.author}}</span>
-                        </div>
-                    </ng-container>
+                                <p class="px-4 mb-0">
+                                    {{section.cardText}}
+                                </p> 
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="section.id === 4">
+                            <div class="card-spacer"></div>
+                            <div class="p-4 rounded card-book align-self-end">
+                                <img src="assets/refactoringUI.jpg" class="w-25 rounded" alt="Refactoring UI cover">
+    
+                                <div class="card-spacer d-lg-none"></div>
+
+                                <p class="px-4 mb-0">{{section.cardText}}</p>
+                            </div>
+                            <div class="card-spacer d-lg-none"></div>
+                        </ng-container>
+                    </div>
+                    
+                    <!--RIGHT COL-->
+                    <div class="col-lg">
+                        <ng-container *ngIf="section.id === 1">
+                            <ng-container *ngTemplateOutlet="truthEthics"></ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="section.id === 4">
+                            <ng-container *ngTemplateOutlet="passionKnowledge; context: { section }"></ng-container>
+                        </ng-container>
+    
+                        <div class="card-spacer d-lg-none"></div>
+                        <ng-container *ngIf="section.id === 5 || section.id === 3 || section.id === 2">
+                            <div class="rounded p-4 aqua-light-bkgd"
+                                [ngClass]="
+                                {
+                                    'blue-violet-light-bkgd': section.id === 2,
+                                    'aqua-light-bkgd': section.id ===3,
+                                    'spring-green-light-bkgd': section.id === 5
+                                }"
+                            >
+                                <h5>{{section.quote}}</h5>
+                                <span>{{section.author}}</span>
+                            </div>
+                        </ng-container>
+                        <div class="card-spacer"></div>
+                    </div>
                 </div>
             </div>
 
-            <!--WAVE SEPARATOR-->
-            <div class="row mt-4" *ngIf="section.id !== 5">
-                <div class="col-lg-3"></div>
-                <img src="assets/node-wave.png" class="img-fluid" [ngClass]="{'flip-img':  section.id === 2 || section.id === 4}">
-                <div class="col-lg-3"></div>
-            </div>
-        </div>
+             <!--WAVE SEPARATOR-->
+            <div class="node-wave" *ngIf="section.id !==5" [ngClass]="{'flip-img':  section.id === 2 || section.id === 4}"></div>
+        </ng-container>
 
         <!--TRUTH ETHICS-->
         <ng-template #truthEthics>
+            <div class="card-spacer"></div>
             <div class="d-flex justify-content-evenly">
-                <img style="height: 8rem" src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo">
-                <img style="height: 10rem" src="assets/idf.jpg" alt="IDF Logo">
+                <img src="assets/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo" class="truth-ethics-img">
+                <img src="assets/idf.jpg" alt="IDF Logo" class="truth-ethics-img">
             </div>
         </ng-template>
 
         <!--PASSION KNOWLEDGE-->
         <ng-template #passionKnowledge let-section="section">
-            <div class="card mt-3">
+            <div class="card">
                 <img src="assets/lawsOfUxNotes.png" class="card-img-top" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
 
                 <div class="card-body">
-                    <p class="card-text">{{section.cardTextRightCol}}</p>
+                    <p class="card-text mb-0">{{section.cardTextRightCol}}</p>
                 </div>
             </div>
         </ng-template>

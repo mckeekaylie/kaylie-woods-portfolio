@@ -11,8 +11,7 @@
         "phaseTitle": "Prep",
         "phaseText": [
           "To kick things off, I thoroughly review the requirements and any drawings or screenshots provided to me.",
-          "After ensuring I understand the objective, I review how ProRank's competitors address a similar solution.",
-          "If I require further inspiration, I review designs on Dribbble and Mobbin",
+          "After ensuring I understand the objective, I review how ProRank's competitors address a similar solution. If I require further inspiration, I review designs on Dribbble and Mobbin.",
           "To finalize my preparation, I review the persona for this solution, writing down their goals with this solution and any potential pain points."
         ]
       },
@@ -39,10 +38,10 @@
           "With all of the components designed, I fine-tune the design by adjusting colors, borders, spacing, and more. I repeat this process until I believe the design meets the requirements, adheres to existing patterns/rules, exhibits visual hierarchy and balance, and meets the needs of the persona."
         ],
         "imgPaths": [
-          "assets/TalentCommunities_Landing_Communities.png",
-          "assets/TalentCommunities_Landing_Members.png",
-          "assets/1_TalentCommunities_Options_Details.png",
-          "assets/2_TalentCommunities_Options_Members.png"
+          "assets/TC_1.png",
+          "assets/TC_2.png",
+          "assets/TC_3.png",
+          "assets/TC_4.png"
         ]
       },
       {

@@ -58,12 +58,17 @@
   }
 }
 
+.carousel-indicators {
+  position: unset !important;
+  margin: 0 !important;
+}
+
 .carousel-indicators [data-bs-target] {
-  width: 3.125rem;
-  height: 0.5rem;
-  margin: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 2rem;
   border: 0.125rem solid vars.$aqua;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   background-color: vars.$aqua;
 }
 
