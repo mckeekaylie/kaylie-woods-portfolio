@@ -29,21 +29,6 @@
   height: 48vh;
 }
 
-.jump-to-btn {
-  border: 2px solid vars.$springGreen;
-  padding: 1rem 2rem;
-  color: vars.$springGreen;
-  text-decoration: none;
-  font-size: 1.15rem;
-  font-weight: 300;
-}
-
-.jump-to-btn:hover {
-  border-color: vars.$crayolaBlue;
-  background-color: vars.$crayolaBlue;
-  color: white;
-}
-
 .card {
   border: none !important;
 }

@@ -1,0 +1,114 @@
+<div class="container-fluid p-0">
+    <div class="case-studies">
+      <div class="w-100 h-100 case-studies-bkgd">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>Case Studies</h1>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              <div class="d-flex flex-wrap justify-content-center">
+                <a [href]="'case-studies' + '#' + 1" class="jump-to-btn m-3">ProRank, Talent Communities</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid case-study-content-wrapper text-white">
+    <div *ngFor="let study of caseStudies$ | async" [id]="study.id">
+        <div class="d-flex flex-column align-items-stretch">
+            <div class="row">
+                <div class="col-lg">
+                    <h1>Overview</h1>
+                    <p>{{ study.overviewText }}</p>
+                </div>
+                <div class="col-lg">
+                    <h1>My Role</h1>
+                    <p>{{ study.myRoleText }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex">
+                        <img src="assets/greenHalftoneArrow.svg" class="green-halftone-arrow">
+                        <div class="problem">
+                            <h1>The Problem</h1>
+                            <p>{{study.problemText}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex">
+                        <div class="solution">
+                            <h1>The Solution</h1>
+                            <p>{{study.solutionText}}</p>
+                        </div>
+                        <img src="assets/greenHalftoneArrow.svg" class="flip-img green-halftone-arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--PHASES-->
+        <ng-container *ngFor="let phase of study.phases; let i = index">
+            <div class="row p-4">
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="hexagon" 
+                    [ngClass]="{ 
+                        'border-blue-violet text-blue-violet': i === 0 || i === 3,
+                        'border-aqua text-aqua': i === 1,
+                        'border-spring-green text-spring-green': i === 2 
+                    }">
+                        <div class="hex-text">{{phase.phaseTitle}}</div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="py-4">
+                        <p>{{phase.phaseText}}</p>
+    
+                        <div class="row">
+                            <div class="col">
+                                <ul *ngIf="phase.list">
+                                    <li *ngFor="let item of phase.list">{{item}}</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="row mt-3" *ngIf="phase.imgPaths">
+                            <div class="col">
+                                <div [id]="'carousel' +  phase.phaseTitle" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div 
+                                            *ngFor="let path of phase.imgPaths; let i = index"
+                                            class="carousel-item" 
+                                            [class.active]="i === 0">
+                                            
+                                            <img src="{{path}}" class="d-block w-100" alt="ProRank UI Figma file">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-indicators my-2">
+                                        <button 
+                                            *ngFor="let path of phase.imgPaths; let i = index" 
+                                            type="button"
+                                            [attr.data-bs-slide-to]="i"
+                                            [class.active]="i === 0"
+                                            [attr.data-bs-target]="'#' + 'carousel' +  phase.phaseTitle">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
