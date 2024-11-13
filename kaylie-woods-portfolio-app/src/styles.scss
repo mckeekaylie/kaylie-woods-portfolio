@@ -39,6 +39,18 @@ h1 {
   background-color: vars.$aquaLight;
 }
 
+.border-aqua {
+  border-color: vars.$aqua!important;
+}
+
+.border-blue-violet {
+  border-color: vars.$blueViolet!important;
+}
+
+.border-spring-green {
+  border-color: vars.$springGreen!important;
+}
+
 /* BUTTONS */
 .btn-primary,
 .btn-primary:visited {
@@ -79,6 +91,21 @@ h1 {
   height: 1.3rem;
 }
 
+.jump-to-btn {
+  border: 2px solid vars.$springGreen;
+  padding: 1rem 2rem;
+  color: vars.$springGreen;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+.jump-to-btn:hover {
+  border-color: vars.$crayolaBlue;
+  background-color: vars.$crayolaBlue;
+  color: white;
+}
+
 /* CARDS */
 .card-spacer {
   height: 1.5rem;
@@ -107,4 +134,51 @@ h1 {
 .flip-img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+/* SHAPES */
+.hexagon {
+  position: relative;
+  width: 12.5rem;
+  height: 7.217rem;
+  margin: 3.609rem 0;
+  border-left: solid 0.125rem;
+  border-right: solid 0.125rem;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 8.839rem;
+  height: 8.839rem;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  left: 1.706rem;
+}
+
+.hexagon:before {
+  top: -4.419rem;
+  border-top: solid 0.25rem;
+  border-right: solid 0.25rem;
+}
+
+.hexagon:after {
+  bottom: -4.419rem;
+  border-bottom: solid 0.25rem;
+  border-left: solid 0.25rem;
+}
+
+.hex-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
