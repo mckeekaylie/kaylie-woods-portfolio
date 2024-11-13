@@ -1,0 +1,90 @@
+<div class="container-fluid p-0">
+    <div class="case-studies">
+      <div class="w-100 h-100 case-studies-bkgd">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>Case Studies</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid">
+    <div *ngFor="let study of caseStudies$ | async">
+        <div class="d-flex flex-column align-items-stretch">
+
+            <div class="row problem-solution text-white">
+                <div class="col">
+                    <div class="d-flex">
+                        <img src="assets/greenHalftoneArrow.svg" class="green-halftone-arrow">
+                        <div class="problem">
+                            <h1>{{study.problemTitle}}</h1>
+                            <p>{{study.problemText}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row problem-solution">
+                <div class="col">
+                    <div class="d-flex">
+                        <div class="solution">
+                            <h1>{{study.solutionTitle}}</h1>
+                            <p>{{study.solutionText}}</p>
+                        </div>
+                        <img src="assets/greenHalftoneArrow.svg" class="flip-img green-halftone-arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--PHASES-->
+        <ng-container *ngFor="let phase of study.phases">
+            <div class="row p-4" 
+                [ngClass]="{
+                    'blue-violet-light-bkgd':  phase.phaseId === 1, 
+                    'spring-green-light-bkgd':  phase.phaseId === 2, 
+                    'aqua-light-bkgd': phase.phaseId === 3
+                }"
+            >
+                <div class="col">
+                    <h4>{{phase.phaseTitle}}</h4>
+                    <p>{{phase.phaseText}}</p>
+
+                    <div class="row">
+                        <div class="col">
+                            <ul *ngIf="phase.list">
+                                <li *ngFor="let item of phase.list">{{item}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-4" 
+            [ngClass]="{
+                'blue-violet-light-bkgd':  phase.phaseId === 1, 
+                'spring-green-light-bkgd':  phase.phaseId === 2, 
+                'aqua-light-bkgd': phase.phaseId === 3
+            }"
+        >
+        <div id="wiresCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div *ngFor="let path of phase.imgPaths; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+                    <img src="{{path}}" class="d-block w-100" alt="ProRank UI Figma file">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#wiresCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#wiresCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+        </ng-container>
+    </div>
+</div>

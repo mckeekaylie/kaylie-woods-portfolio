@@ -45,11 +45,6 @@
   color: vars.$grayDark;
 }
 
-.flip-img {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
 .my-approach-footer {
   background-image: url(../../../public/assets/my-approach-footer.png);
   background-position: 10% 20%;

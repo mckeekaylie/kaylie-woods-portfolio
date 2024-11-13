@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "problemTitle": "The Problem",
+    "problemText": "Recruiters can only search for or interact with candidates through the context of a job they are recruiting for. If the recruiter finds an excellent candidate whom they wish to keep in mind for future roles, it is up to the recruiter to remember the candidate’s name and information. Recruiters either have to manually search for the candidate via the search bar at the top of ProRank or store the candidate in a place outside of ProRank.",
+    "solutionTitle": "The Solution",
+    "solutionText": "The concept of a new view that exists outside of the context of a job and is easily accessible via the navbar is presented to me. The view will be named Talent Communities and it will consist of a landing page that is split into two tabs, Communities (all) and Members (all). Additionally, there will be a modal accessible via the edit button on a community that enables the user to view and edit a community’s details. This modal consists of two tabs: Details and Members. I am provided with requirements and simple drawings via a Miro board to give me an idea of the expectations for the layout. It is my responsibility to translate the requirements and the drawing into a new user interface.",
+    "phases": [
+      {
+        "phaseId": 0,
+        "phaseTitle": "Preparation",
+        "phaseText": [
+          "To kick things off, I thoroughly review the requirements and any drawings or screenshots provided to me.",
+          "Once I feel confident in my understanding, I look at competitors to see how they approach a similar design",
+          "If what I found during my research of competitors wasn't enough, I seek inspiration via Dribbble, Mobbin, Google search",
+          "I apply the recruiter persona and write down their goals with this view and any pain points."
+        ]
+      },
+      {
+        "phaseId": 1,
+        "phaseTitle": "Phase I: Wireframes",
+        "phaseText": [
+          "I approach wireframes like I would a puzzle. Just like opening a new puzzle box and pouring the pieces onto a table, I gather the pieces needed for the design then drop them on the frame. From there, I start connecting the pieces by moving them to different locations on the frame. I start by placing pieces where my initial instinct tells me to. I carefully consider the placement and move pieces around until the placement makes sense, establishes visual hierarchy, and aligns with existing patterns."
+        ],
+        "imgPaths": [
+          "assets/Talent communities page.png",
+          "assets/Talent Communities_Options_Details.png",
+          "assets/Talent Communities_Options_Members.png"
+        ]
+      },
+      {
+        "phaseId": 2,
+        "phaseTitle": "Phase II: Hi-Fi Mockup",
+        "phaseText": [
+          "I begin this phase with swapping all low-fidelity components with their high-fidelity counterparts, located in the design system I built inside Figma. Then, I tackle the new components necessary for the design that do not yet exist in the design system.",
+
+          "When styling a new component, I pay close attention to the established style rules. For example, in other views of ProRank, I followed a pattern: accordions = indigo; decorative icons = green;  create/new buttons = green. I put these rules into place because patterns aid the user with identifying and understanding the options they have on the screen. If all create/new buttons are green, the user will learn that green = create/new, thus making it easier for them to locate what they want to interact with."
+        ]
+      },
+      {
+        "phaseId": 3,
+        "phaseTitle": "Phase III: Design Critique",
+        "phaseText": [
+          "When I believe the design is ready for feedback, I inform the designated stakeholders. At ProRank, these stakeholders open the design in Figma and leave comments detailing questions, concerrns or required changes.",
+
+          "After addressing the feedback I received and getting approval, I schedule a design critique session with the stakeholders and the engineering team. For these sessions, I create a Miro board with frames detailing the context of the design and what the goals of the session are. After reviewing the context and goals with attendees, I set a timer and give everyone time to process the designs and add sticky notes under positive feedback, ideas and concerns buckets. Once the timer is up, I walk through each sticky note with the team, allowing all attendees to present ideas for the sticky note. The session is wrapped up by establishing action items. In the following days, I implement all action items and get a final approval"
+        ]
+      }
+    ]
+  }
+]
