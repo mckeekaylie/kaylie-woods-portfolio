@@ -1,7 +1,7 @@
 @use "../../../public/assets/sass/variables" as vars;
 
 .my-ux-process {
-  background-image: url(../../../public/assets/bkgd-my-approach.png);
+  background-image: url(../../../public/assets/images/my-approach/bkgd-my-approach.png);
   background-position: 10% 20%;
   background-size: cover;
   width: 100%;
@@ -51,7 +51,7 @@
 }
 
 .my-approach-footer {
-  background-image: url(../../../public/assets/my-approach-footer.png);
+  background-image: url(../../../public/assets/images/my-approach/my-approach-footer.png);
   background-position: 10% 20%;
   background-size: cover;
   height: 48vh;
@@ -61,7 +61,7 @@
 /* XXL screens */
 @media (min-width: 1400px) {
   .node-wave {
-    background-image: url(../../../public/assets/node-wave.png);
+    background-image: url(../../../public/assets/images/my-approach/node-wave.png);
     background-size: cover;
     background-position: 10% 20%;
     height: 60vh;
@@ -73,7 +73,7 @@
 /* LG XL screens */
 @media (min-width: 992px) and (max-width: 1399px) {
   .node-wave {
-    background-image: url(../../../public/assets/node-wave.png);
+    background-image: url(../../../public/assets/images/my-approach/node-wave.png);
     background-size: cover;
     background-position: 50% 20%;
     height: 52vh;
@@ -85,7 +85,7 @@
 /* SM MD Screens */
 @media (max-width: 991.99px) {
   .node-wave {
-    background-image: url(../../../public/assets/node-wave.png);
+    background-image: url(../../../public/assets/images/my-approach/node-wave.png);
     background-size: cover;
     background-position: 70% 20%;
     height: 40vh;
@@ -115,7 +115,7 @@
 /* XS screens */
 @media (max-width: 575.99px) {
   .node-wave {
-    background-image: url(../../../public/assets/node-wave.png);
+    background-image: url(../../../public/assets/images/my-approach/node-wave.png);
     background-size: cover;
     background-position: 70% 20%;
     height: 38vh;

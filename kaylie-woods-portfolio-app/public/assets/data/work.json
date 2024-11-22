@@ -8,15 +8,15 @@
         "id": 1,
         "title": "Year in Review",
         "description": "This is a presentation I put together explaining the highlights of my design and engineering work during my year at ProRank.",
-        "link": "assets/102824_KaylieWoods_ProRank Highlights.pdf",
-        "imgSrc": "assets/yearInReview.jpg"
+        "link": "assets/images/my-work/prorank/kw-pr-year-in-review.pdf",
+        "imgSrc": "assets/images/my-work/prorank/yearInReview.jpg"
       },
       {
         "id": 2,
         "title": "UX Docs",
         "description": "UX Docs is a compilation of letter-sized Figma frames that I put together in hopes of providing a simple, yet helpful resource for all things user interface. It details the color palette, font sizes, font colors, and even the CSS required for common UI Elements.",
-        "link": "assets/UX Docs.pdf",
-        "imgSrc": "assets/ux-docs-card-img.png"
+        "link": "assets/images/my-work/prorank/ux-docs.pdf",
+        "imgSrc": "assets/images/my-work/prorank/ux-docs-card-img.png"
       },
       {
         "id": 3,
@@ -36,7 +36,7 @@
         "title": "Export View Data",
         "description": "A feature I developed with Ember & TypeScript that exports the data from selected views and selected columns inside Analytics UI as a CSV file or PDF. This file is sent to the user's inbox inside Genesys Cloud.",
         "link": "https://help.mypurecloud.com/articles/export-view-data/",
-        "img": "assets/Export View Data.png",
+        "img": "assets/images/my-work/genesys/export-view-data.png",
         "imgAltTxt": "Icon of a text document"
       },
       {
@@ -44,7 +44,7 @@
         "title": "Conversation Data Model",
         "description": "An epic I comtributed to in which analytics metrics were applied to conversation records.",
         "link": "https://developer.genesys.cloud/analyticsdatamanagement/analytics/detail/conversation-data-model",
-        "img": "assets/Conversation Record.png",
+        "img": "assets/images/my-work/genesys/conversation-record.png",
         "imgAltTxt": "Icon of a call center agent wearing a headset"
       },
       {
@@ -53,7 +53,7 @@
         "description": "Two new views I developed with Ember & TypeScript in Analytics UI where the user can see current and past metrics and data for queues.",
         "link": "https://help.mypurecloud.com/articles/queues-performance-summary-view/",
         "link2": "https://help.mypurecloud.com/articles/queue-performance-detail-view/",
-        "img": "assets/Queue Performance.png",
+        "img": "assets/images/my-work/genesys/queue-performance.png",
         "imgAltTxt": "Icon of a line chart"
       }
     ]
@@ -70,7 +70,7 @@
         "description": "As the UI/UX Developer on the GoGoMeds team at TCC Solutions, I was responsible for the HTML & CSS of new pages and features. I also resolved front-end bugs, updated content, and audited pages for Section 508 compliance and responsiveness to screen size. I led the design effort and client-side code for rebuilding the client in a blank-slate repository.",
         "link": "https://www.gogomeds.com/",
         "linkTxt": "gogomeds.com",
-        "img": "assets/ggm.png",
+        "img": "assets/images/my-work/tcc/ggm.png",
         "imgAltTxt": "Screenshot of gogomeds.com, circa 2022"
       },
       {
@@ -79,7 +79,7 @@
         "description": "When I first joined the NJCCIS team at TCC Solutions, I served as UI/UX Developer, auditing code for any user experience, screen size or accessibility discrepancies. I expressed interest in learning the back-end and tackling full-stack tasks. The team architect helped me get going with C# and SQL. Shortly after, I was tackling full-stack features sprint-to-sprint.",
         "link": "https://www.njccis.com/",
         "linkTxt": "njccis.com",
-        "img": "assets/njccis.png",
+        "img": "assets/images/my-work/tcc/njccis.png",
         "imgAltTxt": "Screenshot of njccis.com, circa 2022"
       },
       {
@@ -88,7 +88,7 @@
         "description": "As the UI/UX Developer on the Meck Pre-K team at TCC Solutions, I was responsible for the HTML and CSS of new features. Additionally, I reviewed pull requests to ensure usability, Section 508 compliance, responsiveness to screen size, and consistency with the style guide.",
         "link": "https://ascend.meckprek.com/ecds/home",
         "linkTxt": "ascend.meckprek.com",
-        "img": "assets/meck.png",
+        "img": "assets/images/my-work/tcc/meck.png",
         "imgAltTxt": "Screenshot of meckprek.com, circa 2022"
       },
       {
@@ -97,7 +97,7 @@
         "description": "I was the developer at TCC Software Solutions in charge of any changes needed to the company website. This included coding the Secure Virtual Desktop page in ASP.Net Razor Pages based off a provided wireframe and implementing content updates. Secure Virtual Desktop, and the iteration of e-tcc.com that I worked on, is now deprecated.",
         "link": "https://www.e-tcc.com/",
         "linkTxt": "e-tcc.com",
-        "img": "assets/tcc.png",
+        "img": "assets/images/my-work/tcc/tcc.png",
         "imgAltTxt": "Screenshot of e-tcc.com, Secure Virtual Desktop page, circa 2022"
       }
     ]
