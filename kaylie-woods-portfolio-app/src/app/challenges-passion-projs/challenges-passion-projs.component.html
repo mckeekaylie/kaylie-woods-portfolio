@@ -3,17 +3,32 @@
     <div class="row border-top pt-4">
       <h2 class="text-blue-violet">Challenges & Other Projects</h2>
     </div>
+
     <div class="row mt-4">
       <ng-container *ngFor="let example of challengesProjs$ | async">
         <div class="col-lg">
             <div class="card h-100" [ngClass]="
             {
-              'card-aqua':  example.id === 1, 
-              'card-spring-green': example.id === 2
+              'card-spring-green': example.id === 1,
+              'card-aqua':  example.id === 2, 
+              'card-blue-violet': example.id === 3
             }">
                 <img src="{{example.image}}" class="card-img-top" alt="">
                 <div class="card-body">
-                  <h5 class="card-title">{{example.title}}</h5>
+                  <h5 class="card-title m-0">{{example.title}}</h5>
+                  <!--FRAMEWORK ICONS-->
+                  <ng-container *ngIf="example.id === 1">
+                    <div class="d-flex my-2">
+                      <img src="assets/images/logos/react.png" class="framework-icon m-2" alt="React logo">
+                      <img src="assets/images/logos/nextjs.png" class="framework-icon m-2" alt="Next.js logo">
+                    </div>
+                  </ng-container>
+                  <ng-container *ngIf="example.id !== 1">
+                    <div class="my-2">
+                      <img src="assets/images/logos/angular_gradient.png" class="framework-icon" alt="Angular logo">
+                    </div>
+                  </ng-container>
+                  <!--EXAMPLE DESCRIPTION-->
                   <p class="card-text">{{example.description}}</p>
                 </div>
                 <a href="{{example.link}}" 

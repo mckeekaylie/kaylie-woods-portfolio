@@ -1,16 +1,23 @@
 [
   {
     "id": 1,
-    "title": "Employee App",
-    "description": "This angular application requests an array of employees from a json file, then populates a table with employee information. The table can be filtered by name and sorted by name and id. Clicking an employee's name routes to a detail view for the selected employee.",
-    "link": "https://kw-angular-employees-app.netlify.app/",
-    "image": "assets/employees-app.png"
+    "title": "The Planets of Star Wars",
+    "description": "This React 19.0.0/Next.js 15.0.3 (+TypeScript & Sass) application utilizes SWR to fetch planet data from SWAPI (Star Wars API). The api response is then utilized to render a home page and a detail page (for a selected planet). Additionally, I wrote unit tests for both the detail and home pages with Jest and react-router-dom.",
+    "link": "https://kw-the-planets-of-star-wars.netlify.app/",
+    "image": "assets/images/my-work/challenges/swapi-app.png"
   },
   {
     "id": 2,
+    "title": "Employee App",
+    "description": "This Angular 18 application requests an array of employees from a json file, then populates a table with employee information. The table can be filtered by name and sorted by name and id. Clicking an employee's name routes to a detail view for the selected employee.",
+    "link": "https://kw-angular-employees-app.netlify.app/",
+    "image": "assets/images/my-work/challenges/employees-app.png"
+  },
+  {
+    "id": 3,
     "title": "Contact Book",
-    "description": "This angular application requests an array of contacts from a serverless function built with Netlify edge functions & express.js. Once the angular service receives a response, the response is referenced to populate the panel with all contacts, then the profile with the applied contact.",
+    "description": "This Angular 18 application requests an array of contacts from a serverless function built with Netlify edge functions & express.js. Once the Angular service receives a response, the response is referenced to populate the panel with all contacts, then the profile with the applied contact.",
     "link": "https://kw-contact-book-angular.netlify.app/",
-    "image": "assets/address-book.png"
+    "image": "assets/images/my-work/challenges/address-book.png"
   }
 ]
