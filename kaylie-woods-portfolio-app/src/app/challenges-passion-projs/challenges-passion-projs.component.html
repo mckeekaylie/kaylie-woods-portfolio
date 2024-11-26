@@ -2,6 +2,7 @@
 <div class="container mt-5">
     <div class="row border-top pt-4">
       <h2 class="text-blue-violet">Challenges & Other Projects</h2>
+      <p>A collection of challenges and projects I completed independently to manifest my expertise in front-end engineering.</p>
     </div>
 
     <div class="row mt-4">
@@ -16,6 +17,9 @@
                 <img src="{{example.image}}" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title m-0">{{example.title}}</h5>
+                  <div class="my-3">
+                    <a href="{{example.github}}" target="_blank">GitHub Repository</a>
+                  </div>
                   <!--FRAMEWORK ICONS-->
                   <ng-container *ngIf="example.id === 1">
                     <div class="d-flex my-2">

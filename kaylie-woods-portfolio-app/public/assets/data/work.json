@@ -2,7 +2,7 @@
   {
     "employer": "ProRank",
     "role": "Design Engineer",
-    "description": "ProRank is a startup seeking to transform talent acquisition in healthcare. I joined as Angular Developer, developing front-end features and enhancements, but as time progressed, I assumed responsibility for UX and UI design and front-end developer mentorship in addition to angular development. I was a key voice in the ideation discussions behind MVP and I brought these discussions to fruition in wireframes and hi-fidelity mockups. Once the designs were approved, I tackled the angular development required to bring them to life in the product. These efforts established ProRank’s new look and the direction of the product, which led to the signing of ProRank’s first client.",
+    "description": "ProRank is a startup seeking to transform talent acquisition in healthcare. In September 2023, I started at ProRank as the sole Angular Developer on the team. I was accountable for implementing front-end features and enhancements with Angular 16. As time progressed, I eagerly assumed responsibility for UX and UI design and front-end developer mentorship. I was a key voice in the ideation discussions behind MVP and I brought these discussions to fruition in wireframes and high-fidelity mockups. Once the designs were approved, I tackled the Angular development required to bring them to life in the product. My design and engineering efforts during MVP established ProRank’s new look and the direction of the product, which led to the signing of ProRank’s first client.",
     "workExamples": [
       {
         "id": 1,
@@ -29,7 +29,7 @@
   {
     "employer": "Genesys",
     "role": "Software Engineer, Analytics UI",
-    "description": "Genesys Cloud develops call center and customer service software, driven by empathy. The Analytics UI team develops views where managers can go and see various analytics and graphics that relay call center agent productivity. I was a software engineer responsible for developing new views and features for Analytics UI.",
+    "description": "Genesys develops call center and customer service software, driven by empathy. The Analytics UI team builds and maintains a series of views in which call center managers review various analytics and charts that relay the productivity of their agents. From spring 2022 to fall 2023, I was a software engineer on the Analytics UI team, tasked with implementing new views and features with Ember.js and TypeScript. Prior to opening a pull request, I was required to write integration and unit tests for the code I added, utilizing Ember’s built-in testing functionality and QUnit.",
     "workExamples": [
       {
         "id": 1,
@@ -67,7 +67,7 @@
       {
         "id": 1,
         "title": "GoGoMeds",
-        "description": "As the UI/UX Developer on the GoGoMeds team at TCC Solutions, I was responsible for the HTML & CSS of new pages and features. I also resolved front-end bugs, updated content, and audited pages for Section 508 compliance and responsiveness to screen size. I led the design effort and client-side code for rebuilding the client in a blank-slate repository.",
+        "description": "GoGoMeds is an online pharmacy laser-focused on leveraging technology to make prescription medicine low-cost and stress free. In 2020, GoGoMeds underwent a redesign and it was my responsibility to update Angular components to reflect the mockups provided to me. From 2020-2022, I continuously audited the user interface, focusing on the user experience, the presentation of the UI, mobile performance, and adherence to Section 508/WCAG guidelines. From 2021-2022, I took the lead on redesigning the GoGoMeds portal in Adobe XD and converting the front-end to Angular 14 in a new repository.",
         "link": "https://www.gogomeds.com/",
         "linkTxt": "gogomeds.com",
         "img": "assets/images/my-work/tcc/ggm.png",
@@ -76,7 +76,7 @@
       {
         "id": 2,
         "title": "NJCCIS",
-        "description": "When I first joined the NJCCIS team at TCC Solutions, I served as UI/UX Developer, auditing code for any user experience, screen size or accessibility discrepancies. I expressed interest in learning the back-end and tackling full-stack tasks. The team architect helped me get going with C# and SQL. Shortly after, I was tackling full-stack features sprint-to-sprint.",
+        "description": "NJCCIS is a government-run organization for families in New Jersey seeking childcare. In 2022, I was responsible for implementing full-stack features with Angular 6, ASP.NET Core, C#, and Microsoft SQL Server. Additionally, I resolved bugs across the stack and frequently analyzed the user interface to detect hindrances to the user experience, front-end defects,  and any breaches of Section 508/WCAG guidelines.",
         "link": "https://www.njccis.com/",
         "linkTxt": "njccis.com",
         "img": "assets/images/my-work/tcc/njccis.png",
@@ -85,7 +85,7 @@
       {
         "id": 3,
         "title": "Meck Pre-K",
-        "description": "As the UI/UX Developer on the Meck Pre-K team at TCC Solutions, I was responsible for the HTML and CSS of new features. Additionally, I reviewed pull requests to ensure usability, Section 508 compliance, responsiveness to screen size, and consistency with the style guide.",
+        "description": "Meck Pre-K is a Pre-Kindergarten Program for families in North Carolina. In 2020, I was responsible for coding the layout and design of new features with Angular 6 and PrimeNG. As part of the code review process, I tested the pull request by running the code in different browsers and different screen sizes, taking note of any defects. Then, I ran the code through a series of Section 508/WCAG tests. After my initial review, I presented my findings to the designated software engineer, who would address them. Upon resolution, I approved the code for deployment to ST for quality assurance.",
         "link": "https://ascend.meckprek.com/ecds/home",
         "linkTxt": "ascend.meckprek.com",
         "img": "assets/images/my-work/tcc/meck.png",
@@ -94,7 +94,7 @@
       {
         "id": 4,
         "title": "TCC Company Website",
-        "description": "I was the developer at TCC Software Solutions in charge of any changes needed to the company website. This included coding the Secure Virtual Desktop page in ASP.Net Razor Pages based off a provided wireframe and implementing content updates. Secure Virtual Desktop, and the iteration of e-tcc.com that I worked on, is now deprecated.",
+        "description": " In addition to client projects, one of my responsibilities was maintaining TCC’s website by adding or removing content as needed through ASP.NET Razor Pages. In 2021, I implemented the Secure Virtual Desktop page (now deprecated) based on a provided mockup.",
         "link": "https://www.e-tcc.com/",
         "linkTxt": "e-tcc.com",
         "img": "assets/images/my-work/tcc/tcc.png",
