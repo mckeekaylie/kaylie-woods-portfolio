@@ -1,17 +1,17 @@
 <!--CONTENT-->
 <div class="container-fluid p-0">
   <!-- HELLO -->
-  <div class="hello">
-    <div class="w-100 h-100 introWrapper">
+  <div class="hello-wrapper">
+    <div class="w-100 h-100 hello-inner-content">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 id="line1">Hello,</h2>
+            <h2>Hello,</h2>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <h1 id="line2">I'm <span>Kaylie.</span></h1>
+            <h1>I'm <span>Kaylie.</span></h1>
           </div>
         </div>
         <div class="row">
@@ -24,49 +24,58 @@
             <div class="row">
               <div class="d-flex justify-content-center">
                 <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
-                  <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2">
+                  <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2"
+                    alt="LinkedIn logo">
                 </a>
                 <a href="https://github.com/mckeekaylie" target="blank">
-                  <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2">
+                  <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2" alt="GitHub logo">
                 </a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-  <!--MY JOURNEY-->
-  <div class="container-fluid my-journey pt-4">
-    <div class="row px-5">
-      <div class="col-md p-0">
-        <h1 class="text-spring-green">My Journey</h1>
-      </div>
+  <!-- MY JOURNEY -->
+  <div class="row g-0">
+    <div class="col-md-3 col-lg-2 p-0">
+      <div class="journey-border-left d-none d-md-block"></div>
     </div>
-    <div class="row mt-3 px-5 pb-5">
-      <div class="col-lg-8 para-col">
+    <div class="col-md-9 col-lg-8 align-self-center">
+      <div class="journey-text-wrapper">
+        <h1 class="text-blue-violet">My Journey</h1>
         <p>{{myJourneyTxt.para1}}</p>
         <p>{{myJourneyTxt.para2}}</p>
         <p>{{myJourneyTxt.para3}}</p>
         <p>{{myJourneyTxt.para4}}</p>
       </div>
-      <div class="col-lg-4 text-center">
-        <img src="assets/images/home/my-journey-graphic.svg" class="img-fluid" alt="My unique combination of creativity
-          and technical ability allows me to bridge 
-          the gap between designers and engineers while
-          producing high-quality designs and code.">
+    </div>
+    <div class="col-lg-2 p-0">
+      <div class="journey-border-right d-none d-lg-block"></div>
+    </div>
+  </div>
+  <!-- MY SKILLS -->
+  <div class="container-fluid charcoal-bkgd py-4 px-0">
+    <div class="row m-4">
+      <div class="col">
+        <h1 class="text-spring-green">My Skills</h1>
+        <p class="text-white">
+          {{skillsTxt.skillsDesc}}
+        </p>
       </div>
     </div>
-    <div class="text-white p-5">
+
+    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid" alt="blue violet node lines">
+
+    <div class="text-white skills-wrapper">
       <!--IDEATE-->
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
             <div>
-              <h1>Ideate</h1>
+              <h1 class="text-aqua">Ideate</h1>
               <p>
                 {{skillsTxt.ideateDesc}}
               </p>
@@ -84,9 +93,9 @@
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
             <div>
-              <h1>Design</h1>
+              <h1 class="text-aqua">Design</h1>
               <p>
                 {{skillsTxt.designDesc}}
               </p>
@@ -105,9 +114,9 @@
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
             <div>
-              <h1>Develop</h1>
+              <h1 class="text-aqua">Develop</h1>
               <p>
                 {{skillsTxt.developDesc}}
               </p>
@@ -122,5 +131,9 @@
         </div>
       </div>
     </div>
+
+    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid flip-img"
+      alt="blue violet node lines">
+
   </div>
 </div>

@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { MyWorkService, myJobs } from '../services/my-work.service';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from '../nav/nav.component';
-import { FooterComponent } from '../footer/footer.component';
 import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
 
 @Component({

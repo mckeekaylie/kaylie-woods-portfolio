@@ -6,10 +6,8 @@ export enum MyJourney {
 }
 
 export enum skills {
+    skillsDesc = "As a versatile engineer who is equally as adept at design as engineering, my skillset spans the entire process of building user interfaces. I like to break my skills into 3 buckets: Ideate, Design and Develop.",
     ideateDesc = "The skills behind my ability to determine solutions to a problem by gathering pertinent information, receiving user/stakeholder input, conducting adequate research, and participation in or ownership of ideation/discovery.",
-    ideateSkills = "Empathizing with and understanding the user (Users First!, User Flows & User Personas, UX Writing, Information Architecture, UX “Laws” & Best Practices, HCI and Psychology Insight",
     designDesc = "The skills behind my ability to bring the results of the discovery/ideation phase to fruition in wireframes, mockups and prototypes in addition to my ability to create or optimize any visuals required for the design.",
-    designSkills = "Visual Design, Design Technologies Expert (Strongest familiarity with Figma & Adobe Creative Cloud), Wireframes & Prototypes, High-Fidelity Mockups, Data Visualization, Design Systems, Style Guides, Color Palettes, Typography, Creating & Optimizing photos, videos and graphics to meet the needs of the application.",
     developDesc = "The skills behind my ability to translate a mockup into a fully-functional user interface.",
-    developSkills = "Angular 18 & React 19, Next.js, JavaScript/TypeScript, HTML 5 & CSS 3, CSS Frameworks, Responsive CSS & Design, CSS Animations, Sass, Reactive Programming with RxJS & SWR, RESTful API Architecture & Development, API Platforms (Postman), Server & Middleware Development with Node.js + Express.js, Integration & Unit Testing with Jest, Karma or QUnit, Version Control with Git & GitHub, Section 508 / WCAG 2.2 compliance"
 } 

@@ -3,7 +3,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { MyWorkComponent } from '../my-work/my-work.component';
 import { MyJourney, skills } from '../../enum';
 import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
-import { SplitPipe } from '../pipes/split.pipe';
 import { HomeService } from '../services/home.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -16,7 +15,6 @@ import { CommonModule } from '@angular/common';
     RouterOutlet,
     MyWorkComponent,
     ChallengesPassionProjsComponent,
-    SplitPipe,
     CommonModule
   ],
   templateUrl: './home.component.html',
@@ -27,6 +25,7 @@ export class HomeComponent implements OnInit {
   skillsTxt = skills;
 
   onDestroy$: Subject<void> = new Subject();
+  
   ideateSkills$ = new BehaviorSubject<string[]>([]);
   designSkills$ = new BehaviorSubject<string[]>([]);
   developSkills$ = new BehaviorSubject<string[]>([]);
@@ -43,5 +42,10 @@ export class HomeComponent implements OnInit {
             this.developSkills$.next(data.develop);
           }
         );
+  }
+
+  ngOnDestroy() {
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
   }
 }
