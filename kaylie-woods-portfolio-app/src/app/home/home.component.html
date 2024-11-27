@@ -26,9 +26,9 @@
                 <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
                   <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2">
                 </a>
-                  <a href="https://github.com/mckeekaylie" target="blank">
-                    <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2">
-                  </a>
+                <a href="https://github.com/mckeekaylie" target="blank">
+                  <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2">
+                </a>
               </div>
             </div>
           </div>
@@ -51,28 +51,76 @@
         <p>{{myJourneyTxt.para2}}</p>
         <p>{{myJourneyTxt.para3}}</p>
         <p>{{myJourneyTxt.para4}}</p>
-        <p>{{myJourneyTxt.para5}}</p>
-        <p>{{myJourneyTxt.para6}}</p>
       </div>
       <div class="col-lg-4 text-center">
-        <img src="assets/images/home/my-journey-graphic.svg"
-          class="img-fluid" 
-          alt="My unique combination of creativity
+        <img src="assets/images/home/my-journey-graphic.svg" class="img-fluid" alt="My unique combination of creativity
           and technical ability allows me to bridge 
           the gap between designers and engineers while
-          producing high-quality designs and code."
-        >
+          producing high-quality designs and code.">
+      </div>
     </div>
+    <div class="text-white p-5">
+      <!--IDEATE-->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="d-flex align-items-start">
+            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <div>
+              <h1>Ideate</h1>
+              <p>
+                {{skillsTxt.ideateDesc}}
+              </p>
+              <div class="mb-2" *ngFor="let skill of ideateSkills$ | async">
+                <div class="d-flex">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  {{skill}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--DESIGN-->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="d-flex align-items-start">
+            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <div>
+              <h1>Design</h1>
+              <p>
+                {{skillsTxt.designDesc}}
+              </p>
+              <div class="mb-2" *ngFor="let skill of designSkills$ | async">
+                <div class="d-flex">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  {{skill}}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--DEVELOP-->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="d-flex align-items-start">
+            <img src="assets/images/home/right-chevron.svg" class="chevron">
+            <div>
+              <h1>Develop</h1>
+              <p>
+                {{skillsTxt.developDesc}}
+              </p>
+              <div class="mb-2" *ngFor="let skill of developSkills$ | async">
+                <div class="d-flex">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  {{skill}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!--LinkedIn Banner-->
-  <div class="container-fluid p-0">
-    <img src="assets/images/home/kw-linkedin-banner.png" class="w-100">
-  </div>
-
-  <!--Skill Graphic-->
-  <div class="container-fluid p-0">
-    <img src="assets/images/home/my-skills-graphic.png" class="w-100">
   </div>
 </div>

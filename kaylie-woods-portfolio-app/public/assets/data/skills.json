@@ -1,0 +1,37 @@
+{
+    "ideate": [
+        "Empathizing with and understanding the user (Users First!", 
+        "User Flows & User Personas", 
+        "UX Writing", 
+        "Information Architecture", 
+        "UX “Laws” & Best Practices", 
+        "HCI and Psychology Insight"
+    ],
+    "design": [
+        "Visual Design",
+        "Design Technologies Expert (Strongest familiarity with Figma & Adobe Creative Cloud)",
+        "Wireframes & Prototypes",
+        "High-Fidelity Mockups",
+        "Data Visualization",
+        "Design Systems",
+        "Style Guides, Color Palettes, Typography",
+        "Creating & Optimizing photos, videos and graphics to meet the needs of the application."
+    ],
+    "develop": [
+        "Angular 18 & React 19",
+        "Next.js",
+        "JavaScript/TypeScript",
+        "HTML 5 & CSS 3",
+        "CSS Frameworks",
+        "Responsive CSS & Design",
+        "UI Animations",
+        "Sass",
+        "Reactive Programming with RxJS & SWR",
+        "RESTful API Architecture & Development",
+        "API Platforms (Postman)",
+        "Server & Middleware Development with Node.js + Express.js",
+        "Integration & Unit Testing with Jest, Karma or QUnit",
+        "Version Control with Git & GitHub",
+        "Section 508 / WCAG 2.2 compliance"
+    ]
+}
