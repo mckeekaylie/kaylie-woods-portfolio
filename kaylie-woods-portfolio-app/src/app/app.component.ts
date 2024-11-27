@@ -16,7 +16,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
   styleUrl: './app.component.scss',
   animations: [
     trigger('routeAnimation', [
-      transition('* <=> *', [animate('1s ease-in'), style({ opacity: 1 })]),
+      transition('* <=> *', [animate('4s ease-in'), style({ opacity: 1 })])
     ]),
   ],
 })

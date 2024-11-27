@@ -6,6 +6,7 @@ import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/cha
 import { HomeService } from '../services/home.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,14 @@ import { CommonModule } from '@angular/common';
     ChallengesPassionProjsComponent,
     CommonModule
   ],
+   animations: [
+    trigger('fadeIn', [
+      state('void', style({ opacity: 0.50 })),
+      transition('void => *', [ 
+        animate('1s ease-in')
+      ])
+    ])
+   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -33,6 +42,8 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) {}
 
   ngOnInit() {
+    window.scrollTo(0, 0);
+
     this.homeService
           .getSkills()
           .pipe(takeUntil(this.onDestroy$))
