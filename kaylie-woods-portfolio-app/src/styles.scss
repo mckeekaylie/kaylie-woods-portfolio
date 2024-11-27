@@ -27,6 +27,10 @@ h1 {
   color: vars.$springGreen !important;
 }
 
+.aqua-light-bkgd {
+  background-color: vars.$aquaLight;
+}
+
 .blue-violet-light-bkgd {
   background-color: vars.$blueVioletLight;
 }
@@ -35,8 +39,8 @@ h1 {
   background-color: vars.$springGreenLight;
 }
 
-.aqua-light-bkgd {
-  background-color: vars.$aquaLight;
+.charcoal-bkgd {
+  background-color: vars.$charcoal;
 }
 
 .border-aqua {

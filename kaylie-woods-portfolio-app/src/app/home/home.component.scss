@@ -1,7 +1,11 @@
 @use "../../../public/assets/sass/variables" as vars;
 
 /* HELLO */
-.introWrapper {
+.hello-wrapper {
+  height: 93vh;
+}
+
+.hello-inner-content {
   background-image: url(../../../public/assets/images/home/bkgd-home.png);
   background-position: 10% 20%;
   background-size: cover;
@@ -10,86 +14,145 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-#line1 {
-  color: white !important;
-  font-weight: 500;
-  font-size: 9.2rem;
-  line-height: 10rem;
-}
+  h2:nth-child(1){
+    color: white !important;
+    font-weight: 500;
+    font-size: 9.2rem;
+    line-height: 10rem;
+  }
+  
+  h1:nth-child(1){
+    margin-top: 0;
+    font-weight: 700;
+    color: white !important;
+    font-size: 10rem;
+    line-height: 9.5rem;
 
-#line2 {
-  margin-top: 0;
-  font-weight: 700;
-  color: white !important;
-  font-size: 10rem;
-  line-height: 9.5rem;
-}
+    span {
+      color: vars.$aqua;
+    }
+  }
 
-#line2 span {
-  color: vars.$aqua;
-}
+  p {
+    color: white;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 2.5rem 0;
+  }
 
-.introWrapper p {
-  color: white;
-  font-size: 2rem;
-  line-height: 1.5;
-  margin: 2.5rem 0;
-}
-
-.icon-button:hover {
-  transform: scale(1.25, 1.25);
-}
-
-.hello {
-  height: 93vh;
+  .icon-button:hover {
+    transform: scale(1.25, 1.25);
+  }
 }
 
 /* MY JOURNEY */
-.my-journey {
-  background-color: vars.$charcoal;
+.journey-border-left, .journey-border-right {
+    height: 100vh;
 }
 
-.para-col {
-  padding: 1rem 1rem 0 1rem;
-  border: 2px solid vars.$springGreen;
-  color: white;
+.journey-border-left {
+  background-image: url(../../../public/assets/images/home/my-journey-border-left.svg);
+  background-position: right;
+  background-size: cover;
 }
 
-.card {
-  border: none !important;
+.journey-border-right {
+  background-image: url(../../../public/assets/images/home/my-journey-border-right.svg);
+  background-position: left;
+  background-size: cover;
+}
+
+/* MY SKILLS */
+.list-item-hexagon {
+  width: 1.5rem;
 }
 
 /* MEDIA QUERIES */
 
-/* xs, sm, md screens */
-@media (max-width: 991.99px) {
-  #line1 {
-    font-size: 6rem;
-    line-height: 1;
-  }
-  #line2 {
-    font-size: 8rem;
-    line-height: 1;
+/* LG XL XXL SCREENS */
+@media(min-width: 992px) {
+  .journey-text-wrapper {
+    padding: 3rem;
   }
 }
 
-/* xs, sm screens */
+/* MD, LG, XL, XXL SCREENS */
+@media (min-width: 768px) {
+  .skills-wrapper {
+    margin: 2rem 4rem;
+
+    .chevron {
+      width: 12rem;
+    }
+  }
+}
+
+
+/* MD SCREENS */
+@media (min-width: 768px) and (max-width: 991.99px) {
+  .journey-text-wrapper {
+    padding: 2rem;
+  }
+}
+
+/* XS SM MD SCREENS */
+@media (max-width: 991.99px) {
+  .hello-inner-content {
+     h2:nth-child(1){
+      font-size: 6rem;
+      line-height: 1;
+    }
+
+    h1:nth-child(1){
+      font-size: 8rem;
+      line-height: 1;
+    }
+  }
+}
+
+/* XS SM SCREENS */
 @media (max-width: 767.99px) {
-  #line1 {
-    font-size: 4rem;
-    line-height: 1.1;
+  .journey-text-wrapper {
+    padding: 2rem;
   }
 
-  #line2 {
-    margin-top: 0;
-    font-size: 6rem;
-    line-height: 1.1;
-  }
+  .hello-inner-content {
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
 
-  .introWrapper p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    h2:nth-child(1) {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
+
+    h1:nth-child(1) {
+      margin-top: 0;
+      font-size: 6rem;
+      line-height: 1.1;
+    }
+  }
+}
+
+/* SM SCREENS */
+@media (min-width: 576px) and (max-width: 767.99px) {
+  .skills-wrapper {
+    margin: 2rem;
+    .chevron {
+      width: 8rem;
+    }
+  }
+}
+
+/* XS SCREENS */
+@media (max-width: 576.99px) {
+  .skills-wrapper {
+    margin: 1rem;
+    .chevron {
+      width: 4rem;
+      margin-right: 0.5rem;
+    }
   }
 }
