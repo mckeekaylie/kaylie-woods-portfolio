@@ -1,6 +1,6 @@
 {
     "ideate": [
-        "Empathizing with and understanding the user (Users First!", 
+        "Empathizing with and understanding the user (Users First!)", 
         "User Flows & User Personas", 
         "UX Writing", 
         "Information Architecture", 
@@ -15,7 +15,7 @@
         "Data Visualization",
         "Design Systems",
         "Style Guides, Color Palettes, Typography",
-        "Creating & Optimizing photos, videos and graphics to meet the needs of the application."
+        "Creating & Optimizing Visuals for Proper Rendering (incl. graphics, photos and videos)"
     ],
     "develop": [
         "Angular 18 & React 19",

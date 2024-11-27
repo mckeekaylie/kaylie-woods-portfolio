@@ -5,7 +5,8 @@
         <div style="max-width: 72vw;">
             <h4 class="text-white mt-4">
                 When approached with a design and/or user experience problem, I value coming to a solution
-                that is truthful and ethical, embraces human nature, and puts the user first. My endless pursuit of knowledge
+                that is truthful and ethical, embraces human nature, and puts the user first. My endless pursuit of
+                knowledge
                 and my emphasis on collaboration aids in my path to a decision.
             </h4>
         </div>
@@ -23,29 +24,31 @@
                     <!--LEFT COL-->
                     <div class="col-lg">
                         <p class="mb-0">{{section.text}}</p>
-                        <div class="card-spacer"></div>
+                        <div class="card-spacer d-none d-sm-block"></div>
                         <div *ngFor="let li of section.list; let i = index">
-                            <span class="list-text w-100" >{{li}}</span>
+                            <span class="list-text w-100">{{li}}</span>
                         </div>
                         <!--BOOK CARDS UNDER TEXT-->
                         <ng-container *ngIf="section.id === 2">
                             <div class="card-spacer"></div>
 
                             <div class="p-4 rounded card-book align-self-end">
-                                <img src="assets/images/my-approach/100things.jpg" class="w-25 rounded" alt="100 Things Every Designer Needs to Know About People cover">
-                
+                                <img src="assets/images/my-approach/100things.jpg" class="w-25 rounded"
+                                    alt="100 Things Every Designer Needs to Know About People cover">
+
                                 <div class="card-spacer d-lg-none"></div>
 
                                 <p class="px-4 mb-0">
                                     {{section.cardText}}
-                                </p> 
+                                </p>
                             </div>
                         </ng-container>
                         <ng-container *ngIf="section.id === 4">
                             <div class="card-spacer"></div>
                             <div class="p-4 rounded card-book align-self-end">
-                                <img src="assets/images/my-approach/refactoringUI.jpg" class="w-25 rounded" alt="Refactoring UI cover">
-    
+                                <img src="assets/images/my-approach/refactoringUI.jpg" class="w-25 rounded"
+                                    alt="Refactoring UI cover">
+
                                 <div class="card-spacer d-lg-none"></div>
 
                                 <p class="px-4 mb-0">{{section.cardText}}</p>
@@ -53,7 +56,7 @@
                             <div class="card-spacer d-lg-none"></div>
                         </ng-container>
                     </div>
-                    
+
                     <!--RIGHT COL-->
                     <div class="col-lg">
                         <ng-container *ngIf="section.id === 1">
@@ -62,35 +65,35 @@
                         <ng-container *ngIf="section.id === 4">
                             <ng-container *ngTemplateOutlet="passionKnowledge; context: { section }"></ng-container>
                         </ng-container>
-    
+
                         <div class="card-spacer d-lg-none"></div>
                         <ng-container *ngIf="section.id === 5 || section.id === 3 || section.id === 2">
-                            <div class="rounded p-4 aqua-light-bkgd"
-                                [ngClass]="
+                            <div class="rounded p-4 aqua-light-bkgd" [ngClass]="
                                 {
                                     'blue-violet-light-bkgd': section.id === 2,
                                     'aqua-light-bkgd': section.id ===3,
                                     'spring-green-light-bkgd': section.id === 5
-                                }"
-                            >
+                                }">
                                 <h5>{{section.quote}}</h5>
                                 <span>{{section.author}}</span>
                             </div>
                         </ng-container>
-                        <div class="card-spacer"></div>
+                        <div class="card-spacer d-none d-sm-block"></div>
                     </div>
                 </div>
             </div>
 
-             <!--WAVE SEPARATOR-->
-            <div class="node-wave" *ngIf="section.id !==5" [ngClass]="{'flip-img':  section.id === 2 || section.id === 4}"></div>
+            <!--WAVE SEPARATOR-->
+            <div class="node-wave" *ngIf="section.id !==5"
+                [ngClass]="{'flip-img':  section.id === 2 || section.id === 4}"></div>
         </ng-container>
 
         <!--TRUTH ETHICS-->
         <ng-template #truthEthics>
             <div class="card-spacer"></div>
             <div class="d-flex justify-content-evenly">
-                <img src="assets/images/my-approach/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo" class="truth-ethics-img">
+                <img src="assets/images/my-approach/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo"
+                    class="truth-ethics-img">
                 <img src="assets/images/my-approach/idf.jpg" alt="IDF Logo" class="truth-ethics-img">
             </div>
         </ng-template>
@@ -98,7 +101,8 @@
         <!--PASSION KNOWLEDGE-->
         <ng-template #passionKnowledge let-section="section">
             <div class="card">
-                <img src="assets/images/my-approach/lawsOfUxNotes.png" class="card-img-top" alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
+                <img src="assets/images/my-approach/lawsOfUxNotes.png" class="card-img-top"
+                    alt="A screenshot of my digital notebook highlighting what I learned while reading Laws of UX by Jon Yablonski.">
 
                 <div class="card-body">
                     <p class="card-text mb-0">{{section.cardTextRightCol}}</p>
