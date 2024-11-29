@@ -1,7 +1,7 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CaseStudiesService } from '../services/case-studies.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-case-studies',
@@ -15,18 +15,24 @@ export class CaseStudiesComponent implements OnDestroy {
 
   caseStudies$ = new BehaviorSubject<any>(null);
 
-  constructor(private caseStudiesService: CaseStudiesService) {}
+  @ViewChild('talentCommunities') sectionProrank!: ElementRef;
+
+  constructor(private caseStudiesService: CaseStudiesService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    this.viewportScroller.scrollToPosition([0, 0]);
+    this.viewportScroller.setOffset([0, 100]);
 
     this.caseStudiesService
       .getCaseStudies()
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((data) => {
         this.caseStudies$.next(data);
-        console.log(data);
       });
+  }
+
+  scrollToSection(section: string) {
+    this.viewportScroller.scrollToAnchor(section);
   }
 
   ngOnDestroy() {

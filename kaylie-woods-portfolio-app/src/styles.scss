@@ -114,6 +114,7 @@ h1 {
 }
 
 .jump-to-btn {
+  background-color: transparent;
   border: 2px solid vars.$springGreen;
   padding: 1rem 2rem;
   color: vars.$springGreen;
@@ -146,11 +147,6 @@ h1 {
 .card-spring-green {
   background-color: vars.$springGreenLight !important;
   border: transparent !important;
-}
-
-/* Target all elements with an id attribute */
-[id] {
-  scroll-margin-top: 4.375rem;
 }
 
 .flip-img {

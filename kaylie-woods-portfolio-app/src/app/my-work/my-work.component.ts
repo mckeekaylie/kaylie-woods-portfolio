@@ -29,8 +29,8 @@ export class MyWorkComponent {
   constructor(private myWorkService: MyWorkService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.viewportScroller.setOffset([0, 100]);
-    window.scrollTo(0, 0);
     
     this.myWorkService
       .getMyJobs()

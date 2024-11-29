@@ -4,7 +4,7 @@ import {
   MyApproachService,
 } from '../services/my-approach.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'ux-process',
@@ -17,10 +17,10 @@ export class UxProcessComponent {
   onDestroy$: Subject<void> = new Subject();
 
   myApproachData$ = new BehaviorSubject<MyApproachSections[] | null>(null);
-  constructor(private myApproachService: MyApproachService) {}
+  constructor(private myApproachService: MyApproachService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    this.viewportScroller.scrollToPosition([0, 0]);
 
     this.myApproachService
       .getMyApproach()
