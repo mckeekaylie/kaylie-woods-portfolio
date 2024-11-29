@@ -1,31 +1,34 @@
 <div class="container-fluid p-0">
   <!-- MY WORK -->
-  <div class="my-work">
-    <div class="w-100 h-100 my-work-bkgd">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1>My Work</h1>
+  <section id="sectionHero">
+    <div class="my-work">
+      <div class="w-100 h-100 my-work-bkgd">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>My Work</h1>
+            </div>
           </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col">
-            <div class="d-flex flex-wrap justify-content-center">
-              <a href="my-work#prorank" class="jump-to-btn m-3">ProRank</a>
-              <a href="my-work#genesys" class="jump-to-btn m-3">Genesys</a>
-              <a href="my-work#tcc" class="jump-to-btn m-3">TCC</a>
-              <a href="my-work#challenges" class="jump-to-btn m-3">Challenges & Other Projects</a>
+          <div class="row mt-4">
+            <div class="col">
+              <div class="d-flex flex-wrap justify-content-center">
+                <a (click)="scrollToSection('sectionProrank')" class="jump-to-btn m-3">ProRank</a>
+                <a (click)="scrollToSection('sectionGenesys')" class="jump-to-btn m-3">Genesys</a>
+                <a (click)="scrollToSection('sectionTcc')" class="jump-to-btn m-3">TCC</a>
+                <a (click)="scrollToSection('sectionChallenges')" class="jump-to-btn m-3">Challenges & Other
+                  Projects</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 <div class="container">
   <!--PRORANK-->
-  <div id="prorank">
+  <section id="sectionProrank">
     <div class="row mt-4">
       <div class="col">
         <h2 class="text-blue-violet">{{proRank.employer}}</h2>
@@ -141,10 +144,10 @@
         </ng-container>
       </ng-container>
     </div>
-  </div>
+  </section>
 
   <!-- GENESYS -->
-  <div id="genesys">
+  <section id="sectionGenesys">
     <div class="row border-top mt-5">
       <div class="mt-4">
         <h2 class="text-blue-violet">{{genesys.employer}}</h2>
@@ -179,10 +182,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!--TCC-->
-  <div id="tcc">
+  <section id="sectionTcc">
     <div class="row border-top mt-5">
       <div class="mt-4">
         <h2 class="text-blue-violet">{{tcc.employer}}</h2>
@@ -238,12 +241,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!--CHALLENGES PROJECTS-->
-  <div id="challenges">
+  <section id="sectionChallenges">
     <challenges-passion-projs></challenges-passion-projs>
-  </div>
+  </section>
 </div>
 
 <!--LINE ART IMG-->

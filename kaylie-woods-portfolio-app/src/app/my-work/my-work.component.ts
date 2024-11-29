@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { MyWorkService, myJobs } from '../services/my-work.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
 
 @Component({
@@ -21,10 +21,16 @@ export class MyWorkComponent {
   genesys = {} as myJobs;
   tcc = {} as myJobs;
 
-  constructor(private myWorkService: MyWorkService) {}
+  @ViewChild('prorank') sectionProrank!: ElementRef;
+  @ViewChild('genesys') sectionGenesys!: ElementRef;
+  @ViewChild('tcc') sectionTcc!: ElementRef;
+  @ViewChild('challenges') sectionChallenges!: ElementRef;
+
+  constructor(private myWorkService: MyWorkService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-      window.scrollTo(0, 0);
+    this.viewportScroller.setOffset([0, 100]);
+    window.scrollTo(0, 0);
     
     this.myWorkService
       .getMyJobs()
@@ -43,6 +49,10 @@ export class MyWorkComponent {
           data.find((item) => item.employer === 'TCC Solutions'),
         );
       });
+  }
+
+  scrollToSection(section: string) {
+    this.viewportScroller.scrollToAnchor(section);
   }
 
   ngOnDestroy() {

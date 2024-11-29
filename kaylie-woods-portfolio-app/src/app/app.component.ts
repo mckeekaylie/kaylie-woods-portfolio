@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
   imports: [
     NavComponent,
     FooterComponent,
-    RouterModule
+    RouterModule,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -22,10 +24,21 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 
 export class AppComponent {
-  constructor(private router: Router) {}
+  showScrollButton = false;
+
+  constructor(private router: Router, private viewportScroller: ViewportScroller) {}
   title = 'kaylie-woods-portfolio-app';
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollButton = window.scrollY > 1000;
+  }
 
   getRouteAnimationData() {
     return this.router.url;
+  }
+
+  scrollToTop() {
+    this.viewportScroller.scrollToPosition([0, 0]);
   }
 }

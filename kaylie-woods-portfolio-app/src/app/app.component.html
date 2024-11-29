@@ -1,7 +1,11 @@
 <app-nav></app-nav>
 
 <div [@routeAnimation]="getRouteAnimationData()" style="min-height: 93vh;">
-  <router-outlet ></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 
 <app-footer></app-footer>
+
+<button class="to-top-btn" (click)="scrollToTop()" *ngIf="showScrollButton">
+  <img src="assets/images/my-work/chevrons-up.svg" class="img-fluid">
+</button>

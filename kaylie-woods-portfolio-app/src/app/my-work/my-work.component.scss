@@ -56,8 +56,12 @@
   background-color: vars.$aquaLight;
 }
 
-@media (min-width: 1200px) {
+.genesys-card-row {
+  margin: 0 4rem;
+}
+
+@media (max-width: 575.99px) {
   .genesys-card-row {
-    margin: 0 4rem;
+    margin: 0 3rem;
   }
 }

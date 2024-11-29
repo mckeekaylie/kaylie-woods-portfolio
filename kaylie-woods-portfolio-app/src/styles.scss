@@ -95,6 +95,24 @@ h1 {
   height: 1.3rem;
 }
 
+.to-top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: transparent;
+  border-radius: 50%;
+  background-color: vars.$pewter;
+  float: right;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+  padding: 1rem;
+}
+
 .jump-to-btn {
   border: 2px solid vars.$springGreen;
   padding: 1rem 2rem;
