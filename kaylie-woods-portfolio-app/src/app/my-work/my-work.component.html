@@ -145,15 +145,16 @@
 
   <!-- GENESYS -->
   <div id="genesys">
-    <div class="row border-top mt-5 mb-3">
-      <div class="mt-3">
+    <div class="row border-top mt-5">
+      <div class="mt-4">
         <h2 class="text-blue-violet">{{genesys.employer}}</h2>
         <h4 class="fw-light">{{genesys.role}}</h4>
         <p>{{genesys.description}}</p>
       </div>
+      <div class="spacer"></div>
     </div>
-    <div class="row">
-      <div class="col mx-5 mb-3">
+    <div class="row genesys-card-row">
+      <div class="col">
         <div class="row row-cols-1 row-cols-md-3">
           <ng-container *ngFor="let example of genesys.workExamples">
             <div class="col">
@@ -182,56 +183,58 @@
 
   <!--TCC-->
   <div id="tcc">
-    <div class="row border-top mt-4">
+    <div class="row border-top mt-5">
       <div class="mt-4">
         <h2 class="text-blue-violet">{{tcc.employer}}</h2>
         <h4 class="fw-light">{{tcc.role}}</h4>
         <p>{{tcc.description}}</p>
+      </div>
 
-        <div class="container-fluid p-0 mt-4">
-          <div class="row g-0" *ngFor="let example of tcc.workExamples; let i = index; let even = even">
-            <ng-container *ngIf="even">
+      <div class="spacer"></div>
+
+      <div class="container-fluid p-0">
+        <div class="row g-0" *ngFor="let example of tcc.workExamples; let i = index; let even = even">
+          <ng-container *ngIf="even">
+            <ng-container *ngTemplateOutlet="tccCardImgCol"></ng-container>
+            <ng-container *ngTemplateOutlet="tccCardCaptionCol; context: { even }"></ng-container>
+          </ng-container>
+
+          <ng-container *ngIf="!even">
+            <!--display image above text on xs, sm, md screens-->
+            <div class="d-lg-none">
               <ng-container *ngTemplateOutlet="tccCardImgCol"></ng-container>
-              <ng-container *ngTemplateOutlet="tccCardCaptionCol; context: { even }"></ng-container>
-            </ng-container>
+            </div>
+            <ng-container *ngTemplateOutlet="tccCardCaptionCol; context: { even }"></ng-container>
+            <!--display image to the right of text on lg, xl, xxl screens-->
+            <div class="d-none d-lg-flex col-lg">
+              <ng-container *ngTemplateOutlet="tccCardImgCol"></ng-container>
+            </div>
+          </ng-container>
 
-            <ng-container *ngIf="!even">
-              <!--display image above text on xs, sm, md screens-->
-              <div class="d-lg-none">
-                <ng-container *ngTemplateOutlet="tccCardImgCol"></ng-container>
+          <ng-template #tccCardImgCol>
+            <div class="col-lg">
+              <div class="tcc-card-img-wrapper">
+                <a href="{{example.link}}" target="blank">
+                  <img src="{{example.img}}" alt="{{example.imgAltTxt}}" class="img-fluid">
+                </a>
               </div>
-              <ng-container *ngTemplateOutlet="tccCardCaptionCol; context: { even }"></ng-container>
-              <!--display image to the right of text on lg, xl, xxl screens-->
-              <div class="d-none d-lg-flex col-lg">
-                <ng-container *ngTemplateOutlet="tccCardImgCol"></ng-container>
-              </div>
-            </ng-container>
+            </div>
+          </ng-template>
 
-            <ng-template #tccCardImgCol>
-              <div class="col-lg">
-                <div class="tcc-card-img-wrapper">
-                  <a href="{{example.link}}" target="blank">
-                    <img src="{{example.img}}" alt="{{example.imgAltTxt}}" class="img-fluid">
-                  </a>
+          <ng-template #tccCardCaptionCol let-even="even">
+            <div class="col-lg">
+              <div class="p-4 caption" [ngClass]="{'light-aqua':  !even}">
+                <div>
+                  <h4>{{example.title}}</h4>
+                  <p>{{example.description}}</p>
                 </div>
+                <a href="{{example.link}}" target="_blank" class="btn btn-primary" style="width: fit-content;">
+                  {{example.linkTxt}}
+                </a>
               </div>
-            </ng-template>
+            </div>
+          </ng-template>
 
-            <ng-template #tccCardCaptionCol let-even="even">
-              <div class="col-lg">
-                <div class="p-4 caption" [ngClass]="{'light-aqua':  !even}">
-                  <div>
-                    <h4>{{example.title}}</h4>
-                    <p>{{example.description}}</p>
-                  </div>
-                  <a href="{{example.link}}" target="_blank" class="btn btn-primary" style="width: fit-content;">
-                    {{example.linkTxt}}
-                  </a>
-                </div>
-              </div>
-            </ng-template>
-
-          </div>
         </div>
       </div>
     </div>
@@ -244,4 +247,4 @@
 </div>
 
 <!--LINE ART IMG-->
-<div class="my-work-footer"></div>
+<div class="my-work-footer mt-5"></div>

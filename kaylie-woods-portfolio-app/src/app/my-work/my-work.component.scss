@@ -55,3 +55,9 @@
 .caption.light-aqua {
   background-color: vars.$aquaLight;
 }
+
+@media (min-width: 1200px) {
+  .genesys-card-row {
+    margin: 0 4rem;
+  }
+}
