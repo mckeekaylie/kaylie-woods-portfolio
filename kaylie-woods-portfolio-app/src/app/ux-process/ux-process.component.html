@@ -24,19 +24,19 @@
                     <!--LEFT COL-->
                     <div class="col-lg">
                         <p class="mb-0">{{section.text}}</p>
-                        <div class="card-spacer d-none d-sm-block"></div>
+                        <div class="spacer d-none d-sm-block"></div>
                         <div *ngFor="let li of section.list; let i = index">
                             <span class="list-text w-100">{{li}}</span>
                         </div>
                         <!--BOOK CARDS UNDER TEXT-->
                         <ng-container *ngIf="section.id === 2">
-                            <div class="card-spacer"></div>
+                            <div class="spacer"></div>
 
                             <div class="p-4 rounded card-book align-self-end">
                                 <img src="assets/images/my-approach/100things.jpg" class="w-25 rounded"
                                     alt="100 Things Every Designer Needs to Know About People cover">
 
-                                <div class="card-spacer d-lg-none"></div>
+                                <div class="spacer d-lg-none"></div>
 
                                 <p class="px-4 mb-0">
                                     {{section.cardText}}
@@ -44,16 +44,16 @@
                             </div>
                         </ng-container>
                         <ng-container *ngIf="section.id === 4">
-                            <div class="card-spacer"></div>
+                            <div class="spacer"></div>
                             <div class="p-4 rounded card-book align-self-end">
                                 <img src="assets/images/my-approach/refactoringUI.jpg" class="w-25 rounded"
                                     alt="Refactoring UI cover">
 
-                                <div class="card-spacer d-lg-none"></div>
+                                <div class="spacer d-lg-none"></div>
 
                                 <p class="px-4 mb-0">{{section.cardText}}</p>
                             </div>
-                            <div class="card-spacer d-lg-none"></div>
+                            <div class="spacer d-lg-none"></div>
                         </ng-container>
                     </div>
 
@@ -66,7 +66,7 @@
                             <ng-container *ngTemplateOutlet="passionKnowledge; context: { section }"></ng-container>
                         </ng-container>
 
-                        <div class="card-spacer d-lg-none"></div>
+                        <div class="spacer d-lg-none"></div>
                         <ng-container *ngIf="section.id === 5 || section.id === 3 || section.id === 2">
                             <div class="rounded p-4 aqua-light-bkgd" [ngClass]="
                                 {
@@ -78,7 +78,7 @@
                                 <span>{{section.author}}</span>
                             </div>
                         </ng-container>
-                        <div class="card-spacer d-none d-sm-block"></div>
+                        <div class="spacer d-none d-sm-block"></div>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
 
         <!--TRUTH ETHICS-->
         <ng-template #truthEthics>
-            <div class="card-spacer"></div>
+            <div class="spacer"></div>
             <div class="d-flex justify-content-evenly">
                 <img src="assets/images/my-approach/Nielsen_Norman_Group_logo_2022.png" alt="NNG Logo"
                     class="truth-ethics-img">

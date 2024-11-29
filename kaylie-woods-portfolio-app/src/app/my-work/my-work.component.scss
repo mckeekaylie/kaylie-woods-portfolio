@@ -33,9 +33,23 @@
   border: none !important;
 }
 
+.tcc-card-img-wrapper {
+  background-image: url(../../../public/assets/images/my-work/prisms.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
 .caption {
   background-color: vars.$blueVioletLight;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .caption.light-aqua {
