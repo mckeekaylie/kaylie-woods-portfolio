@@ -27,6 +27,7 @@ export class AppComponent {
   showScrollButton = false;
 
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
+  
   title = 'kaylie-woods-portfolio-app';
 
   @HostListener('window:scroll', [])

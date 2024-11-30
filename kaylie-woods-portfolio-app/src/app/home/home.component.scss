@@ -1,4 +1,5 @@
 @use "../../../public/assets/sass/variables" as vars;
+@use "../../../public/assets/sass/flex" as flex;
 
 /* HELLO */
 .hello-wrapper {
@@ -9,25 +10,22 @@
   background-image: url(../../../public/assets/images/home/bkgd-home.png);
   background-position: 10% 20%;
   background-size: cover;
+  @include flex.flexcolumncentercenter;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   h2:nth-child(1){
     color: white !important;
     font-weight: 500;
-    font-size: 9.2rem;
-    line-height: 10rem;
+    font-size: clamp(4rem, 4vw + 3rem, 9.2rem);
+    line-height: 1;
   }
   
   h1:nth-child(1){
     margin-top: 0;
     font-weight: 700;
     color: white !important;
-    font-size: 10rem;
-    line-height: 9.5rem;
+    font-size: clamp(6rem, 4vw + 5rem, 10rem);
+    line-height: 1.15;
 
     span {
       color: vars.$aqua;
@@ -36,9 +34,8 @@
 
   p {
     color: white;
-    font-size: 2rem;
-    line-height: 1.5;
-    margin: 2.5rem 0;
+    font-size: clamp(1rem, 4vw + 0.5rem, 1.5rem);
+    margin: 2rem 0;
   }
 
   .icon-button:hover {
@@ -88,7 +85,6 @@
   }
 }
 
-
 /* MD SCREENS */
 @media (min-width: 768px) and (max-width: 991.99px) {
   .journey-text-wrapper {
@@ -96,43 +92,10 @@
   }
 }
 
-/* XS SM MD SCREENS */
-@media (max-width: 991.99px) {
-  .hello-inner-content {
-     h2:nth-child(1){
-      font-size: 6rem;
-      line-height: 1;
-    }
-
-    h1:nth-child(1){
-      font-size: 8rem;
-      line-height: 1;
-    }
-  }
-}
-
 /* XS SM SCREENS */
 @media (max-width: 767.99px) {
   .journey-text-wrapper {
     padding: 2rem;
-  }
-
-  .hello-inner-content {
-    p {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-
-    h2:nth-child(1) {
-      font-size: 4rem;
-      line-height: 1.1;
-    }
-
-    h1:nth-child(1) {
-      margin-top: 0;
-      font-size: 6rem;
-      line-height: 1.1;
-    }
   }
 }
 

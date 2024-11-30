@@ -1,4 +1,5 @@
 @use "../../../public/assets/sass/variables" as vars;
+@use "../../../public/assets/sass/flex" as flex;
 
 .case-studies {
   height: 93vh;
@@ -15,22 +16,7 @@
   background-position: right;
   background-size: cover;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.case-studies h1 {
-  font-weight: 700;
-  font-size: 6rem;
-  color: vars.$aqua;
-}
-
-.case-studies h4 {
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 0.75rem;
+  @include flex.flexcolumncentercenter;
 }
 
 .case-study-content-wrapper {
@@ -58,6 +44,7 @@
   }
 }
 
+/* CAROUSEL */
 .carousel-indicators {
   position: unset !important;
   margin: 0 !important;
@@ -72,18 +59,23 @@
   background-color: vars.$aqua;
 }
 
+/* MEDIA QUERIES */
+
+/* MD LG XL XXL SCREENS */
 @media (min-width: 768px) {
   .green-halftone-arrow {
     width: 16rem;
   }
 }
 
+/* XS SM SCREENS */
 @media (max-width: 767.99px) {
   .green-halftone-arrow {
     width: 10rem;
   }
 }
 
+/* XS SCREENS */
 @media (max-width: 575.99px) {
   .green-halftone-arrow {
    transform: rotate(90deg);

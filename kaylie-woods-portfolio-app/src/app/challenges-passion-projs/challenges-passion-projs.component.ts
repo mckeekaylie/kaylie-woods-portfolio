@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChallengesProjsService } from '../services/challenges-projs.service';
+import { ChallengesProjs, ChallengesProjsService } from '../services/challenges-projs.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ChallengesPassionProjsComponent {
   onDestroy$: Subject<void> = new Subject();
-  challengesProjs$ = new BehaviorSubject<any>(null);
+
+  challengesProjs$ = new BehaviorSubject<ChallengesProjs[]>([]);
 
   constructor(private challengesProjsService: ChallengesProjsService) {}
 
@@ -23,5 +24,10 @@ export class ChallengesPassionProjsComponent {
       .subscribe((data) => {
         this.challengesProjs$.next(data);
       });
+  }
+
+  ngOnDestroy() {
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
   }
 }

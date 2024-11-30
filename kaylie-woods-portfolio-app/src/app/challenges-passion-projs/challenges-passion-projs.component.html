@@ -11,13 +11,13 @@
   <div class="row">
     <ng-container *ngFor="let example of challengesProjs$ | async">
       <div class="col-lg">
-        <div class="card h-100" [ngClass]="
+        <div class="card h-100 border-transparent" [ngClass]="
             {
-              'card-spring-green': example.id === 1,
-              'card-aqua':  example.id === 2, 
-              'card-blue-violet': example.id === 3
+              'bg-spring-green-light': example.id === 1,
+              'bg-aqua-light':  example.id === 2, 
+              'bg-blue-violet-light': example.id === 3
             }">
-          <img src="{{example.image}}" class="card-img-top" alt="">
+          <img src="{{example.image}}" class="card-img-top" alt="Screenshot of {{example.title}}">
           <div class="card-body">
             <h5 class="card-title m-0">{{example.title}}</h5>
             <div class="my-3">

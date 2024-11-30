@@ -17,6 +17,7 @@ export class UxProcessComponent {
   onDestroy$: Subject<void> = new Subject();
 
   myApproachData$ = new BehaviorSubject<MyApproachSections[] | null>(null);
+  
   constructor(private myApproachService: MyApproachService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {

@@ -1,0 +1,9 @@
+@mixin flexcolumncentercenter {
+  display: flex; flex-direction: column; justify-content: center; align-items:
+  center;
+}
+
+@mixin flexrowcentercenter {
+  display: flex; flex-direction: row; justify-content: center; align-items:
+  center;
+}

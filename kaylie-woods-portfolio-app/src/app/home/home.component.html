@@ -21,25 +21,24 @@
         </div>
         <div class="row">
           <div class="col">
-            <div class="row">
-              <div class="d-flex justify-content-center">
-                <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
-                  <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2"
-                    alt="LinkedIn logo">
-                </a>
-                <a href="https://github.com/mckeekaylie" target="blank">
-                  <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2" alt="GitHub logo">
-                </a>
-              </div>
+            <div class="d-flex justify-content-center">
+              <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
+                <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2"
+                  alt="LinkedIn logo">
+              </a>
+              <a href="https://github.com/mckeekaylie" target="blank">
+                <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2" alt="GitHub logo">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <!-- MY JOURNEY -->
   <div class="container-fluid px-0">
-    <img src="assets/images/home/journey-border-top.svg" class="img-fluid d-md-none" alt="hexagonal pattern">
+    <img src="assets/images/home/journey-border-top.svg" class="img-fluid d-md-none" alt="">
 
     <div class="row g-0">
       <div class="col-md-3 col-lg-2 p-0">
@@ -59,10 +58,11 @@
       </div>
     </div>
 
-    <img src="assets/images/home/journey-border-bottom.svg" class="img-fluid d-md-none" alt="hexagonal pattern">
+    <img src="assets/images/home/journey-border-bottom.svg" class="img-fluid d-md-none" alt="">
   </div>
+
   <!-- MY SKILLS -->
-  <div class="container-fluid charcoal-bkgd py-4 px-0">
+  <div class="container-fluid bg-charcoal py-4 px-0">
     <div class="row m-4">
       <div class="col">
         <h1 class="text-spring-green">My Skills</h1>
@@ -72,14 +72,14 @@
       </div>
     </div>
 
-    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid" alt="blue violet node lines">
+    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid" alt="">
 
     <div class="text-white skills-wrapper">
       <!--IDEATE-->
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="">
             <div>
               <h1 class="text-aqua">Ideate</h1>
               <p>
@@ -87,7 +87,7 @@
               </p>
               <div class="mb-2" *ngFor="let skill of ideateSkills$ | async">
                 <div class="d-flex">
-                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="">
                   {{skill}}
                 </div>
               </div>
@@ -95,11 +95,12 @@
           </div>
         </div>
       </div>
+
       <!--DESIGN-->
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="">
             <div>
               <h1 class="text-aqua">Design</h1>
               <p>
@@ -107,20 +108,20 @@
               </p>
               <div class="mb-2" *ngFor="let skill of designSkills$ | async">
                 <div class="d-flex">
-                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="">
                   {{skill}}
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
+
       <!--DEVELOP-->
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex align-items-start">
-            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="spring green chevron arrow">
+            <img src="assets/images/home/right-chevron.svg" class="chevron" alt="">
             <div>
               <h1 class="text-aqua">Develop</h1>
               <p>
@@ -128,7 +129,7 @@
               </p>
               <div class="mb-2" *ngFor="let skill of developSkills$ | async">
                 <div class="d-flex">
-                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="blue hexagon icon">
+                  <img src="assets/images/home/hexagon.svg" class="list-item-hexagon me-2" alt="">
                   {{skill}}
                 </div>
               </div>
@@ -138,8 +139,7 @@
       </div>
     </div>
 
-    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid flip-img"
-      alt="blue violet node lines">
+    <img src="assets/images/home/blue-violet-node-lines (1).svg" class="img-fluid flip-img" alt="">
 
   </div>
 </div>

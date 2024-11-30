@@ -1,58 +1,13 @@
 @use "../public/assets/sass/variables" as vars;
+@import "../public/assets/sass/color";
 
 /* TYPOGRAPHY */
 * {
   font-family: "Poppins", sans-serif;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 h1 {
   color: vars.$blueViolet !important;
-  font-weight: 600;
-}
-
-.text-blue-violet {
-  color: vars.$blueViolet;
-}
-
-.text-aqua {
-  color: vars.$aqua !important;
-}
-
-.text-spring-green {
-  color: vars.$springGreen !important;
-}
-
-.aqua-light-bkgd {
-  background-color: vars.$aquaLight;
-}
-
-.blue-violet-light-bkgd {
-  background-color: vars.$blueVioletLight;
-}
-
-.spring-green-light-bkgd {
-  background-color: vars.$springGreenLight;
-}
-
-.charcoal-bkgd {
-  background-color: vars.$charcoal;
-}
-
-.border-aqua {
-  border-color: vars.$aqua!important;
-}
-
-.border-blue-violet {
-  border-color: vars.$blueViolet!important;
-}
-
-.border-spring-green {
-  border-color: vars.$springGreen!important;
 }
 
 /* BUTTONS */
@@ -129,24 +84,8 @@ h1 {
   color: white;
 }
 
-/* CARDS */
 .spacer {
   height: 1.5rem;
-}
-
-.card-aqua {
-  background-color: vars.$aquaLight !important;
-  border: transparent !important;
-}
-
-.card-blue-violet {
-  background-color: vars.$blueVioletLight !important;
-  border: transparent !important;
-}
-
-.card-spring-green {
-  background-color: vars.$springGreenLight !important;
-  border: transparent !important;
 }
 
 .flip-img {

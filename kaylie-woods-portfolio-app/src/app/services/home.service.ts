@@ -9,7 +9,13 @@ import { Observable } from 'rxjs';
 export class HomeService {
   constructor(private http: HttpClient) {}
 
-  getSkills(): Observable<any> {
-    return this.http.get<any>('assets/data/skills.json');
+  getSkills(): Observable<Skills> {
+    return this.http.get<Skills>('assets/data/skills.json');
   }
+}
+
+interface Skills {
+  ideate: string[],
+  design: string[],
+  develop: string[]
 }

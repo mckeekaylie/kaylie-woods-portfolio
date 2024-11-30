@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MyWorkComponent } from '../my-work/my-work.component';
-import { MyJourney, skills } from '../../enum';
+import { MyJourney, MySkills } from '../../enum';
 import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
 import { HomeService } from '../services/home.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -29,9 +29,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
+
 export class HomeComponent implements OnInit {
   myJourneyTxt = MyJourney;
-  skillsTxt = skills;
+  skillsTxt = MySkills;
 
   onDestroy$: Subject<void> = new Subject();
   
@@ -39,10 +40,10 @@ export class HomeComponent implements OnInit {
   designSkills$ = new BehaviorSubject<string[]>([]);
   developSkills$ = new BehaviorSubject<string[]>([]);
 
-  constructor(private homeService: HomeService) {}
+  constructor(private homeService: HomeService,  private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    this.viewportScroller.scrollToPosition([0, 0]);
 
     this.homeService
           .getSkills()

@@ -5,7 +5,7 @@ export enum MyJourney {
     para4 = "Since Eleven Fifty, I have held roles as UI/UX Developer, Software Engineer, Angular Developer, and Design Engineer. My passion lies in building user interfaces that are equally beautiful and useful with an emphasis on the user’s needs."
 }
 
-export enum skills {
+export enum MySkills {
     skillsDesc = "As a versatile engineer who is equally as adept at design as engineering, my skillset spans the entire process of building user interfaces. I like to break my skills into 3 buckets: Ideate, Design and Develop.",
     ideateDesc = "The skills behind my ability to determine solutions to a problem by gathering pertinent information, receiving user/stakeholder input, conducting adequate research, and participation in or ownership of ideation/discovery.",
     designDesc = "The skills behind my ability to bring the results of the discovery/ideation phase to fruition in wireframes, mockups and prototypes in addition to my ability to create or optimize any visuals required for the design.",

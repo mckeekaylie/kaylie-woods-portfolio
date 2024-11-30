@@ -1,0 +1,32 @@
+@use "../sass/variables" as vars;
+
+$bgColors : (
+  "aqua-light":  vars.$aquaLight,
+  "blue-violet-light": vars.$blueVioletLight,
+  "spring-green-light": vars.$springGreenLight,
+  "charcoal": vars.$charcoal
+);
+
+@each $color, $value in $bgColors {
+    .bg-#{$color} {
+        background-color: $value!important;
+    }
+}
+
+$primaryColors : (
+    "aqua": vars.$aqua,
+    "spring-green": vars.$springGreen,
+    "blue-violet": vars.$blueViolet,
+    "white": #ffffff,
+    "transparent": transparent
+);
+
+@each $color, $value in $primaryColors {
+    .text-#{$color} {
+        color: $value!important;
+    }
+
+    .border-#{$color} {
+        border-color: $value!important;
+    }
+}

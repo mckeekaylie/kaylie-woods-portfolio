@@ -1,26 +1,30 @@
-<div class="container-fluid p-0">
-    <div class="case-studies">
-        <div class="w-100 h-100 case-studies-bkgd">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Case Studies</h1>
+<header>
+    <div class="container-fluid p-0">
+        <div class="case-studies">
+            <div class="w-100 h-100 case-studies-bkgd">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Case Studies</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col">
-                        <div class="d-flex flex-wrap justify-content-center">
-                            <button (click)="scrollToSection('talentCommunities')" class="jump-to-btn m-3">ProRank,
-                                Talent Communities</button>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <button (click)="scrollToSection('talentCommunities')" class="jump-to-btn m-3">
+                                    ProRank, Talent Communities
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</header>
 
-<section id="talentCommunities">
+<!--TALENT COMMUNITIES-->
+<section id="talentCommunities" aria-label="Talent Communities">
     <div class="container-fluid case-study-content-wrapper text-white">
         <div *ngFor="let study of caseStudies$ | async" [id]="study.id">
             <div class="d-flex flex-column align-items-stretch">
@@ -29,7 +33,7 @@
                         <h1>Overview</h1>
                         <p>{{ study.overviewText }}</p>
                     </div>
-                    <div class="card-spacer d-md-none"></div>
+                    <div class="spacer d-md-none"></div>
                     <div class="col-lg">
                         <h1>My Role</h1>
                         <p>{{ study.myRoleText }}</p>
@@ -37,16 +41,16 @@
                 </div>
 
                 <div class="d-sm-none text-center">
-                    <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow">
+                    <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow" alt="">
                 </div>
 
-                <div class="card-spacer"></div>
+                <div class="spacer"></div>
 
                 <div class="row">
                     <div class="col">
                         <div class="d-flex">
                             <img src="assets/images/case-studies/greenHalftoneArrow.svg"
-                                class="green-halftone-arrow d-none d-sm-flex">
+                                class="green-halftone-arrow d-none d-sm-flex" alt="">
                             <div class="problem">
                                 <h1>The Problem</h1>
                                 <p>{{study.problemText}}</p>
@@ -56,7 +60,7 @@
                 </div>
 
                 <div class="d-sm-none text-center">
-                    <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow">
+                    <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow" alt="">
                 </div>
 
                 <div class="row">
@@ -67,23 +71,23 @@
                                 <p>{{study.solutionText}}</p>
                             </div>
                             <img src="assets/images/case-studies/greenHalftoneArrow.svg"
-                                class="flip-img green-halftone-arrow d-none d-sm-flex">
+                                class="flip-img green-halftone-arrow d-none d-sm-flex" alt="">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card-spacer"></div>
+            <div class="spacer"></div>
 
             <!--PHASES-->
             <ng-container *ngFor="let phase of study.phases; let i = index">
                 <div class="row p-4">
                     <div class="col-lg-3 d-flex justify-content-center">
                         <div class="hexagon" [ngClass]="{ 
-                            'border-blue-violet text-blue-violet': i === 0 || i === 3,
-                            'border-aqua text-aqua': i === 1,
-                            'border-spring-green text-spring-green': i === 2 
-                        }">
+                                'border-blue-violet text-blue-violet': i === 0 || i === 3,
+                                'border-aqua text-aqua': i === 1,
+                                'border-spring-green text-spring-green': i === 2 
+                            }">
                             <div class="hex-text">{{phase.phaseTitle}}</div>
                         </div>
                     </div>
@@ -99,8 +103,9 @@
                                 </div>
                             </div>
 
+                            <!--CAROUSEL-->
                             <div class="row mt-3" *ngIf="phase.imgPaths">
-                                <div class="card-spacer"></div>
+                                <div class="spacer"></div>
                                 <div class="col">
                                     <div [id]="'carousel' +  phase.phaseTitle" class="carousel slide">
                                         <div class="carousel-inner">
@@ -114,6 +119,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!--CAROUSEL INDICATORS-->
                             <div class="row mt-3">
                                 <div class="carousel-indicators my-2">
                                     <button *ngFor="let path of phase.imgPaths; let i = index" type="button"

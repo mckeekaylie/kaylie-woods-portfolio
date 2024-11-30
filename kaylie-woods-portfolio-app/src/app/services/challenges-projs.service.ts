@@ -18,6 +18,7 @@ export class ChallengesProjsService {
 export interface ChallengesProjs {
   id: number;
   title: string;
+  github: string;
   description: string;
   link: string;
   image: string;
