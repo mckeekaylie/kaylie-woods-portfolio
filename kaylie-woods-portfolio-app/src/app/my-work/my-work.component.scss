@@ -1,47 +1,20 @@
 @use "../../../public/assets/sass/variables" as vars;
-
-/* MY WORK  */
-.my-work {
-  height: 93vh;
-
-  h1 {
-    font-size: 6rem !important;
-    color: vars.$aqua !important;
-    font-weight: 600 !important;
-  }
-}
-
-.my-work-bkgd {
-  background-image: url(../../../public/assets/images/my-work/bkgd-my-work.jpg);
-  background-position: 10% 20%;
-  background-size: cover;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.my-work-footer {
-  background-image: url(../../../public/assets/images/my-work/my-work-footer.png);
-  background-position: 10% 20%;
-  background-size: cover;
-  height: 48vh;
-}
+@use "../../../public/assets/sass/flex" as flex;
 
 .card {
   border: none !important;
 }
 
+.genesys-card-row {
+  margin: 0 4rem;
+}
+
 .tcc-card-img-wrapper {
   background-image: url(../../../public/assets/images/my-work/prisms.png);
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   padding: 2rem;
+  @include flex.flexcolumncentercenter;
 }
 
 .caption {
@@ -56,8 +29,11 @@
   background-color: vars.$aquaLight;
 }
 
-.genesys-card-row {
-  margin: 0 4rem;
+.my-work-footer {
+  background-image: url(../../../public/assets/images/my-work/my-work-footer.png);
+  background-position: 10% 20%;
+  background-size: cover;
+  height: 48vh;
 }
 
 @media (max-width: 575.99px) {

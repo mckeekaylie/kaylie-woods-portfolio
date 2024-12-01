@@ -1,27 +1,4 @@
-<header>
-    <div class="container-fluid p-0">
-        <div class="case-studies">
-            <div class="w-100 h-100 case-studies-bkgd">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h1>Case Studies</h1>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <button (click)="scrollToSection('talentCommunities')" class="jump-to-btn m-3">
-                                    ProRank, Talent Communities
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<hero [heroTitle]="heroTitle" [imageUrl]="imageUrl"></hero>
 
 <!--TALENT COMMUNITIES-->
 <section id="talentCommunities" aria-label="Talent Communities">

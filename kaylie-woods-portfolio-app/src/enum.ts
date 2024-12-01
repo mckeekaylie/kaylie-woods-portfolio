@@ -10,4 +10,4 @@ export enum MySkills {
     ideateDesc = "The skills behind my ability to determine solutions to a problem by gathering pertinent information, receiving user/stakeholder input, conducting adequate research, and participation in or ownership of ideation/discovery.",
     designDesc = "The skills behind my ability to bring the results of the discovery/ideation phase to fruition in wireframes, mockups and prototypes in addition to my ability to create or optimize any visuals required for the design.",
     developDesc = "The skills behind my ability to translate a mockup into a fully-functional user interface.",
-} 
+}

@@ -1,0 +1,99 @@
+<header aria-labelledby="heroTitle">
+    <div class="hero">
+        <div class="hero-bkgd w-100 h-100" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}">
+            <ng-container *ngIf="isHome">
+                <ng-container *ngTemplateOutlet="home"></ng-container>
+            </ng-container>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 id="heroTitle" class="text-aqua">{{heroTitle}}</h1>
+                    </div>
+                </div>
+                <ng-container *ngIf="isMyWork">
+                    <ng-container *ngTemplateOutlet="myWork"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isMyApproach">
+                    <ng-container *ngTemplateOutlet="myApproach"></ng-container>
+                </ng-container>
+                <ng-container *ngIf="isCaseStudies">
+                    <ng-container *ngTemplateOutlet="caseStudies"></ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ng-template #home>
+    <div class="container home-container">
+        <div class="row">
+            <div class="col">
+                <h2>Hello,</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>I'm <span>Kaylie.</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>I'm a Design Engineer with UX/UI Design & Software Engineering experience.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.linkedin.com/in/kayliewoods" target="blank">
+                        <img src="assets/images/logos/linkedin-spring-green.svg" class="icon-button p-2 m-2"
+                            alt="LinkedIn logo">
+                    </a>
+                    <a href="https://github.com/mckeekaylie" target="blank">
+                        <img src="assets/images/logos/github-spring-green.svg" class="icon-button m-2"
+                            alt="GitHub logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #myWork>
+    <div class="row mt-4">
+        <div class="col">
+            <div class="d-flex flex-wrap justify-content-center">
+                <button (click)="scrollToSection('sectionProrank')" class="jump-to-btn m-3">ProRank</button>
+                <button (click)="scrollToSection('sectionGenesys')" class="jump-to-btn m-3">Genesys</button>
+                <button (click)="scrollToSection('sectionTcc')" class="jump-to-btn m-3">TCC</button>
+                <button (click)="scrollToSection('sectionChallenges')" class="jump-to-btn m-3">Challenges &
+                    Other
+                    Projects</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #myApproach>
+    <div class="row mt-4 my-approach">
+        <div class="col">
+            <p class="text-white mt-4">
+                When approached with a design and/or user experience problem, I value coming to a solution
+                that is truthful and ethical, embraces human nature, and puts the user first. My endless pursuit of
+                knowledge
+                and my emphasis on collaboration aids in my path to a decision.
+            </p>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #caseStudies>
+    <div class="row mt-4">
+        <div class="col">
+            <div class="d-flex flex-wrap justify-content-center">
+                <button (click)="scrollToSection('talentCommunities')" class="jump-to-btn m-3">
+                    ProRank, Talent Communities
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -4,13 +4,13 @@ import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'challenges-passion-projs',
+  selector: 'challenges-projs',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './challenges-passion-projs.component.html',
-  styleUrl: './challenges-passion-projs.component.scss',
+  templateUrl: './challenges-projs.component.html',
+  styleUrl: './challenges-projs.component.scss',
 })
-export class ChallengesPassionProjsComponent {
+export class ChallengesProjsComponent {
   onDestroy$: Subject<void> = new Subject();
 
   challengesProjs$ = new BehaviorSubject<ChallengesProjs[]>([]);

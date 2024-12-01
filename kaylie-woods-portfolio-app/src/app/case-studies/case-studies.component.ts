@@ -1,19 +1,23 @@
 import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
-import { CaseStudiesService } from '../services/case-studies.service';
+import { CaseStudies, CaseStudiesService } from '../services/case-studies.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'app-case-studies',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeroComponent],
   templateUrl: './case-studies.component.html',
   styleUrl: './case-studies.component.scss',
 })
 export class CaseStudiesComponent implements OnDestroy {
   onDestroy$: Subject<void> = new Subject();
 
-  caseStudies$ = new BehaviorSubject<any>(null);
+  heroTitle = "Case Studies";
+  imageUrl = "assets/images/case-studies/bkgd-case-studies.png";
+
+  caseStudies$ = new BehaviorSubject<CaseStudies[]>([]);
 
   @ViewChild('talentCommunities') sectionProrank!: ElementRef;
 
@@ -29,10 +33,6 @@ export class CaseStudiesComponent implements OnDestroy {
       .subscribe((data) => {
         this.caseStudies$.next(data);
       });
-  }
-
-  scrollToSection(section: string) {
-    this.viewportScroller.scrollToAnchor(section);
   }
 
   ngOnDestroy() {

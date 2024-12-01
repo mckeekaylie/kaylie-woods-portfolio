@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MyWorkComponent } from '../my-work/my-work.component';
 import { MyJourney, MySkills } from '../../enum';
-import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
 import { HomeService } from '../services/home.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +15,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     RouterLink,
     RouterOutlet,
     MyWorkComponent,
-    ChallengesPassionProjsComponent,
-    CommonModule
+    CommonModule,
+    HeroComponent
   ],
    animations: [
     trigger('fadeIn', [
@@ -35,7 +35,9 @@ export class HomeComponent implements OnInit {
   skillsTxt = MySkills;
 
   onDestroy$: Subject<void> = new Subject();
-  
+
+  imageUrl = "assets/images/home/bkgd-home.png";
+
   ideateSkills$ = new BehaviorSubject<string[]>([]);
   designSkills$ = new BehaviorSubject<string[]>([]);
   developSkills$ = new BehaviorSubject<string[]>([]);

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UxProcessComponent } from './ux-process.component';
+import { UxProcessComponent } from './my-approach.component';
 
 describe('UxProcessComponent', () => {
   let component: UxProcessComponent;

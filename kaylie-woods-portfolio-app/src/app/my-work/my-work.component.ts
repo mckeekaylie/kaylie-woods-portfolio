@@ -2,20 +2,25 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { MyWorkService, myJobs } from '../services/my-work.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { ChallengesPassionProjsComponent } from '../challenges-passion-projs/challenges-passion-projs.component';
+import { ChallengesProjsComponent } from '../challenges-passion-projs/challenges-projs.component';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'my-work',
   standalone: true,
   imports: [
     CommonModule,
-    ChallengesPassionProjsComponent,
+    ChallengesProjsComponent,
+    HeroComponent
   ],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
   onDestroy$: Subject<void> = new Subject();
+
+  heroTitle = "My Work"
+  imageUrl = "assets/images/my-work/bkgd-my-work.jpg";
 
   proRank = {} as myJobs;
   genesys = {} as myJobs;

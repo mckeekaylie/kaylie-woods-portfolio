@@ -1,23 +1,4 @@
 @use "../../../public/assets/sass/variables" as vars;
-@use "../../../public/assets/sass/flex" as flex;
-
-.case-studies {
-  height: 93vh;
-
-  h1 {
-    font-size: 6rem !important;
-    color: vars.$aqua !important;
-    font-weight: 600 !important;
-  }
-}
-
-.case-studies-bkgd {
-  background-image: url(../../../public/assets/images/case-studies/bkgd-case-studies.png);
-  background-position: right;
-  background-size: cover;
-  text-align: center;
-  @include flex.flexcolumncentercenter;
-}
 
 .case-study-content-wrapper {
   background-color: vars.$charcoal;

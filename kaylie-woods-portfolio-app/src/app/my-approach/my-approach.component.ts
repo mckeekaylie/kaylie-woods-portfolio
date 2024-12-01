@@ -5,16 +5,20 @@ import {
 } from '../services/my-approach.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
-  selector: 'ux-process',
+  selector: 'my-approach',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './ux-process.component.html',
-  styleUrl: './ux-process.component.scss',
+  imports: [CommonModule, HeroComponent],
+  templateUrl: './my-approach.component.html',
+  styleUrl: './my-approach.component.scss',
 })
-export class UxProcessComponent {
+export class MyApproachComponent {
   onDestroy$: Subject<void> = new Subject();
+
+  heroTitle = "My Approach"
+  imageUrl = "assets/images/my-approach/bkgd-my-approach.png";
 
   myApproachData$ = new BehaviorSubject<MyApproachSections[] | null>(null);
   
