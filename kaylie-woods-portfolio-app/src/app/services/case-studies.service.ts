@@ -16,15 +16,19 @@ export class CaseStudiesService {
 
 export interface CaseStudies {
   id: number;
+  myRoleText: string;
+  overviewText: string;
   problemTitle: string;
   problemText: string;
   solutionTitle: string;
   solutionText: string;
-  phase: Phases[];
+  phases: Phases[];
 }
 
 export interface Phases {
-    phaseTitle: string;
-    phaseText: string[];
-    phaseList?: string[];
+  phaseTitle: string;
+  phaseText: string[];
+  phaseList?: string[];
+  imgPaths?: string[];
+  list?: string[];
 }
