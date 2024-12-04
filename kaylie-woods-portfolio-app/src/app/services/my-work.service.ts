@@ -17,6 +17,7 @@ export class MyWorkService {
 export interface myJobs {
     employer: string;
     role: string;
+    stack: string;
     description: string;
     workExamples: workExamples[]
 }

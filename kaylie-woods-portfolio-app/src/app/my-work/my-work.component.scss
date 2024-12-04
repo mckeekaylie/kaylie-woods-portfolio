@@ -5,10 +5,6 @@
   border: none !important;
 }
 
-.genesys-card-row {
-  margin: 0 4rem;
-}
-
 .tcc-card-img-wrapper {
   background-image: url(../../../public/assets/images/my-work/prisms.png);
   background-size: cover;
@@ -36,8 +32,14 @@
   height: 48vh;
 }
 
-@media (max-width: 575.99px) {
+@media (min-width: 992px) {
   .genesys-card-row {
-    margin: 0 3rem;
+    margin: 0 4rem;
+  }
+}
+
+@media (max-width: 767.99px) {
+  .genesys-card-row {
+    margin: 0 2rem;
   }
 }
