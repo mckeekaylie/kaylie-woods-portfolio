@@ -5,9 +5,9 @@
   <section id="sectionProrank">
     <div class="row mt-4">
       <div class="col">
-        <h2 class="text-blue-violet">{{proRank.employer}}</h2>
-        <h4 class="fw-light">{{proRank.role}}</h4>
-        <p>{{proRank.stack}}</p>
+        <h1 class="text-blue-violet">{{proRank.employer}}</h1>
+        <h2 class="fw-light">{{proRank.role}}</h2>
+        <p class="text-gray-dark fs-5">{{proRank.stack}}</p>
         <p>{{proRank.description}}</p>
       </div>
     </div>
@@ -19,10 +19,9 @@
           <div class="col-md">
             <div class="card h-100 border-transparent"
               [ngClass]="{'bg-blue-violet-light':  example.id === 1, 'bg-aqua-light': example.id === 2}">
-              <img src="{{ example.imgSrc }}" class="card-img-top"
-                alt="Kaylie Woods Design Engineer Year in Review at ProRank">
+              <img src="{{ example.imgSrc }}" class="card-img-top" alt="{{example.imgAltTxt}}">
               <div class="card-body">
-                <h5 class="card-title">{{example.title}}</h5>
+                <p class="fw-medium fs-5">{{example.title}}</p>
                 <p class="card-text">{{example.description}}</p>
               </div>
               <a href="{{example.link}}" target="_blank" class="btn btn-primary m-3" style="width: fit-content;">
@@ -110,7 +109,7 @@
                   </button>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">{{example.title}}</h5>
+                  <p class="fs-5 fw-medium">{{example.title}}</p>
                   <p class="card-text">{{example.description}}</p>
                 </div>
               </div>
@@ -126,9 +125,9 @@
   <section id="sectionGenesys">
     <div class="row border-top mt-5">
       <div class="mt-4">
-        <h2 class="text-blue-violet">{{genesys.employer}}</h2>
-        <h4 class="fw-light">{{genesys.role}}</h4>
-        <p>{{genesys.stack}}</p>
+        <h1 class="text-blue-violet">{{genesys.employer}}</h1>
+        <h2 class="fw-light">{{genesys.role}}</h2>
+        <p class="text-gray-dark fs-5">{{genesys.stack}}</p>
         <p>{{genesys.description}}</p>
       </div>
       <div class="spacer"></div>
@@ -146,7 +145,7 @@
                 }">
                 <img src="{{example.img}}" class="card-img-top" alt="{{example.imgAltTxt}}">
                 <div class="card-body">
-                  <h5 class="card-title">{{example.title}}</h5>
+                  <p class="fs-5 fw-medium">{{example.title}}</p>
                   <p class="card-text">{{example.description}}</p>
                 </div>
                 <a href="{{example.link}}" target="_blank" class="btn btn-primary m-3" style="width: fit-content;">
@@ -165,9 +164,9 @@
   <section id="sectionTcc">
     <div class="row border-top mt-5">
       <div class="mt-4">
-        <h2 class="text-blue-violet">{{tcc.employer}}</h2>
-        <h4 class="fw-light">{{tcc.role}}</h4>
-        <p>{{tcc.stack}}</p>
+        <h1 class="text-blue-violet">{{tcc.employer}}</h1>
+        <h2 class="fw-light">{{tcc.role}}</h2>
+        <p class="text-gray-dark fs-5">{{tcc.stack}}</p>
         <p>{{tcc.description}}</p>
       </div>
 
@@ -195,9 +194,7 @@
           <ng-template #tccCardImgCol>
             <div class="col-lg">
               <div class="tcc-card-img-wrapper">
-                <a href="{{example.link}}" target="blank">
-                  <img src="{{example.img}}" alt="{{example.imgAltTxt}}" class="img-fluid">
-                </a>
+                <img src="{{example.img}}" alt="{{example.imgAltTxt}}" class="img-fluid">
               </div>
             </div>
           </ng-template>
@@ -206,7 +203,7 @@
             <div class="col-lg">
               <div class="p-4 caption" [ngClass]="{'light-aqua':  !even}">
                 <div>
-                  <h4>{{example.title}}</h4>
+                  <p class="fw-medium fs-5">{{example.title}}</p>
                   <p>{{example.description}}</p>
                 </div>
                 <a href="{{example.link}}" target="_blank" class="btn btn-primary" style="width: fit-content;">
@@ -215,7 +212,6 @@
               </div>
             </div>
           </ng-template>
-
         </div>
       </div>
     </div>

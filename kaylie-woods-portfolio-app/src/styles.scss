@@ -11,6 +11,11 @@ h1 {
 }
 
 /* BUTTONS */
+.btn-inner-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
 .btn-primary,
 .btn-primary:visited {
   background-color: vars.$crayolaBlue !important;

@@ -3,7 +3,7 @@
     "id": 1,
     "title": "The Planets of Star Wars",
     "github": "https://github.com/mckeekaylie/kw-swapi-app-react",
-    "description": "This React 19.0.0/Next.js 15.0.3 (+TypeScript & Sass) application utilizes SWR to fetch planet data from SWAPI (Star Wars API). The api response is then utilized to render a home page and a detail page (for a selected planet). Additionally, I wrote unit tests for both the detail and home pages with Jest and react-router-dom.",
+    "description": "This React 19.0.0/Next.js 15.0.3 (+ TypeScript, Sass, Motion for React & Jest) application utilizes SWR to fetch planet data from SWAPI (Star Wars API). The api response is then utilized to render a home page and a detail page (for a selected planet).",
     "link": "https://kw-the-planets-of-star-wars.netlify.app/",
     "image": "assets/images/my-work/challenges/swapi-app.webp"
   },

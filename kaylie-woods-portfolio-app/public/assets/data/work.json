@@ -10,19 +10,22 @@
         "title": "Year in Review",
         "description": "This is a presentation I put together explaining the highlights of my design and engineering work during my year at ProRank.",
         "link": "assets/images/my-work/prorank/kw-pr-year-in-review.pdf",
-        "imgSrc": "assets/images/my-work/prorank/yearInReview.jpg"
+        "imgSrc": "assets/images/my-work/prorank/yearInReview.jpg",
+        "imgAltTxt": "The cover of the Year In Review presentation I created to showcase my achievements at ProRank."
       },
       {
         "id": 2,
         "title": "UX Docs",
         "description": "UX Docs is a compilation of letter-sized Figma frames that I put together in hopes of providing a simple, yet helpful resource for all things user interface. It details the color palette, font sizes, font colors, and even the CSS required for common UI Elements.",
         "link": "assets/images/my-work/prorank/ux-docs.pdf",
-        "imgSrc": "assets/images/my-work/prorank/ux-docs-card-img.png"
+        "imgSrc": "assets/images/my-work/prorank/ux-docs-card-img.png",
+        "imgAltTxt": "The color palette, fonts, and CSS pages inside UX Docs"
       },
       {
         "id": 3,
         "title": "ProRank UI Library",
-        "description": "ProRank UI Library is the design system I created from scratch in Figma. It consists of 194 components that can be quickly imported into any Figma file, vigorously organized with proper names and plenty of color coding. It serves as the central location where developers, and anyone at ProRank, can locate colors, typography and every UI component in the product."
+        "description": "ProRank UI Library is the design system I created from scratch in Figma. It consists of 194 components that can be quickly imported into any Figma file, vigorously organized with proper names and plenty of color coding. It serves as the central location where developers, and anyone at ProRank, can locate colors, typography and every UI component in the product.",
+        "imgAltTxt": "Screenshots of ProRank UI Library, displaying the various frames dedicated to specific UI components."
       }
     ]
   },

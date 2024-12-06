@@ -18,7 +18,8 @@ $primaryColors : (
     "spring-green": vars.$springGreen,
     "blue-violet": vars.$blueViolet,
     "white": #ffffff,
-    "transparent": transparent
+    "transparent": transparent,
+    "gray-dark": vars.$grayDark
 );
 
 @each $color, $value in $primaryColors {
