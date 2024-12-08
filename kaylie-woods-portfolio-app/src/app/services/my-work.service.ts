@@ -11,24 +11,29 @@ export class MyWorkService {
   getMyJobs(): Observable<myJobs[]> {
     return this.http.get<myJobs[]>('assets/data/work.json');
   }
-  
 }
 
 export interface myJobs {
-    employer: string;
-    role: string;
-    stack: string;
-    description: string;
-    workExamples: workExamples[]
+  employer: string;
+  role: string;
+  stack: string;
+  description: string;
+  workExamples: workExamples[];
 }
 
 export interface workExamples {
-    id: number;
-    title: string,
-    description: string;
-    link: string;
-    linkTxt?: string;
-    img?: string;
-    imgAltTxt?: string;
-    imgSrc?: string;
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+  linkTxt?: string;
+  img?: string;
+  imgAltTxt?: string;
+  imgSrc?: string;
+  carouselImgs?: Array<CarouselImg>;
+}
+
+export interface CarouselImg {
+  imgSrc: string;
+  imgAlt: string;
 }

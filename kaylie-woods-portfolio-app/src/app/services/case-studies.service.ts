@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CarouselImg } from './my-work.service';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class CaseStudiesService {
   constructor(private http: HttpClient) {}
 
@@ -29,6 +29,6 @@ export interface Phases {
   phaseTitle: string;
   phaseText: string[];
   phaseList?: string[];
-  imgPaths?: string[];
+  carouselImgs?: CarouselImg[];
   list?: string[];
 }

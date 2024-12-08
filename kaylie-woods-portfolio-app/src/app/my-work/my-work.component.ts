@@ -4,6 +4,7 @@ import { MyWorkService, myJobs } from '../services/my-work.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { ChallengesProjsComponent } from '../challenges-passion-projs/challenges-projs.component';
 import { HeroComponent } from '../hero/hero.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'my-work',
@@ -11,7 +12,8 @@ import { HeroComponent } from '../hero/hero.component';
   imports: [
     CommonModule,
     ChallengesProjsComponent,
-    HeroComponent
+    HeroComponent,
+    CarouselComponent
   ],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',

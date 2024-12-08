@@ -25,7 +25,65 @@
         "id": 3,
         "title": "ProRank UI Library",
         "description": "ProRank UI Library is the design system I created from scratch in Figma. It consists of 194 components that can be quickly imported into any Figma file, vigorously organized with proper names and plenty of color coding. It serves as the central location where developers, and anyone at ProRank, can locate colors, typography and every UI component in the product.",
-        "imgAltTxt": "Screenshots of ProRank UI Library, displaying the various frames dedicated to specific UI components."
+        "imgAltTxt": "Screenshots of ProRank UI Library, displaying the various frames dedicated to specific UI components.",
+        "carouselImgs": [
+          {
+            "imgSrc": "assets/images/my-work/prorank/prorank-ui-library.png",
+            "imgAlt": "All frames"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-cards.png",
+            "imgAlt": "Cards frame"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-candidate-card.png",
+            "imgAlt": "Candidate card (talent search) frame"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-talent-communities-cards.png",
+            "imgAlt": "Candidate card (talent communities) frame"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-buttons-1.png",
+            "imgAlt": "Buttons frame 1"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-buttons-2.png",
+            "imgAlt": "Buttons frame 2"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-chips.png",
+            "imgAlt": "Chips frame"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-flags.png",
+            "imgAlt": "Flags frame"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-icons-1.png",
+            "imgAlt": "Icons frame 1"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-icons-2.png",
+            "imgAlt": "Icons frame 2"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-icons-3.png",
+            "imgAlt": "Icons frame 3"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-inputs-1.png",
+            "imgAlt": "Inputs frame 1"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-inputs-2.png",
+            "imgAlt": "Inputs frame 2"
+          },
+          {
+            "imgSrc": "assets/images/my-work/prorank/pr-ui-library-base-ui.png",
+            "imgAlt": "Base UI frame"
+          }
+        ]
       }
     ]
   },
