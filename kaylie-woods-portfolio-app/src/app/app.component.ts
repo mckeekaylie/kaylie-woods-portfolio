@@ -8,26 +8,26 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    NavComponent,
-    FooterComponent,
-    RouterModule,
-    CommonModule
-  ],
+  imports: [NavComponent, FooterComponent, RouterModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
     trigger('routeAnimation', [
-      transition('* <=> *', [animate('4s ease-in'), style({ opacity: 1 })])
+      transition('* => *', [
+        style({ opacity: 0.9 }),
+        animate('1s ease-in-out', style({ opacity: 1 })),
+      ]),
     ]),
   ],
 })
-
 export class AppComponent {
   showScrollButton = false;
 
-  constructor(private router: Router, private viewportScroller: ViewportScroller) {}
-  
+  constructor(
+    private router: Router,
+    private viewportScroller: ViewportScroller,
+  ) {}
+
   title = 'kaylie-woods-portfolio-app';
 
   @HostListener('window:scroll', [])

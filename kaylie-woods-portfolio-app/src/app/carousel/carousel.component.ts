@@ -1,4 +1,10 @@
-import { animate, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
@@ -18,8 +24,10 @@ import { CarouselImg } from '../services/my-work.service';
   styleUrl: './carousel.component.scss',
   animations: [
     trigger('carouselAnimation', [
-      transition(':enter', [animate('2s ease-in')]),
-      transition(':leave', [animate('2s ease-out')]),
+      state('void', style({ opacity: 0.5 })),
+      state('*', style({ opacity: 1 })),
+      transition(':enter', [animate('1s ease-in')]),
+      transition(':leave', [animate('1s ease-out')]),
     ]),
   ],
 })
