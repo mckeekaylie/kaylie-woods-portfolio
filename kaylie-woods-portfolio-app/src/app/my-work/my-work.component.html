@@ -1,6 +1,11 @@
+<!--HERO-->
 <hero [imageUrl]="imageUrl" [heroTitle]="heroTitle"></hero>
 
-<div class="container">
+<!--LOADING INDICATOR-->
+<loader *ngIf="(loading$ | async) !== false"></loader>
+
+<!--CONTENT-->
+<div class="container" *ngIf="(loading$ | async) === false">
   <!--PRORANK-->
   <section id="sectionProrank">
     <div class="row mt-4">

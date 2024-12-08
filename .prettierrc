@@ -1,4 +1,5 @@
 { "printWidth": 80, "singleQuote": true, "trailingComma": "all", "tabWidth": 2,
 "semi": true, "parser": "angular", "overrides": [ { "files": "*.ts", "options":
 { "parser": "typescript" } }, { "files": "*.scss", "options": { "parser": "scss"
-} }, { "files": "*.json", "options": { "parser": "json" } } ] }
+} }, { "files": "*.json", "options": { "parser": "json" } }, {"files": "*.html",
+"options": {"singleAttributePerLine": true}} ] }
