@@ -1,0 +1,107 @@
+<!--HERO-->
+<hero [heroTitle]="heroTitle" [imageUrl]="imageUrl"></hero>
+
+<!--LOADING INDICATOR-->
+<loader *ngIf="(loading$ | async) !== false"></loader>
+
+<ng-container *ngIf="(loading$ | async) === false">
+    <!--TALENT COMMUNITIES-->
+    <section id="talentCommunities" aria-label="Talent Communities">
+        <div class="container-fluid case-study-content-wrapper text-white">
+            <div *ngFor="let study of caseStudies$ | async" [id]="study.id">
+                <div class="d-flex flex-column align-items-stretch">
+                    <div class="row">
+                        <div class="col-lg">
+                            <h1>Overview</h1>
+                            <p>{{ study.overviewText }}</p>
+                        </div>
+                        <div class="spacer d-md-none"></div>
+                        <div class="col-lg">
+                            <h1>My Role</h1>
+                            <p>{{ study.myRoleText }}</p>
+                        </div>
+                    </div>
+
+                    <div class="d-sm-none text-center">
+                        <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow"
+                            alt="">
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex">
+                                <img src="assets/images/case-studies/greenHalftoneArrow.svg"
+                                    class="green-halftone-arrow d-none d-sm-flex" alt="">
+                                <div class="problem">
+                                    <h1>The Problem</h1>
+                                    <p>{{study.problemText}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-sm-none text-center">
+                        <img src="assets/images/case-studies/greenHalftoneArrow.svg" class="green-halftone-arrow"
+                            alt="">
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex">
+                                <div class="solution">
+                                    <h1>The Solution</h1>
+                                    <p>{{study.solutionText}}</p>
+                                </div>
+                                <img src="assets/images/case-studies/greenHalftoneArrow.svg"
+                                    class="flip-img green-halftone-arrow d-none d-sm-flex" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+
+                <!--PHASES-->
+                <ng-container *ngFor="let phase of study.phases; let i = index">
+                    <div class="row p-4">
+                        <!--HEXAGON TITLE-->
+                        <div class="col-lg-3 d-flex justify-content-center">
+                            <div class="hexagon" [ngClass]="{ 
+                                    'border-blue-violet text-blue-violet': i === 0 || i === 3,
+                                    'border-aqua text-aqua': i === 1,
+                                    'border-spring-green text-spring-green': i === 2 
+                                }">
+                                <div class="hex-text">{{phase.phaseTitle}}</div>
+                            </div>
+                        </div>
+                        <!--TEXT (+ OPTIONAL LIST, CAROUSEL)-->
+                        <div class="col-lg-9">
+                            <div class="pt-4">
+                                <p *ngFor="let phasePara of phase.phaseText">{{phasePara}}</p>
+
+                                <div class="row" *ngIf="phase.list">
+                                    <div class="col">
+                                        <ul>
+                                            <li *ngFor="let item of phase.list">{{item}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="spacer"></div>
+
+                                <div class="row" *ngIf="phase.carouselImgs && phase.carouselImgs.length > 0">
+                                    <div class="col">
+                                        <carousel class="mt-2" [carouselImgs]="phase.carouselImgs"></carousel>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </section>
+</ng-container>

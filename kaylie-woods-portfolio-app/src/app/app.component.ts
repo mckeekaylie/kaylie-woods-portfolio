@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from '@app/shared/components/nav/nav.component';
+import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule, ViewportScroller } from '@angular/common';
 

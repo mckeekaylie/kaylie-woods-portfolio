@@ -1,0 +1,27 @@
+<div role="region" aria-roledescription="carousel" *ngIf="carouselImgs.length">
+    <div class="row">
+        <div class="col">
+            <div class="carousel-slide" aria-roledescription="slide">
+                <div *ngFor="let img of carouselImgs; let i = index">
+                    <div #imageElWrapper [style.height.px]="contentHeight" *ngIf="i === currentSlide">
+                        <img src="{{img.imgSrc}}" alt="{{img.imgAlt}}" class="img-fluid imageElement" #imageElement
+                            @carouselAnimation>
+                    </div>
+                </div>
+            </div>
+            <div class="control-bar px-4">
+                <a role="button" aria-label="previous" (click)="onPrevious()" (keypress)="onPrevious()" tabindex="0">
+                    <img src="assets/images/icons/previous.svg" alt="">
+                </a>
+                <p class="fs-5 m-0">
+                    <span class="fw-semibold mx-1">{{currentSlide + 1}}</span>
+                    of
+                    <span class="mx-1">{{carouselImgs.length}}</span>
+                </p>
+                <a role="button" aria-label="next" (click)="onNext()" (keypress)="onNext()" tabindex="0">
+                    <img src="assets/images/icons/next.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

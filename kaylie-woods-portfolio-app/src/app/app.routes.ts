@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { MyApproachComponent } from './my-approach/my-approach.component';
-import { HomeComponent } from './home/home.component';
-import { MyWorkComponent } from './my-work/my-work.component';
-import { CaseStudiesComponent } from './case-studies/case-studies.component';
+import { MyApproachComponent } from '@app/features/pages/my-approach/my-approach.component';
+import { HomeComponent } from '@app/features/pages/home/home.component';
+import { MyWorkComponent } from '@app/features/pages/my-work/my-work.component';
+import { CaseStudiesComponent } from '@app/features/pages/case-studies/case-studies.component';
 
 export const routes: Routes = [
   {

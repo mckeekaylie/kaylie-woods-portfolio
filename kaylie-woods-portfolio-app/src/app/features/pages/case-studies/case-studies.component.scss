@@ -1,0 +1,64 @@
+@use '../../../../../public/assets/sass/variables' as vars;
+
+.case-study-content-wrapper {
+  background-color: vars.$charcoal;
+  padding: 1.5rem;
+}
+
+.problem {
+  border: 2px solid vars.$aqua;
+  margin: 1rem;
+  padding: 1rem;
+
+  h1 {
+    color: vars.$aqua !important;
+  }
+}
+
+.solution {
+  border: 2px solid vars.$springGreen;
+  margin: 1rem;
+  padding: 1rem;
+
+  h1 {
+    color: vars.$springGreen !important;
+  }
+}
+
+/* CAROUSEL */
+.carousel-indicators {
+  position: unset !important;
+  margin: 0 !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 2rem;
+  border: 0.125rem solid vars.$aqua;
+  border-radius: 50%;
+  background-color: vars.$aqua;
+}
+
+/* MEDIA QUERIES */
+
+/* MD LG XL XXL SCREENS */
+@media (min-width: 768px) {
+  .green-halftone-arrow {
+    width: 16rem;
+  }
+}
+
+/* XS SM SCREENS */
+@media (max-width: 767.99px) {
+  .green-halftone-arrow {
+    width: 10rem;
+  }
+}
+
+/* XS SCREENS */
+@media (max-width: 575.99px) {
+  .green-halftone-arrow {
+    transform: rotate(90deg);
+  }
+}

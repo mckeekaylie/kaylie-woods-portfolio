@@ -1,0 +1,18 @@
+@use '../../../../../public/assets/sass/variables' as vars;
+
+/* NAVBAR */
+nav {
+  background-color: black;
+  z-index: 5;
+}
+
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  align-items: center;
+  z-index: 9999;
+}
+
+.navbar-brand {
+  color: vars.$aqua;
+}
