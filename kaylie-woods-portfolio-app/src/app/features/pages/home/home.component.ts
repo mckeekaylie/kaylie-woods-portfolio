@@ -4,25 +4,12 @@ import { MyJourney, MySkills } from '@app/shared/enum';
 import { HomeService } from '@app/core/services/home.service';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { CommonModule, ViewportScroller } from '@angular/common';
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { HeroComponent } from '@app/shared/components/hero/hero.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [RouterLink, RouterOutlet, CommonModule, HeroComponent],
-  animations: [
-    trigger('fadeIn', [
-      state('void', style({ opacity: 0.5 })),
-      transition('void => *', [animate('1s ease-in')]),
-    ]),
-  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
