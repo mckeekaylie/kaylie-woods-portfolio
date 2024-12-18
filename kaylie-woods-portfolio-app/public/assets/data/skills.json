@@ -1,42 +1,42 @@
 {
-    "ideate": [
-        "Empathizing with and understanding the user (Users First!)", 
-        "User Flows & User Personas", 
-        "UX Writing", 
-        "Information Architecture", 
-        "UX “Laws” & Best Practices", 
-        "HCI and Psychology Insight"
-    ],
-    "design": [
-        "Visual Design",
-        "Design Technologies Expert (Strongest familiarity with Figma & Adobe Creative Cloud)",
-        "Wireframes & Prototypes",
-        "High-Fidelity Mockups",
-        "Data Visualization",
-        "Design Systems",
-        "Style Guides, Color Palettes, Typography",
-        "Creating & Optimizing Visuals for Proper Rendering (incl. graphics, photos & videos)"
-    ],
-    "develop": [
-        "JavaScript/TypeScript",
-        "Angular 18 & React 19",
-        "Next.js",
-        "Reactive Programming (RxJS, SWR)",
-        "HTML 5 & CSS 3",
-        "Sass",
-        "Responsive Design",
-        "UI Animations (Motion, CSS)",
-        "CSS Frameworks",
-        "Section 508 / WCAG 2.2 compliance",
-        "Server & Middleware Development (Node.js + Express.js)",
-        "RESTful API Architecture & Development",
-        "API Platforms (Postman)",
-        "Integration & Unit Testing (Jest, Karma or QUnit)",
-        "WebSockets",
-        "C#",
-        "Version Control (Git & GitHub)",
-        "Package Managers (npm, yarn)",
-        "JS Bundlers (Webpack, Vite)",
-        "SQL, PostgresQL"
-    ]
+  "ideate": [
+    "Empathizing with and understanding the user (Users First!)",
+    "User Flows & User Personas",
+    "UX Writing",
+    "Information Architecture",
+    "UX “Laws” & Best Practices",
+    "HCI and Psychology Insight"
+  ],
+  "design": [
+    "Visual Design",
+    "Design Technologies Expert (Strongest familiarity with Figma & Adobe Creative Cloud)",
+    "Wireframes & Prototypes",
+    "High-Fidelity Mockups",
+    "Data Visualization",
+    "Design Systems",
+    "Style Guides, Color Palettes, Typography",
+    "Creating & Optimizing Visuals for Proper Rendering (incl. graphics, photos & videos)"
+  ],
+  "develop": [
+    "JavaScript/TypeScript",
+    "Angular 19 & React 19",
+    "Next.js",
+    "Reactive Programming (RxJS, SWR)",
+    "HTML 5 & CSS 3",
+    "Sass",
+    "Responsive Design",
+    "UI Animations (Motion, CSS)",
+    "CSS Frameworks (Tailwind, Bootstrap)",
+    "Section 508 / WCAG 2.2 compliance",
+    "Server & Middleware Development (Node.js + Express.js)",
+    "RESTful API Architecture & Development",
+    "API Platforms (Postman)",
+    "Integration & Unit Testing (Jest, Karma or QUnit)",
+    "WebSockets",
+    "C#",
+    "Version Control (Git & GitHub)",
+    "Package Managers (npm, yarn)",
+    "JS Bundlers (Webpack, Vite)",
+    "SQL, PostgresQL"
+  ]
 }
