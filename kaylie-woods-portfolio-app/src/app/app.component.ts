@@ -14,7 +14,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
   animations: [
     trigger('routeAnimation', [
       transition('* => *', [
-        style({ opacity: 0.9 }),
+        style({ backgroundColor: 'black', opacity: 0.9 }),
         animate('1s ease-in-out', style({ opacity: 1 })),
       ]),
     ]),
