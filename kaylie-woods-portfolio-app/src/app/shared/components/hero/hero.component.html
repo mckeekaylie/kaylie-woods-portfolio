@@ -1,5 +1,5 @@
 <header [attr.aria-labelledby]="heroTitle ? heroTitle : undefined">
-    <div class="hero">
+    <div [ngClass]="isHome ? 'hero-home' : 'hero'">
         <div class="hero-bkgd w-100 h-100" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}">
             <ng-container *ngIf="isHome">
                 <ng-container *ngTemplateOutlet="home"></ng-container>
@@ -38,7 +38,10 @@
         </div>
         <div class="row">
             <div class="col">
-                <p>I'm a Design Engineer with UX/UI Design & Software Engineering experience.</p>
+                <p>
+                    I'm a Design Engineer with a unique blend of full-stack engineering and UX/UI design expertise,
+                    bridging the gap between designers and engineers.
+                </p>
             </div>
         </div>
         <div class="row">
