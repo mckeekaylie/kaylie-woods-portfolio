@@ -17,7 +17,7 @@
     "Style Guides, Color Palettes, Typography",
     "Creating & Optimizing Visuals for Proper Rendering (incl. graphics, photos & videos)"
   ],
-  "develop": [
+  "build": [
     "JavaScript & TypeScript",
     "Angular 19",
     "React 19",

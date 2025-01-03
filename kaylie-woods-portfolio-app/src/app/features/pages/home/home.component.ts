@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ideateSkills$ = new BehaviorSubject<string[]>([]);
   designSkills$ = new BehaviorSubject<string[]>([]);
-  developSkills$ = new BehaviorSubject<string[]>([]);
+  buildSkills$ = new BehaviorSubject<string[]>([]);
 
   constructor(
     private homeService: HomeService,
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.ideateSkills$.next(data.ideate);
         this.designSkills$.next(data.design);
-        this.developSkills$.next(data.develop);
+        this.buildSkills$.next(data.build);
       });
   }
 

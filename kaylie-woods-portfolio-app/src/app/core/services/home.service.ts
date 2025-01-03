@@ -17,5 +17,5 @@ export class HomeService {
 interface Skills {
   ideate: string[],
   design: string[],
-  develop: string[]
+  build: string[]
 }

@@ -6,8 +6,8 @@ export enum MyJourney {
 }
 
 export enum MySkills {
-  skillsDesc = 'As a versatile engineer who is equally as adept at design as engineering, my skillset spans the entire process of building software. I like to group my skills into three categories: Ideate, Design and Develop.',
+  skillsDesc = 'As a versatile engineer who is equally as adept at design as engineering, my skillset spans the entire process of building software. I like to group my skills into three categories: Ideate, Design and Build.',
   ideateDesc = 'Determine solutions to a problem by gathering pertinent information, receiving user/stakeholder input, conducting adequate research, and participation in or ownership of ideation/discovery.',
   designDesc = 'Bring the findings of the discovery/ideation phase to fruition in wireframes, mockups and prototypes in addition to creating or optimizing any visuals required for the design.',
-  developDesc = 'Translate mockups into a fully-functional, pixel-perfect user interface that requests and displays applicable data.',
+  buildDesc = 'Translate mockups into a fully-functional, pixel-perfect user interface that requests and displays applicable data.',
 }
