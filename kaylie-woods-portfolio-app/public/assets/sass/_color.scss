@@ -29,6 +29,6 @@ $primaryColors: (
   }
 
   .border-#{$color} {
-    border: 2px solid $value !important;
+    border-color: $value !important;
   }
 }
