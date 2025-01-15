@@ -27,10 +27,10 @@ export interface workExamples {
   description: string;
   link: string;
   linkTxt?: string;
-  img?: string;
-  imgAltTxt?: string;
   imgSrc?: string;
+  imgAltTxt?: string;
   carouselImgs?: CarouselImg[];
+  examples?: workExamples[];
 }
 
 export interface CarouselImg {

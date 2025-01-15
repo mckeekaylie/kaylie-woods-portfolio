@@ -92,32 +92,62 @@
     "employer": "Genesys",
     "role": "Software Engineer, Analytics UI",
     "stack": "Front-End: Ember 4 & 5",
-    "description": "Genesys develops call center and customer service software, driven by empathy. The Analytics UI team builds and maintains a series of views in which call center managers review various analytics and charts that relay the productivity of their agents. From spring 2022 to fall 2023, I was a software engineer on the Analytics UI team, tasked with implementing new views and features with Ember.js and TypeScript. Prior to opening a pull request, I was required to write integration and unit tests for the code I added, utilizing Ember’s built-in testing functionality and QUnit.",
+    "description": "Genesys builds call center and customer service software, driven by empathy. The Analytics UI team builds and maintains a series of views in which call center managers review various metrics and data visualizations that relay the productivity of their agents. From spring 2022 to fall 2023, I was a software engineer on the Analytics UI team, tasked with implementing new views and features with Ember.js and TypeScript. Prior to opening a pull request, I was required to write integration and unit tests for the code I added, utilizing Ember’s built-in testing functionality and QUnit.",
     "workExamples": [
       {
-        "id": 1,
-        "title": "Export View Data",
-        "description": "A feature I developed with Ember & TypeScript that exports the data from selected views and selected columns inside Analytics UI as a CSV file or PDF. This file is sent to the user's inbox inside Genesys Cloud.",
-        "link": "https://help.mypurecloud.com/articles/export-view-data/",
-        "img": "assets/images/my-work/genesys/export-view-data.png",
-        "imgAltTxt": "Icon of a text document"
+        "title": "Views",
+        "description": "When I was assigned new views to build, I was responsible for the TS, HTML, CSS and integration/unit tests required to establish the view. Each view required the execution of various API requests followed by rigorous TypeScript logic to pass each object and/or property inside the response object to their designated location in the UI. Each view also required custom TypeScript to enable the user to customize the view through the use of filters, sorting, toggles, and column rearrangement.",
+        "imgSrc": "assets/images/my-work/genesys/queue_activity_detail_view_new.png",
+        "imgAltText": "Queue Activity Detail, Genesys Cloud",
+        "examples": [
+          {
+            "id": 1,
+            "title": "Queues Activity Summary & Detail",
+            "description": "Parent and child user interfaces that enable call center managers to view and interact with real-time statistics for queues.",
+            "link": "https://help.mypurecloud.com/articles/queues-activity-summary-view/",
+            "link2": "https://help.mypurecloud.com/articles/queues-activity-detail-view/"
+          },
+          {
+            "id": 2,
+            "title": "Queue Performance Summary & Detail",
+            "description": "Parent and child user interfaces that display data visualizations relaying metrics and data for queues.",
+            "link": "https://help.mypurecloud.com/articles/queues-performance-summary-view/",
+            "link2": "https://help.mypurecloud.com/articles/queue-performance-detail-view/"
+          },
+          {
+            "id": 3,
+            "title": "Campaign Performance Summary",
+            "description": "Parent user interface for Campaign Performance Detail that provides current and past metrics and data for campaigns.",
+            "link": "https://help.mypurecloud.com/articles/campaigns-performance-summary-view/"
+          }
+        ]
       },
       {
-        "id": 2,
-        "title": "Conversation Data Model",
-        "description": "An epic I contributed to in which analytics metrics were applied to conversation records.",
-        "link": "https://developer.genesys.cloud/analyticsdatamanagement/analytics/detail/conversation-data-model",
-        "img": "assets/images/my-work/genesys/conversation-record.png",
-        "imgAltTxt": "Icon of a call center agent wearing a headset"
-      },
-      {
-        "id": 3,
-        "title": "Queue Performance Summary & Detail",
-        "description": "Two new views I developed with Ember & TypeScript in Analytics UI where the user can see current and past metrics and data for queues.",
-        "link": "https://help.mypurecloud.com/articles/queues-performance-summary-view/",
-        "link2": "https://help.mypurecloud.com/articles/queue-performance-detail-view/",
-        "img": "assets/images/my-work/genesys/queue-performance.png",
-        "imgAltTxt": "Icon of a line chart"
+        "title": "Features",
+        "description": "When I was assigned new features to build, I was responsible for the client-side code and automated testing required to add new functionality to existing views. These tasks typically involved considerable TypeScript logic with additions to the relevant view’s HTML.",
+        "imgSrc": "assets/images/my-work/genesys/export-view-data-ui.webp",
+        "imgAltText": "Export View Data, Genesys Cloud",
+        "examples": [
+          {
+            "id": 1,
+            "title": "Agent Development Learning Modules",
+            "description": "Users with the Master or Performance Admin role can automatically or manually assign a learning module to an agent or to a group of agents. Master or Performance Admins can also reset and re-assign learning modules as needed.",
+            "link": "https://help.mypurecloud.com/articles/assign-a-development-and-feedback-module/",
+            "link2": "https://help.mypurecloud.com/articles/reset-and-assign-a-module-again/"
+          },
+          {
+            "id": 2,
+            "title": "Analytics UI Workspace Improvements",
+            "description": "All Analytics UI users can save their customized views, which will be located in the Saved list on the Workspace tab. Users can also override an existing saved view and export any view as a CSV file or a PDF report delivered to their inbox in Genesys Cloud.",
+            "link": "https://help.mypurecloud.com/articles/work-with-the-analytics-workspace"
+          },
+          {
+            "id": 3,
+            "title": "Export View Data",
+            "description": "Users with data export permissions are able to export the data from selected views and selected columns inside an Analytics UI view as a CSV file or PDF. This file is sent to the user's inbox inside Genesys Cloud.",
+            "link": "https://help.mypurecloud.com/articles/export-view-data/"
+          }
+        ]
       }
     ]
   },
@@ -134,7 +164,7 @@
         "description": "GoGoMeds is an online pharmacy laser-focused on leveraging technology to make prescription medicine low-cost and stress free. In 2020, GoGoMeds underwent a redesign and it was my responsibility to update Angular components to reflect the mockups provided to me. From 2020-2022, I continuously audited the user interface, focusing on the user experience, the presentation of the UI, mobile performance, and adherence to Section 508/WCAG guidelines. From 2021-2022, I took the lead on redesigning the GoGoMeds portal in Adobe XD and converting the frontend to Angular 14 in a new repository.",
         "link": "https://www.gogomeds.com/",
         "linkTxt": "gogomeds.com",
-        "img": "assets/images/my-work/tcc/ggm.png",
+        "imgSrc": "assets/images/my-work/tcc/ggm.png",
         "imgAltTxt": "Screenshot of gogomeds.com, circa 2022"
       },
       {
@@ -143,7 +173,7 @@
         "description": "NJCCIS is a government-run organization for families in New Jersey seeking childcare. In 2022, I was responsible for implementing full-stack features with Angular 6, ASP.NET Core, C#, and Microsoft SQL Server. Additionally, I resolved bugs across the stack and frequently analyzed the user interface to detect hindrances to the user experience, front-end defects, and any breaches of Section 508/WCAG guidelines.",
         "link": "https://www.njccis.com/",
         "linkTxt": "njccis.com",
-        "img": "assets/images/my-work/tcc/njccis.png",
+        "imgSrc": "assets/images/my-work/tcc/njccis.png",
         "imgAltTxt": "Screenshot of njccis.com, circa 2022"
       },
       {
@@ -152,7 +182,7 @@
         "description": "Meck Pre-K is a Pre-Kindergarten Program for families in North Carolina. In 2020, I was responsible for coding the layout and design of new features with Angular 6 and PrimeNG. Additionally, I contributed to the team’s code review process by running pull requests in different browsers with varying screen sizes. I took note of any defects then ran the code through a series of Section 508/WCAG tests. Upon completion of this process, I presented my findings to the designated software engineer, who would address them prior to deployment.",
         "link": "https://ascend.meckprek.com/ecds/home",
         "linkTxt": "ascend.meckprek.com",
-        "img": "assets/images/my-work/tcc/meck.png",
+        "imgSrc": "assets/images/my-work/tcc/meck.png",
         "imgAltTxt": "Screenshot of meckprek.com, circa 2022"
       },
       {
@@ -161,7 +191,7 @@
         "description": "In addition to client projects, one of my responsibilities was maintaining TCC’s website by adding or removing content as needed through ASP.NET Razor Pages. In 2021, I implemented the Secure Virtual Desktop page (now deprecated) based on a provided mockup.",
         "link": "https://www.e-tcc.com/",
         "linkTxt": "e-tcc.com",
-        "img": "assets/images/my-work/tcc/tcc.png",
+        "imgSrc": "assets/images/my-work/tcc/tcc.png",
         "imgAltTxt": "Screenshot of e-tcc.com, Secure Virtual Desktop page, circa 2022"
       }
     ]

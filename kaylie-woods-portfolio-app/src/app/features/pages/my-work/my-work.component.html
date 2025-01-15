@@ -66,34 +66,51 @@
         <p class="text-gray-dark fs-5">{{genesys.stack}}</p>
         <p>{{genesys.description}}</p>
       </div>
-      <div class="spacer"></div>
     </div>
-    <div class="row genesys-card-row">
-      <div class="col">
-        <div class="row row-cols-1 row-cols-md-3">
-          <ng-container *ngFor="let example of genesys.workExamples">
-            <div class="col">
-              <div class="card h-100" [ngClass]="
-                {
-                  'bg-aqua-light':  example.id === 1, 
-                  'bg-blue-violet-light':  example.id === 2, 
-                  'bg-spring-green-light': example.id === 3
-                }">
-                <img src="{{example.img}}" class="card-img-top" alt="{{example.imgAltTxt}}">
-                <div class="card-body">
-                  <p class="fs-5 fw-medium">{{example.title}}</p>
-                  <p class="card-text">{{example.description}}</p>
-                </div>
-                <a href="{{example.link}}" target="_blank" class="btn btn-primary m-3" style="width: fit-content;">
-                  Documentation
-                </a>
-              </div>
-            </div>
-            <div class="spacer d-md-none"></div>
-          </ng-container>
+
+    <ng-container *ngFor="let category of genesys.workExamples">
+      <div class="spacer"></div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class="text-blue-violet">{{category.title}}</h3>
+          <p>{{category.description}}</p>
+        </div>
+        <div class="col-lg-8">
+          <img src={{category.imgSrc}} alt={{category.imgAltTxt}} class="img-fluid">
         </div>
       </div>
-    </div>
+
+      <div class="spacer"></div>
+
+      <div class="row">
+        <div class="col">
+          <div class="row row-cols-1 row-cols-lg-3">
+            <ng-container *ngFor="let example of category.examples">
+              <div class="col">
+                <div class="card h-100" [ngClass]="
+                    {
+                      'bg-aqua-light':  category.title === 'Views', 
+                      'bg-spring-green-light': category.title === 'Features'
+                    }">
+                  <div class="card-body">
+                    <p class="fs-5 fw-medium">{{example.title}}</p>
+                    <p class="card-text">{{example.description}}</p>
+                  </div>
+                  <a href="{{example.link}}" target="_blank" class="btn btn-primary m-3" style="width: fit-content;">
+                    Documentation
+                  </a>
+                </div>
+              </div>
+              <div class="spacer d-lg-none"></div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="spacer d-none d-lg-block" *ngIf="category.title !== 'Features'"></div>
+
+      </div>
+    </ng-container>
   </section>
 
   <!--TCC-->
@@ -130,7 +147,7 @@
           <ng-template #tccCardImgCol>
             <div class="col-lg">
               <div class="tcc-card-img-wrapper">
-                <img src="{{example.img}}" alt="{{example.imgAltTxt}}" class="img-fluid">
+                <img src="{{example.imgSrc}}" alt="{{example.imgAltTxt}}" class="img-fluid">
               </div>
             </div>
           </ng-template>

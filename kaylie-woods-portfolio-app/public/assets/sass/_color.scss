@@ -1,33 +1,34 @@
-@use "../sass/variables" as vars;
+@use '../sass/variables' as vars;
 
-$bgColors : (
-  "aqua-light":  vars.$aquaLight,
-  "blue-violet-light": vars.$blueVioletLight,
-  "spring-green-light": vars.$springGreenLight,
-  "charcoal": vars.$charcoal
+$bgColors: (
+  'aqua-light': vars.$aquaLight,
+  'blue-violet-light': vars.$blueVioletLight,
+  'spring-green-light': vars.$springGreenLight,
+  'charcoal': vars.$charcoal,
 );
 
 @each $color, $value in $bgColors {
-    .bg-#{$color} {
-        background-color: $value!important;
-    }
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
 }
 
-$primaryColors : (
-    "aqua": vars.$aqua,
-    "spring-green": vars.$springGreen,
-    "blue-violet": vars.$blueViolet,
-    "white": #ffffff,
-    "transparent": transparent,
-    "gray-dark": vars.$grayDark
+$primaryColors: (
+  'aqua': vars.$aqua,
+  'crayola-blue': vars.$crayolaBlue,
+  'spring-green': vars.$springGreen,
+  'blue-violet': vars.$blueViolet,
+  'white': #ffffff,
+  'transparent': transparent,
+  'gray-dark': vars.$grayDark,
 );
 
 @each $color, $value in $primaryColors {
-    .text-#{$color} {
-        color: $value!important;
-    }
+  .text-#{$color} {
+    color: $value !important;
+  }
 
-    .border-#{$color} {
-        border-color: $value!important;
-    }
+  .border-#{$color} {
+    border: 2px solid $value !important;
+  }
 }
