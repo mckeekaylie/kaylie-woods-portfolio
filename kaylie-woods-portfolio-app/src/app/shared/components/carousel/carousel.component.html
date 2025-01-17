@@ -1,13 +1,13 @@
-<div role="region" aria-roledescription="carousel" *ngIf="carouselImgs.length" class="w-100">
+<div role="region" aria-roledescription="carousel" *ngIf="carouselImgs.length" class="w-100" #carouselParentDiv>
     <!--SLIDE ELEMENT-->
-    <div *ngFor="let img of carouselImgs; let i = index" aria-roledescription="slide">
-        <div *ngIf="i === currentSlide" [@carouselAnimation]="{
-                value: '',
-                params: {
-                start: lastDirection === 'right' ? '+' : '-',
-                end: lastDirection === 'right' ? '-' : '+',
-                
-            }}">
+    <div *ngFor="let img of carouselImgs; let i = index" aria-roledescription="slide" #slideWrapper>
+        <div #imageWrapper *ngIf="i === currentSlide" [@carouselAnimation]="{
+                    value: '',
+                    params: {
+                    start: lastDirection === 'right' ? '+' : '-',
+                    end: lastDirection === 'right' ? '-' : '+',
+                    
+                }}">
             <img src="{{img.imgSrc}}" alt="{{img.imgAlt}}" class="imageElement img-fluid" #imageElement>
         </div>
     </div>
