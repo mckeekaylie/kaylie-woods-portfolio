@@ -1,4 +1,9 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { Subject, takeUntil, timer } from 'rxjs';
 import { MyWorkService, myJobs } from '@app/core/services/my-work.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
@@ -38,8 +43,8 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.viewportScroller.scrollToPosition([0, 0]);
     this.viewportScroller.setOffset([0, 100]);
+    this.viewportScroller.scrollToPosition([0, 0]);
 
     this.myWorkService
       .getMyJobs()
@@ -58,6 +63,12 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
           data.find((item) => item.employer === 'TCC Solutions'),
         );
       });
+
+    this.loading$.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
+      timer(1000).subscribe(() => {
+        this.scrollToSection('anchor');
+      })
+    });
   }
 
   ngAfterViewInit() {

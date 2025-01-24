@@ -1,21 +1,21 @@
 {
   "ideate": [
-    "Empathizing with and understanding the user (Users First!)",
+    "User Advocate",
     "User Flows & User Personas",
-    "UX Writing",
     "Information Architecture",
+    "UX Writing",
     "UX “Laws” & Best Practices",
     "HCI and Psychology Insight"
   ],
   "design": [
     "Visual Design",
-    "Design Technologies Expert (Strongest familiarity with Figma & Adobe Creative Cloud)",
+    "Data Visualization",
+    "Design Technologies Expert (Figma, Adobe Creative Cloud, and more)",
     "Wireframes & Prototypes",
     "High-Fidelity Mockups",
-    "Data Visualization",
     "Design Systems",
     "Style Guides, Color Palettes, Typography",
-    "Creating & Optimizing Visuals for Proper Rendering (incl. graphics, photos & videos)"
+    "Performance + Rendering Optimization of Visuals (incl. graphics, photos & videos)"
   ],
   "build": [
     "JavaScript & TypeScript",
@@ -31,11 +31,12 @@
     "Reactive Programming (RxJS, SWR)",
     "State Management (NgRx, Redux)",
     "Integration & Unit Testing (Jest, Karma, QUnit)",
+    "Data Visualization (D3.js, ngx-charts)",
     "Node.js",
     "Express.js",
     "C#",
     "SQL",
-    "Databases (Relational: PostgresQL & NoSQL: MongoDB)",
+    "Databases (Relational: PostgreSQL & NoSQL: MongoDB)",
     "API Platforms (Postman)",
     "RESTful API Architecture & Development",
     "CI/CD (Jenkins)",

@@ -6,6 +6,9 @@
 
 <!--CONTENT-->
 <div class="container" *ngIf="(loading$ | async) === false">
+  <!--anchor for scrolling to the top of the content once the loading indicator has left the DOM-->
+  <a id="anchor" aria-hidden="true"></a>
+
   <!--PRORANK-->
   <section id="sectionProrank">
     <div class="row mt-4">

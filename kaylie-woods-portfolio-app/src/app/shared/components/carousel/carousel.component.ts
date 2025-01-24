@@ -6,9 +6,7 @@ import {
   Component,
   ElementRef,
   Input,
-  QueryList,
   ViewChild,
-  ViewChildren,
   ViewEncapsulation,
 } from '@angular/core';
 import { CarouselImg } from '@app/core/services/my-work.service';
