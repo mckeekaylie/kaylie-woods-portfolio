@@ -64,15 +64,15 @@ export class CarouselComponent implements AfterViewInit {
 
   constructor(private renderer: Renderer2) {}
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.updateSize();
-  }
-
   ngAfterViewInit() {
     setTimeout(() => {
       this.updateSize();
     }, 200);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateSize();
   }
 
   updateSize() {
