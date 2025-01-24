@@ -12,6 +12,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { CarouselImg } from '@app/core/services/my-work.service';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'carousel',
@@ -65,9 +66,9 @@ export class CarouselComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    setTimeout(() => {
+    timer(1000).subscribe(() => {
       this.updateSize();
-    }, 500);
+    });
   }
 
   @HostListener('window:resize', ['$event'])
