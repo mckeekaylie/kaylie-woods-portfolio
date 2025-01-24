@@ -66,7 +66,7 @@ export class CarouselComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    timer(1000).subscribe(() => {
+    timer(500).subscribe(() => {
       this.updateSize();
     });
   }
