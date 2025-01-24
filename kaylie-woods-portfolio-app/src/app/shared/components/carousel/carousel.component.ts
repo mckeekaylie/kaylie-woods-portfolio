@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Renderer2 } from '@angular/core';
+import { HostListener, Renderer2 } from '@angular/core';
 import {
   AfterViewInit,
   Component,
@@ -23,28 +23,29 @@ import { CarouselImg } from '@app/core/services/my-work.service';
 
   animations: [
     trigger('carouselAnimation', [
-      transition('void => *', [
+      transition(':enter', [
         style({
           transform: 'translateX({{start}}20%)',
           opacity: 0,
-          visibility: 'hidden',
+          height: 0,
         }),
         animate(
-          '0.3s 0.3s ease-out',
+          '0.3s 0.3s ease-in',
           style({
-            opacity: 1,
-            visibility: 'visible',
             transform: 'translateX(0)',
+            opacity: 1,
+            height: '*',
           }),
         ),
       ]),
-      transition('* => void', [
+      transition(':leave', [
+        style({ height: '*' }),
         animate(
           '0.3s ease-out',
           style({
             transform: 'translateX({{end}}20%)',
             opacity: 0,
-            visibility: 'hidden',
+            height: 0,
           }),
         ),
       ]),
@@ -57,47 +58,36 @@ export class CarouselComponent implements AfterViewInit {
   currentSlide = 0;
 
   lastDirection: 'left' | 'right' | 'none' = 'none';
-  @ViewChild('carouselParentDiv') carouselParentDiv!: ElementRef;
 
-  @ViewChild('imageElement') imageElement!: ElementRef;
-  @ViewChildren('slideWrapper') slideWrapper!: QueryList<any>;
+  @ViewChild('imageElement') imageElementRef!: ElementRef;
   @ViewChild('slideWrapper') slideWrapperRef!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateSize();
+  }
+
   ngAfterViewInit() {
     setTimeout(() => {
-      const slideWrapperRect =
-        this.slideWrapperRef.nativeElement.getBoundingClientRect();
-      this.renderer.setStyle(
-        this.slideWrapperRef.nativeElement,
-        'height',
-        slideWrapperRect,
-      );
-      this.updateImageSize();
+      this.updateSize();
     }, 100);
   }
 
-  updateImageSize(previousElement?: number): void {
-    // hide the slide that was visible prior to changing slides
-    if (previousElement) {
-      const previous = this.slideWrapper.get(previousElement);
+  updateSize() {
+    const imageElementRect =
+      this.imageElementRef.nativeElement.getBoundingClientRect();
 
-      this.renderer.setStyle(previous.nativeElement, 'height', 0);
-    }
-
-    // show the current slide and set its height
-    const imageRect = this.imageElement.nativeElement.getBoundingClientRect();
-    const current = this.slideWrapper.get(this.currentSlide);
-
-    this.renderer.removeStyle(current.nativeElement, 'height'); // Remove the previous inline style added by renderer
-    this.renderer.setStyle(current.nativeElement, 'height', imageRect.height);
+    this.renderer.setStyle(
+      this.slideWrapperRef.nativeElement,
+      'height',
+      `${imageElementRect.height}px`,
+    );
   }
 
   public onNavigate(dir: 'left' | 'right'): void {
     this.lastDirection = dir;
-
-    const previousElement = this.currentSlide;
 
     switch (dir) {
       case 'left':
@@ -114,7 +104,5 @@ export class CarouselComponent implements AfterViewInit {
           this.currentSlide = this.currentSlide + 1;
         }
     }
-
-    this.updateImageSize(previousElement);
   }
 }
