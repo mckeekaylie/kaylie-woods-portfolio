@@ -72,7 +72,7 @@ export class CarouselComponent implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.updateSize();
-    }, 100);
+    }, 200);
   }
 
   updateSize() {
