@@ -67,7 +67,7 @@ export class CarouselComponent implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.updateSize();
-    }, 200);
+    }, 500);
   }
 
   @HostListener('window:resize', ['$event'])
