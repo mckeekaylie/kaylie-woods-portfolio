@@ -61,7 +61,7 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    timer(3000).subscribe(() => {
+    timer(4000).subscribe(() => {
       this.loading$.next(false);
     });
   }
