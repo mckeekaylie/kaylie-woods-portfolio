@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil, timer } from 'rxjs';
 import { MyWorkService, myJobs } from '@app/core/services/my-work.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { ChallengesProjsComponent } from '@app/features/challenges-projs/challenges-projs.component';
@@ -61,9 +61,9 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
+    timer(3000).subscribe(() => {
       this.loading$.next(false);
-    }, 2500);
+    });
   }
 
   scrollToSection(section: string) {
