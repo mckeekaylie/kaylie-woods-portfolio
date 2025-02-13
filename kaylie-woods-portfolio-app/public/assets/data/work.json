@@ -2,7 +2,7 @@
   {
     "employer": "ProRank",
     "role": "Design Engineer, Angular Developer",
-    "stack": "Front-End: Angular 16 & 17, Middleware: Node.js & Express.js, Back-End:  Oracle DB & Node-Oracle ORM",
+    "stack": "Stack: Angular 16 & 17  •  Node.js + Express.js  •  Oracle DB & Node-Oracle ORM",
     "description": "ProRank is a startup seeking to transform talent acquisition in healthcare. In September 2023, I started at ProRank as the sole Angular Developer on the team. I was accountable for implementing front-end features and enhancements with Angular 16. As time progressed, I eagerly assumed responsibility for UX and UI design and front-end developer mentorship. I was a key voice in the ideation discussions behind MVP and I brought these discussions to fruition in wireframes and high-fidelity mockups. Once the designs were approved, I tackled the Angular development required to bring them to life in the product. My design and engineering efforts during MVP established ProRank’s new look and the direction of the product, which led to the signing of ProRank’s first client.",
     "workExamples": [
       {
@@ -91,7 +91,7 @@
   {
     "employer": "Genesys",
     "role": "Software Engineer, Analytics UI",
-    "stack": "Front-End: Ember 4 & 5",
+    "stack": "Stack: Ember 4 & 5  •  TypeScript  •  Ember Testing Suite + QUnit",
     "description": "Genesys builds call center and customer service software, driven by empathy. The Analytics UI team builds and maintains a series of views in which call center managers review various metrics and data visualizations that relay the productivity of their agents. From spring 2022 to fall 2023, I was a software engineer on the Analytics UI team, tasked with implementing new views and features with Ember.js and TypeScript. Prior to opening a pull request, I was required to write integration and unit tests for the code I added, utilizing Ember’s built-in testing functionality and QUnit.",
     "workExamples": [
       {
@@ -155,7 +155,7 @@
   {
     "employer": "TCC Solutions",
     "role": "UI/UX Developer",
-    "stack": "Front-End: Angular 6 & 14, Back-End: ASP.NET Core, C#, Database: Microsoft SQL Server",
+    "stack": "Stack: Angular 6-14  •  ASP.NET Core, C#  •  Microsoft SQL Server  •  Jasmine + Karma",
     "description": "TCC is a leader in the early childhood education and care solutions industry, developing solutions that help organizations in the industry solve problems to better serve children and families. From 2020-2022, I was the sole UI/UX Developer on the team and my time was spread across multiple projects (highlighted below).",
     "workExamples": [
       {

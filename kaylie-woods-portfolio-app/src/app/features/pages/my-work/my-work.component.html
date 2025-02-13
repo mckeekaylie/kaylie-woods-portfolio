@@ -2,7 +2,9 @@
 <hero [imageUrl]="imageUrl" [heroTitle]="heroTitle"></hero>
 
 <!--LOADING INDICATOR-->
-<loader *ngIf="(loading$ | async) !== false"></loader>
+<div style="min-height: 50vh;" *ngIf="(loading$ | async) !== false">
+  <loader></loader>
+</div>
 
 <!--CONTENT-->
 <div class="container" *ngIf="(loading$ | async) === false">

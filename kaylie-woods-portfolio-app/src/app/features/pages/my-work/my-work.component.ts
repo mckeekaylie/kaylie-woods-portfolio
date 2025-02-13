@@ -65,7 +65,7 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
       });
 
     this.loading$.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
-      timer(1000).subscribe(() => {
+      timer(500).subscribe(() => {
         this.scrollToSection('anchor');
       })
     });

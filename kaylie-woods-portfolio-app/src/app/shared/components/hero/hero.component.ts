@@ -13,7 +13,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
     trigger('routeAnimation', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('1s ease-in', style({ opacity: 1 })),
+        animate('1s 1.5s ease-in', style({ opacity: 1 })),
       ]),
     ]),
   ],
