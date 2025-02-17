@@ -1,6 +1,6 @@
 <!--NAV-->
 <div class="nav-wrapper">
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/">Kaylie Woods</a>
 
@@ -17,11 +17,16 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/my-work">My Work</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/my-approach">My Approach</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/case-studies">Case Studies</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              UX
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" routerLink="/my-approach">My Approach</a>
+              </li>
+              <li><a class="nav-link" routerLink="/case-studies">Case Studies</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

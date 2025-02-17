@@ -1,11 +1,12 @@
 {
   "ideate": [
-    "User Advocate",
+    "User Advocacy",
+    "User Research",
     "User Flows & User Personas",
     "Information Architecture",
     "UX Writing",
-    "UX “Laws” & Best Practices",
-    "HCI and Psychology Insight"
+    "Mastery of UX “Laws” & Best Practices",
+    "Keen Understanding of HCI and Psychology"
   ],
   "design": [
     "Visual Design",
@@ -19,7 +20,7 @@
   ],
   "build": [
     "JavaScript & TypeScript",
-    "JS Frameworks & Libraries: Angular 19, React 19, Next.js 15",
+    "JS Frameworks & Libraries: Angular 19, React 19, Next.js 15. Ember.js 6 & 7",
     "Node.js & Node.js frameworks (Express.js)",
     "C# & ASP.NET Core",
     "SQL",
