@@ -11,10 +11,64 @@
   <!--anchor for scrolling to the top of the content once the loading indicator has left the DOM-->
   <a id="anchor" aria-hidden="true"></a>
 
-  <!--PRORANK-->
+  <!-- GEOH -->
+  <section id="sectionGeoh">
+    <div class="row mt-5">
+      <div class="mt-4">
+        <h1 class="text-blue-violet">{{geoh.employer}}</h1>
+        <h2 class="fw-light">{{geoh.role}}</h2>
+        <p class="text-gray-dark fs-5">{{geoh.stack}}</p>
+        <p>{{geoh.description}}</p>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="container-fluid p-0">
+        <div class="row g-0" *ngFor="let example of geoh.workExamples; let i = index; let even = even">
+          <ng-container *ngIf="even">
+            <ng-container *ngTemplateOutlet="geohCardImgCol"></ng-container>
+            <ng-container *ngTemplateOutlet="geohCardCaptionCol; context: { even }"></ng-container>
+          </ng-container>
+
+          <ng-container *ngIf="!even">
+            <!--display image above text on xs, sm, md screens-->
+            <div class="d-lg-none">
+              <ng-container *ngTemplateOutlet="geohCardImgCol"></ng-container>
+            </div>
+            <ng-container *ngTemplateOutlet="geohCardCaptionCol; context: { even }"></ng-container>
+            <!--display image to the right of text on lg, xl, xxl screens-->
+            <div class="d-none d-lg-flex col-lg">
+              <ng-container *ngTemplateOutlet="geohCardImgCol"></ng-container>
+            </div>
+          </ng-container>
+
+          <ng-template #geohCardImgCol>
+            <div class="col-lg">
+              <div>
+                <img src="{{example.imgSrc}}" alt="{{example.imgAltTxt}}" class="img-fluid">
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template #geohCardCaptionCol let-even="even">
+            <div class="col-lg">
+              <div class="p-4 caption" [ngClass]="{'light-aqua':  !even, 'spring-green': even}">
+                <div>
+                  <p class="fw-medium fs-5">{{example.title}}</p>
+                  <p>{{example.description}}</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRORANK -->
   <section id="sectionProrank">
-    <div class="row mt-4">
-      <div class="col">
+    <div class="row border-top mt-5">
+      <div class="mt-4">
         <h1 class="text-blue-violet">{{proRank.employer}}</h1>
         <h2 class="fw-light">{{proRank.role}}</h2>
         <p class="text-gray-dark fs-5">{{proRank.stack}}</p>

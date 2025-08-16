@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  OnDestroy,
-  OnInit
-} from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil, timer } from 'rxjs';
 import { MyWorkService, myJobs } from '@app/core/services/my-work.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
@@ -33,6 +28,7 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
   heroTitle = 'My Work';
   imageUrl = 'assets/images/my-work/bkgd-my-work.jpg';
 
+  geoh = {} as myJobs;
   proRank = {} as myJobs;
   genesys = {} as myJobs;
   tcc = {} as myJobs;
@@ -51,6 +47,10 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((data) => {
         Object.assign(
+          this.geoh,
+          data.find((item) => item.employer === 'GEOH'),
+        );
+        Object.assign(
           this.proRank,
           data.find((item) => item.employer === 'ProRank'),
         );
@@ -67,7 +67,7 @@ export class MyWorkComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loading$.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
       timer(500).subscribe(() => {
         this.scrollToSection('anchor');
-      })
+      });
     });
   }
 

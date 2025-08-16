@@ -1,5 +1,53 @@
 [
   {
+    "employer": "GEOH",
+    "role": "Software Engineer, Full-Stack",
+    "stack": "Stack: React 18 •  Node.js & Express.js • Apollo GraphQL • Azure Cosmos DB",
+    "description": "GEOH offers billing services and a web + mobile application to home health & home care agencies. In March 2025, I joined the engineering team to assist with the backlog of client feature requests. When June hit, the team shifted priorities to go all-in on implementing support for home health services, which is a longstanding goal for GEOH. This was a gargantuan effort on a tight timeline, but we met the deadline with minimal bugs and disasters. In addition to constructing new pages, features and functionality, I work closely with Tier II support to investigate client issues and with UX Designers to ensure their research and designs are accurately reflected in the UI. I write custom scripts as needed to assist GEOH employees and research potential tools for our codebase to address needs. ",
+    "workExamples": [
+      {
+        "id": 1,
+        "title": "Skilled Care - Client Facesheet",
+        "description": "Client Facesheet is a designated page where caregivers and providers can access pertinent information about a specific client they serve. I was one of two engineers assigned to this epic, handling the Facesheet, Client Info, Forms, Care Plans, and Notes tabs, along with their associated overlays. This epic introduced entirely new functionality and data, requiring custom hooks and components in addition to new GraphQL schemas, queries, and resolvers.",
+        "imgSrc": "assets/images/my-work/geoh/GeohPinBkgd.webp",
+        "imgAltText": "Geoh logo"
+      },
+      {
+        "id": 2,
+        "title": "Skilled Care - Visit Facesheet",
+        "description": "Visit Facesheet is a designated page where caregivers and providers log their visits. Visit Facesheet closely mirrors Client Facesheet and the two share some data and components. After I polished Client Facesheet, I updated the components and behaviors associated with Visit Facesheet to either repurpose Client Facesheet’s components, styles and logic or to follow the patterns outlined by Client Facesheet. I took control of addressing missed requirements, ensuring performance on mobile, and collaborating with UX Designers to fine tune the UI.",
+        "imgSrc": "assets/images/my-work/geoh/GeohPinBkgd.webp",
+        "imgAltText": "GEOH logo"
+      },
+      {
+        "id": 3,
+        "title": "Client Tasklist",
+        "description": "Client Tasklist provides a central location for agency owners to view and take action on tasks related to their clients. I was responsible for the reminder column and its associated overlays. The reminder column presents a button per client that either opens an overlay for the user to input required information or routes the user to the designated form. There are 5 steps in the flow for the reminder column, each triggered by a specific event. This required me to build a new component for the create task overlay and a formatter for the button to determine its text and action. Additionally, I had to configure the upsert to accept reminderId.",
+        "imgSrc": "assets/images/my-work/geoh/ClientTasklist.png",
+        "imgAltText": "Client Tasklist, GEOH"
+      },
+      {
+        "id": 4,
+        "title": "Employee Tasklist",
+        "description": "Employee Tasklist provides a central location for agency owners to view and take action on tasks related to their employees. I was responsible for building the create task overlay where an agency owner can assign a task to an employee and the employee credentials overlay where required documents can be uploaded to an employee’s record. This required two new components and behaviors to support them. ",
+        "imgSrc": "assets/images/my-work/geoh/EmployeeTasklist.png",
+        "imgAltText": "Client Tasklist, GEOH"
+      },
+      {
+        "id": 5,
+        "title": "Multi-Line Scheduler",
+        "description": "Home health and home care agencies depend on a reliable, detailed scheduling calendar to ensure patient needs are addressed. It became clear that our pre-existing scheduler needed some enhancements to meet our clients’ needs. I implemented the infrastructure for a new page where a specific employee’s recurring visits and calendar are displayed and can be edited by agency managers. Afterwards, I constructed the calendar and its associated overlays. This required new components for the new overlays, a new behavior for the calendar, and configuring the pre-existing calendar component to meet the needs of this new use case without affecting other pages.",
+        "imgSrc": "assets/images/my-work/geoh/MultiLineScheduler.png"
+      },
+      {
+        "id": 6,
+        "title": "Performance Metrics",
+        "description": "Performance Metrics presents charts relaying the performance of the user’s agency. I was tasked with developing the controls a user can interact with to apply aggregates to the metrics displayed. When close to completion, I adjusted the JSX and JSS to ensure performance metrics is usable and presentable on mobile.",
+        "imgSrc": "assets/images/my-work/geoh/PerformanceMetrics.png"
+      }
+    ]
+  },
+  {
     "employer": "ProRank",
     "role": "Design Engineer, Angular Developer",
     "stack": "Stack: Angular 16 & 17  •  Node.js + Express.js  •  Oracle DB & Node-Oracle ORM",
