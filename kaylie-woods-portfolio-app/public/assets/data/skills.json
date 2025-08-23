@@ -20,17 +20,17 @@
   ],
   "build": [
     "JavaScript & TypeScript",
+    "JS Frameworks & Libraries: Angular 19, React 19, Next.js 15, Ember.js 3 & 4",
     "HTML 5 & CSS 3",
-    "JS Frameworks & Libraries: Angular 19, React 19, Next.js 15, Ember.js 6 & 7",
     "Node.js & Node.js frameworks (Express.js)",
     "C# & ASP.NET Core",
-    "APIS: REST, GraphQL",
+    "APIs: REST, GraphQL",
     "Relational Databases: PostgreSQL, Microsoft SQL Server",
-    "NoSQL Databases: CosmosDB",
+    "NoSQL Databases: Azure Cosmos DB, MongoDB",
     "Query Languages: SQL, GraphQL",
     "Reactive Programming: RxJS",
     "State Management: Redux, NgRx",
-    "CSS Frameworks & Libraries: JSS, Tailwind, Bootstrap",
+    "CSS Frameworks & Libraries: CSS-In-JS, Tailwind, Bootstrap",
     "CSS Preprocessors (Sass)",
     "Animation Libraries: Framer Motion",
     "Charting Libraries: chart.js, D3.js, ngx-charts",
@@ -42,6 +42,6 @@
     "Version Control: Git & GitHub",
     "Bitbucket, Jira, Azure DevOps",
     "Visual Studio & VS Code",
-    "Agile Methodologies"
+    "Agile Methodologies & Scrum"
   ]
 }
