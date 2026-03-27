@@ -9,15 +9,15 @@
         "id": 1,
         "title": "Skilled Care - Client Facesheet",
         "description": "Client Facesheet is a designated page where caregivers access pertinent information about a client they serve. I was one of two engineers assigned to this epic, building the Facesheet, Client Info, Forms, Care Plans, and Notes tabs, along with their associated overlays. This required me to create custom hooks and components in addition to new GraphQL schemas, queries, and resolvers.",
-        "imgSrc": "assets/images/my-work/geoh/GeohPinBkgd.webp",
-        "imgAltText": "Geoh logo"
+        "imgSrc": "assets/images/my-work/geoh/FacesheetTab.png",
+        "imgAltText": "Client Facesheet"
       },
       {
         "id": 2,
         "title": "Skilled Care - Visit Facesheet",
         "description": "Visit Facesheet is a designated page where caregivers log their visits. Visit Facesheet closely mirrors Client Facesheet, utilizing much of the same data and components. Upon the completion of Client Facesheet, I updated the components and behaviors associated with Visit Facesheet to either repurpose Client Facesheet’s components, styles and logic or to follow the patterns I implemented with Client Facesheet. I took control of addressing missed requirements, ensuring responsive design, and collaborating with UX Designers to fine tune the UI",
-        "imgSrc": "assets/images/my-work/geoh/GeohPinBkgd.webp",
-        "imgAltText": "GEOH logo"
+        "imgSrc": "assets/images/my-work/geoh/VisitFacesheet.png",
+        "imgAltText": "Visit Facesheet"
       },
       {
         "id": 3,
