@@ -1,24 +1,23 @@
 {
   "ideate": [
-    "User Advocacy",
+    "Wireframes",
+    "Style Guides",
+    "User Flows & Personas",
     "User Research",
-    "User Flows & User Personas",
     "Information Architecture",
-    "UX Writing",
-    "Mastery of UX “Laws” & Best Practices",
-    "Keen Understanding of HCI and Psychology"
+    "UX Writing"
   ],
   "design": [
-    "Visual Design",
-    "Data Visualization",
-    "Design Technologies Expert (Figma, Adobe Creative Cloud, and more)",
-    "Wireframes & Prototypes",
+    "Figma",
+    "Adobe Creative Cloud",
     "High-Fidelity Mockups",
-    "Design Systems",
-    "Style Guides, Color Palettes, Typography",
-    "Performance + Rendering Optimization of Visuals (incl. graphics, photos & videos)"
+    "Prototypes",
+    "Visual Design",
+    "Responsive Design & Cross Browser Compatibility",
+    "ac11y: Section 508, WCAG 2.2"
   ],
   "build": [
+    "Claude & Codex",
     "JavaScript & TypeScript",
     "JS Frameworks & Libraries: Angular 19, React 19, Next.js 15, Ember.js 3 & 4",
     "HTML 5 & CSS 3",
@@ -26,7 +25,7 @@
     "C# & ASP.NET Core",
     "APIs: REST, GraphQL",
     "Relational Databases: PostgreSQL, Microsoft SQL Server",
-    "NoSQL Databases: Azure Cosmos DB, MongoDB",
+    "NoSQL Databases: Azure Cosmos DB",
     "Query Languages: SQL, GraphQL",
     "Reactive Programming: RxJS",
     "State Management: Redux, NgRx",
